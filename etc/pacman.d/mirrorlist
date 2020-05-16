@@ -441,11 +441,11 @@
 #Server = http://mirror.is.co.za/mirror/archlinux.org/$repo/os/$arch
 
 ## South Korea
-#Server = http://ftp.harukasan.org/archlinux/$repo/os/$arch
-#Server = https://ftp.harukasan.org/archlinux/$repo/os/$arch
-#Server = http://ftp.lanet.kr/pub/archlinux/$repo/os/$arch
-#Server = https://ftp.lanet.kr/pub/archlinux/$repo/os/$arch
-#Server = http://mirror.premi.st/archlinux/$repo/os/$arch
+Server = http://ftp.harukasan.org/archlinux/$repo/os/$arch
+Server = https://ftp.harukasan.org/archlinux/$repo/os/$arch
+Server = http://ftp.lanet.kr/pub/archlinux/$repo/os/$arch
+Server = https://ftp.lanet.kr/pub/archlinux/$repo/os/$arch
+Server = http://mirror.premi.st/archlinux/$repo/os/$arch
 
 ## Spain
 #Server = https://mirror.cloroformo.org/archlinux/$repo/os/$arch
