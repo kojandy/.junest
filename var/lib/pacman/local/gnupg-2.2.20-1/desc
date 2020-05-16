@@ -1,0 +1,56 @@
+%NAME%
+gnupg
+
+%VERSION%
+2.2.20-1
+
+%BASE%
+gnupg
+
+%DESC%
+Complete and free implementation of the OpenPGP standard
+
+%URL%
+https://www.gnupg.org/
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1584738074
+
+%INSTALLDATE%
+1585411572
+
+%PACKAGER%
+Gaetan Bisson <bisson@archlinux.org>
+
+%SIZE%
+10260737
+
+%REASON%
+1
+
+%LICENSE%
+GPL
+
+%VALIDATION%
+pgp
+
+%DEPENDS%
+npth
+libgpg-error
+libgcrypt
+libksba
+libassuan
+pinentry
+bzip2
+readline
+gnutls
+sqlite
+
+%OPTDEPENDS%
+libldap: gpg2keys_ldap
+libusb-compat: scdaemon
+pcsclite: scdaemon
+

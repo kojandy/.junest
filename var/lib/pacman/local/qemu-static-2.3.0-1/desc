@@ -1,0 +1,36 @@
+%NAME%
+qemu-static
+
+%VERSION%
+2.3.0-1
+
+%BASE%
+qemu-static
+
+%DESC%
+Statically linked binaries of Qemu with user emulation. Useful for containers/chroot environment with binfmt.
+
+%URL%
+http://wiki.qemu.org
+
+%ARCH%
+any
+
+%BUILDDATE%
+1585411597
+
+%INSTALLDATE%
+1585411608
+
+%PACKAGER%
+Unknown Packager
+
+%SIZE%
+4715116
+
+%LICENSE%
+GPL2
+
+%VALIDATION%
+none
+
