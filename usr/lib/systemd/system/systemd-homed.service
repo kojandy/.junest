@@ -10,7 +10,7 @@
 [Unit]
 Description=Home Area Manager
 Documentation=man:systemd-homed.service(8)
-RequiresMountsFor=/home
+After=home.mount
 
 [Service]
 BusName=org.freedesktop.home1
@@ -34,3 +34,7 @@ SystemCallArchitectures=native
 SystemCallErrorNumber=EPERM
 SystemCallFilter=@system-service @mount
 WatchdogSec=3min
+
+[Install]
+WantedBy=multi-user.target
+Alias=dbus-org.freedesktop.home1.service

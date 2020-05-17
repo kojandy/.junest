@@ -194,6 +194,7 @@ complete --command curl --short-option 'y' --long-option 'speed-time' --descript
 complete --command curl --long-option 'ssl' --description 'Try SSL/TLS' 
 complete --command curl --long-option 'ssl-allow-beast' --description 'Allow security flaw to improve interop' 
 complete --command curl --long-option 'ssl-no-revoke' --description 'Disable cert revocation checks (Schannel)' 
+complete --command curl --long-option 'ssl-revoke-best-effort' --description 'Ignore revocation offline or missing revocation list errors (Schannel)' 
 complete --command curl --long-option 'ssl-reqd' --description 'Require SSL/TLS' 
 complete --command curl --short-option '2' --long-option 'sslv2' --description 'Use SSLv2' 
 complete --command curl --short-option '3' --long-option 'sslv3' --description 'Use SSLv3' 

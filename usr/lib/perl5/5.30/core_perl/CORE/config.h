@@ -9,9 +9,9 @@
 
 /* Package name      : perl5
  * Source directory  : .
- * Configuration time: Mon Nov 11 19:16:46 CET 2019
+ * Configuration time: Fri Mar 20 09:34:16 CET 2020
  * Configured by     : builduser
- * Target system     : linux flo-64 5.3.8-arch1-1 #1 smp preempt @1572357769 x86_64 gnulinux 
+ * Target system     : archlinux
  */
 
 #ifndef _config_h_
@@ -1369,7 +1369,7 @@
  *	feature tests from Configure are generally more reliable.
  */
 #define OSNAME "linux"		/**/
-#define OSVERS "5.3.8-arch1-1"		/**/
+#define OSVERS "5.5.9-arch1-2"		/**/
 
 /* CAT2:
  *	This macro concatenates 2 tokens together.
@@ -1603,7 +1603,7 @@
 #define HAS_UNAME		/**/
 /*#define HAS_PHOSTNAME	/ **/
 #ifdef HAS_PHOSTNAME
-#define PHOSTNAME "/usr/bin/uname -n"	/* How to get the host name */
+#define PHOSTNAME ""	/* How to get the host name */
 #endif
 
 /* HAS_GETNETBYADDR:

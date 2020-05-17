@@ -8,7 +8,7 @@ includedir=${prefix}/include
 Name: libnftnl
 Description: Netfilter nf_tables infrastructure library
 URL: http://netfilter.org/projects/libnftnl/
-Version: 1.1.5
+Version: 1.1.6
 Requires:
 Requires.private: libmnl
 Conflicts:

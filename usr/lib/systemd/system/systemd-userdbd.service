@@ -39,3 +39,6 @@ SystemCallErrorNumber=EPERM
 SystemCallFilter=@system-service
 Type=notify
 WatchdogSec=3min
+
+[Install]
+Also=systemd-userdbd.socket

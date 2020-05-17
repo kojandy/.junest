@@ -4,7 +4,7 @@
 <registry xmlns="http://www.iana.org/assignments" id="service-names-port-numbers">
   <title>Service Name and Transport Protocol Port Number Registry</title>
   <category>Service Names and Transport Protocol Port Numbers</category>
-  <updated>2020-03-11</updated>
+  <updated>2020-04-28</updated>
   <xref type="rfc" data="rfc6335"/>
   <expert>TCP/UDP: Joe Touch; Eliot Lear, Allison Mankin, Markku Kojo, Kumiko Ono, Martin Stiemerling, 
 Lars Eggert, Alexey Melnikov, Wes Eddy, Alexander Zimmermann, Brian Trammell, and Jana Iyengar
@@ -33478,7 +33478,7 @@ common service discovery mechanisms.</note>
     <description>AMInet</description>
     <number>2639</number>
   </record>
-  <record>
+  <record updated="2020-03-12">
     <name>ami-control</name>
     <protocol>tcp</protocol>
     <assignee>
@@ -33486,9 +33486,9 @@ common service discovery mechanisms.</note>
     </assignee> 
     <description>Alcorn McBride Inc protocol used for device control</description>
     <number>2640</number>
-    <xref type="person" data="Joy_Burke"/>
+    <xref type="person" data="Alcorn_McBride_Inc"/>
   </record>
-  <record>
+  <record updated="2020-03-12">
     <name>ami-control</name>
     <protocol>udp</protocol>
     <assignee>
@@ -33496,7 +33496,7 @@ common service discovery mechanisms.</note>
     </assignee> 
     <description>Alcorn McBride Inc protocol used for device control</description>
     <number>2640</number>
-    <xref type="person" data="Joy_Burke"/>
+    <xref type="person" data="Alcorn_McBride_Inc"/>
   </record>
   <record>
     <name>hdl-srv</name>
@@ -55463,7 +55463,51 @@ common service discovery mechanisms.</note>
   </record>
   <record>
     <description>Unassigned</description>
-    <number>4194-4196</number>
+    <number>4194</number>
+  </record>
+  <record date="2020-04-06">
+    <name>aws-wsp</name>
+    <protocol>tcp</protocol>
+    <assignee>
+      <xref type="person" data="Amazon.com_Services_LLC"/>
+    </assignee>
+    <description>AWS protocol for cloud remoting solution</description>
+    <number>4195</number>
+    <xref type="person" data="Lauren_Townsend"/>
+  </record> 
+  <record date="2020-04-06">
+    <name>aws-wsp</name>
+    <protocol>udp</protocol>
+    <assignee>
+      <xref type="person" data="Amazon.com_Services_LLC"/>
+    </assignee>
+    <description>AWS protocol for cloud remoting solution</description>
+    <number>4195</number>
+    <xref type="person" data="Lauren_Townsend"/>
+  </record> 
+  <record date="2020-04-06">
+    <name>aws-wsp</name>
+    <protocol>sctp</protocol>
+    <assignee>
+      <xref type="person" data="Amazon.com_Services_LLC"/>
+    </assignee>
+    <description>AWS protocol for cloud remoting solution</description>
+    <number>4195</number>
+    <xref type="person" data="Lauren_Townsend"/>
+  </record> 
+  <record date="2020-04-06">
+    <name>aws-wsp</name>
+    <protocol>dccp</protocol>
+    <assignee>
+      <xref type="person" data="Amazon.com_Services_LLC"/>
+    </assignee>
+    <description>AWS protocol for cloud remoting solution</description>
+    <number>4195</number>
+    <xref type="person" data="Lauren_Townsend"/>
+  </record>
+  <record>
+    <description>Unassigned</description>
+    <number>4196</number>
   </record>
   <record date="2017-02-16">
     <name>hctl</name>
@@ -57395,7 +57439,25 @@ common service discovery mechanisms.</note>
   </record>
   <record>
     <description>Unassigned</description>
-    <number>4459-4483</number>
+    <number>4459</number>
+  </record>
+  <record date="2020-04-07">
+    <name>ntske</name>
+    <protocol>tcp</protocol>
+    <assignee><xref type="person" data="IESG"/></assignee>
+    <xref type="person" data="IETF_Chair"/>
+    <description>Network Time Security Key Establishment</description>
+    <xref type="draft" data="RFC-ietf-ntp-using-nts-for-ntp-28"/>
+    <number>4460</number>
+  </record>
+  <record>
+    <protocol>udp</protocol>
+    <description>Reserved</description>
+    <number>4460</number>
+  </record>
+  <record>
+    <description>Unassigned</description>
+    <number>4461-4483</number>
   </record>
   <record date="2005-11">
     <name>hpssmgmt</name>
@@ -58151,9 +58213,24 @@ Further keys may be added in the future.</note>
     <description>Reserved</description>
     <number>4605</number>
   </record>
+  <record date="2020-04-28">
+    <name>sixid</name>
+    <protocol>tcp</protocol>
+    <assignee>
+      <xref type="person" data="Sixscape_Communications_Pte_Ltd"/>
+    </assignee>
+    <description>Secure ID to IP registration and lookup</description>
+    <number>4606</number>
+    <xref type="person" data="Lawrence_E._Hughes"/>
+  </record>
+  <record>
+    <protocol>udp</protocol>
+    <description>Reserved</description>
+    <number>4606</number>
+  </record>
   <record>
     <description>Unassigned</description>
-    <number>4606-4620</number>
+    <number>4607-4620</number>
   </record>
   <record>
     <protocol>tcp</protocol>
@@ -71886,7 +71963,7 @@ common service discovery mechanisms.</note>
   <record>
     <protocol>udp</protocol>
     <description>Reserved</description>
-    <number>7702</number>
+    <number>7202</number>
   </record>
   <record>
     <description>Unassigned</description>
@@ -79208,7 +79285,26 @@ any port number, but the default port for this protocol is 9100.</note>
   </record>
   <record>
     <description>Unassigned</description>
-    <number>9307-9311</number>
+    <number>9307-9309</number>
+  </record>
+  <record date="2020-03-12">
+    <name>sapms</name>
+    <protocol>tcp</protocol>
+    <assignee>
+      <xref type="person" data="SAP_SE"/>
+    </assignee>
+    <description>SAP Message Server</description>
+    <number>9310</number>
+    <xref type="person" data="Stefan_Hagen"/>
+  </record>
+  <record>
+    <protocol>udp</protocol>
+    <description>Reserved</description>
+    <number>9310</number>
+  </record>
+  <record>
+    <description>Unassigned</description>
+    <number>9311</number>
   </record>
   <record date="2009-10-20">
     <name>sphinxapi</name>
@@ -92258,6 +92354,17 @@ common service discovery mechanisms.</note>
     <description>Now Contact</description>
     <note>Defined TXT keys: None</note>
   </record>
+  <record date="2020-03-27">
+    <name>convert</name>
+    <protocol>tcp</protocol>
+    <assignee>
+      <xref type="person" data="IESG"/>
+    </assignee>
+    <description>0-RTT TCP Convert Protocol</description>
+    <note>Defined TXT keys: None</note>
+	<xref type="draft" data="RFC-ietf-tcpm-converters-19"/>
+    <xref type="person" data="IETF_Chair"/>
+  </record>
   <record date="2014-01-03">
     <name>coolanetaudio</name>
     <protocol>tcp</protocol>
@@ -97207,6 +97314,17 @@ cport= the port for the content HTTP server
     <xref type="person" data="Broadband_Forum"/>
     <xref type="uri" data="http://www.broadband-forum.org/assignments"/>
   </record>
+  <record date="2020-03-17">
+    <name>usp-agt-mqtt</name>
+    <protocol>tcp</protocol>
+    <description>USP discovery</description>
+    <assignee>
+      <xref type="person" data="Broadband_Forum"/>
+    </assignee>
+    <note>Defined TXT keys: see www.broadband-forum.org/assignments</note>
+    <xref type="person" data="Broadband_Forum"/>
+    <xref type="uri" data="http://www.broadband-forum.org/assignments"/>
+  </record>
   <record date="2017-01-12">
     <name>usp-agt-stomp</name>
     <protocol>tcp</protocol>
@@ -97242,6 +97360,17 @@ cport= the port for the content HTTP server
   </record>
   <record date="2017-01-12">
     <name>usp-ctr-http</name>
+    <protocol>tcp</protocol>
+    <description>USP discovery</description>
+    <assignee>
+      <xref type="person" data="Broadband_Forum"/>
+    </assignee>
+    <note>Defined TXT keys: see www.broadband-forum.org/assignments</note>
+    <xref type="person" data="Broadband_Forum"/>
+    <xref type="uri" data="http://www.broadband-forum.org/assignments"/>
+  </record>
+  <record date="2020-03-17">
+    <name>usp-ctr-mqtt</name>
     <protocol>tcp</protocol>
     <description>USP discovery</description>
     <assignee>
@@ -98726,6 +98855,11 @@ implementations.  See RFC 3692 for details.</footnote>
     </person>
     <person id="Amatzia_Ben_Artzi">
       <name>Amatzia Ben-Artzi</name>
+    </person>
+    <person id="Amazon.com_Services_LLC">
+      <org>Amazon.com Services LLC</org>
+      <uri>mailto:aws-iana&amp;amazon.com</uri>
+      <updated>2020-04-06</updated>
     </person>
     <person id="Amber_Huffman">
       <name>Amber Huffman</name>
@@ -100839,7 +100973,7 @@ implementations.  See RFC 3692 for details.</footnote>
     <person id="Broadband_Forum">
       <org>Broadband Forum</org>
       <uri>mailto:help&amp;broadband-forum.org</uri>
-      <updated>2019-12-13</updated>
+      <updated>2020-03-17</updated>
     </person>
     <person id="Brocade_Communications_Systems">
       <name>Brocade Communications Systems</name>
@@ -109852,11 +109986,6 @@ implementations.  See RFC 3692 for details.</footnote>
       <name>Jost Faganel</name>
       <uri>mailto:jost.faganel&amp;hermes.si</uri>
     </person>
-    <person id="Joy_Burke">
-      <name>Joy Burke</name>
-      <uri>mailto:joy&amp;alcorn.com</uri>
-      <updated>2016-05-19</updated>
-    </person>
     <person id="Josyula_R_Rao">
       <name>Josyula R. Rao</name>
       <uri>mailto:jrrao&amp;watson.ibm.com</uri>
@@ -111000,6 +111129,12 @@ implementations.  See RFC 3692 for details.</footnote>
       <org>larva.io ltd.</org>
       <uri>mailto:hi&amp;larva.io</uri>
       <updated>2019-02-11</updated>
+    </person>
+    <person id="Lauren_Townsend">
+      <name>Lauren Townsend</name>
+      <org>Amazon.com Services LLC</org>
+      <uri>mailto:townslau&amp;amazon.com</uri>
+      <updated>2020-04-06</updated>
     </person>
     <person id="Laurence_Flath">
       <name>Laurence Flath</name>
@@ -118282,6 +118417,11 @@ implementations.  See RFC 3692 for details.</footnote>
       <uri>mailto:cameron&amp;santorinillc.com</uri>
       <updated>2011-10-25</updated>
     </person>
+    <person id="SAP_SE">
+      <org>SAP SE</org>
+      <uri>mailto:stefan.hagen&amp;sap.com</uri>
+      <updated>2020-03-12</updated>
+    </person>
     <person id="Sarah_Allen">
       <name>Sarah Allen</name>
       <uri>mailto:sallen&amp;macromedia.com</uri>
@@ -119302,6 +119442,11 @@ implementations.  See RFC 3692 for details.</footnote>
     <person id="Stefan_Eriksson">
       <name>Stefan Eriksson</name>
       <uri>mailto:contact-iana&amp;axis.com</uri>
+    </person>
+    <person id="Stefan_Hagen">
+      <name>Stefan Hagen</name>
+      <uri>mailto:stefan.hagen&amp;sap.com</uri>
+      <updated>2020-03-12</updated>
     </person>
     <person id="Stefan_Hochuli">
       <name>Stefan Hochuli</name>

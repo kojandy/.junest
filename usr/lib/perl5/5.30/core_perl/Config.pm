@@ -10,7 +10,7 @@ use strict;
 use warnings;
 our ( %Config, $VERSION );
 
-$VERSION = "5.030001";
+$VERSION = "5.030002";
 
 # Skip @Config::EXPORT because it only contains %Config, which we special
 # case below as it's not a function. @Config::EXPORT won't change in the
@@ -56,11 +56,11 @@ sub import {
     return;
 }
 
-die "$0: Perl lib version (5.30.1) doesn't match executable '$^X' version ($])"
+die "$0: Perl lib version (5.30.2) doesn't match executable '$^X' version ($])"
     unless $^V;
 
-$^V eq 5.30.1
-    or die sprintf "%s: Perl lib version (5.30.1) doesn't match executable '$^X' version (%vd)", $0, $^V;
+$^V eq 5.30.2
+    or die sprintf "%s: Perl lib version (5.30.2) doesn't match executable '$^X' version (%vd)", $0, $^V;
 
 
 sub FETCH {
@@ -96,9 +96,9 @@ tie %Config, 'Config', {
     inc_version_list => ' ',
     intsize => '4',
     ldlibpthname => 'LD_LIBRARY_PATH',
-    libpth => '/usr/local/lib /usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/include-fixed /usr/lib /lib/../lib /usr/lib/../lib /lib /lib64 /usr/lib64',
+    libpth => '/usr/local/lib /usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/include-fixed /usr/lib /lib/../lib /usr/lib/../lib /lib /lib64 /usr/lib64',
     osname => 'linux',
-    osvers => '5.3.8-arch1-1',
+    osvers => '5.5.9-arch1-2',
     path_sep => ':',
     privlibexp => '/usr/share/perl5/core_perl',
     scriptdir => '/usr/bin/core_perl',
@@ -107,5 +107,5 @@ tie %Config, 'Config', {
     so => 'so',
     useithreads => 'define',
     usevendorprefix => 'define',
-    version => '5.30.1',
+    version => '5.30.2',
 };

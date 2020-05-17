@@ -7765,7 +7765,7 @@ B<-i>, B<-V>
 
 =back
 
-=head2 perldelta - what is new for perl v5.30.1
+=head2 perldelta - what is new for perl v5.30.2
 
 =over 4
 
@@ -7799,7 +7799,7 @@ B<-i>, B<-V>
 
 =item Platform-Specific Notes
 
-Win32
+Windows
 
 =back
 
@@ -7815,7 +7815,57 @@ Win32
 
 =back
 
-=head2 perl5301delta, perldelta - what is new for perl v5.30.1
+=head2 perl5302delta, perldelta - what is new for perl v5.30.2
+
+=over 4
+
+=item DESCRIPTION
+
+=item Incompatible Changes
+
+=item Modules and Pragmata
+
+=over 4
+
+=item Updated Modules and Pragmata
+
+=back
+
+=item Documentation
+
+=over 4
+
+=item Changes to Existing Documentation
+
+=back
+
+=item Configuration and Compilation
+
+=item Testing
+
+=item Platform Support
+
+=over 4
+
+=item Platform-Specific Notes
+
+Windows
+
+=back
+
+=item Selected Bug Fixes
+
+=item Acknowledgements
+
+=item Reporting Bugs
+
+=item Give Thanks
+
+=item SEE ALSO
+
+=back
+
+=head2 perl5301delta - what is new for perl v5.30.1
 
 =over 4
 
@@ -19765,6 +19815,8 @@ B<$verbosity>
 =back
 
 =item Constants
+
+=item SUPPORT
 
 =item SEE ALSO
 

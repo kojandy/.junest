@@ -9,6 +9,7 @@ local rc=1
 
 _arguments -C -S \
   --happy-eyeballs-timeout-ms'[How long to wait in milliseconds for IPv6 before trying IPv4]':'<milliseconds>' \
+  --ssl-revoke-best-effort'[Ignore revocation offline or missing revocation list errors (Schannel)]' \
   --sasl-authzid'[Use this identity to act as during SASL PLAIN authentication]':'<identity>' \
   --etag-compare'[Get an ETag from a file and send a conditional request]':'<file>':_files \
   --resolve'[Resolve the host+port to this address]':'<host\:port\:address[,address]...>' \
