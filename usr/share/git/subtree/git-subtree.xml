@@ -12,14 +12,13 @@
   <refpurpose>Merge subtrees together and split repository into subtrees</refpurpose>
 </refnamediv>
 <refsynopsisdiv id="_synopsis">
-<blockquote>
 <literallayout><emphasis>git subtree</emphasis> add   -P &lt;prefix&gt; &lt;commit&gt;
 <emphasis>git subtree</emphasis> add   -P &lt;prefix&gt; &lt;repository&gt; &lt;ref&gt;
 <emphasis>git subtree</emphasis> pull  -P &lt;prefix&gt; &lt;repository&gt; &lt;ref&gt;
 <emphasis>git subtree</emphasis> push  -P &lt;prefix&gt; &lt;repository&gt; &lt;ref&gt;
 <emphasis>git subtree</emphasis> merge -P &lt;prefix&gt; &lt;commit&gt;
 <emphasis>git subtree</emphasis> split -P &lt;prefix&gt; [OPTIONS] [&lt;commit&gt;]</literallayout>
-</blockquote>
+<simpara></simpara>
 </refsynopsisdiv>
 <refsect1 id="_description">
 <title>DESCRIPTION</title>

@@ -1,6 +1,6 @@
 /* ksba.h - X.509 library used by GnuPG
  * Copyright (C) 2001, 2002, 2003, 2004, 2005, 2006, 2010, 2011
- *               2012, 2013, 2104, 2015 g10 Code GmbH
+ *               2012, 2013, 2104, 2015, 2019 g10 Code GmbH
  *
  * This file is part of KSBA.
  *
@@ -42,6 +42,16 @@ extern "C" {
 #endif
 #endif
 
+/* The version of this header should match the one of the library.  Do
+ * not use this symbol in your application; use assuan_check_version
+ * instead.  */
+#define KSBA_VERSION "1.4.0"
+
+/* The version number of this header.  It may be used to handle minor
+ * API incompatibilities.  */
+#define KSBA_VERSION_NUMBER 0x010400
+
+
 
 /* Check for compiler features.  */
 #ifdef __GNUC__
@@ -58,6 +68,50 @@ extern "C" {
 #endif
 
 
+#define KSBA_CLASS_UNIVERSAL   0
+#define KSBA_CLASS_APPLICATION 1
+#define KSBA_CLASS_CONTEXT     2
+#define KSBA_CLASS_PRIVATE     3
+#define KSBA_CLASS_ENCAPSULATE 0x80  /* Pseudo class.  */
+
+#define KSBA_TYPE_BOOLEAN           1
+#define KSBA_TYPE_INTEGER           2
+#define KSBA_TYPE_BIT_STRING        3
+#define KSBA_TYPE_OCTET_STRING      4
+#define KSBA_TYPE_NULL              5
+#define KSBA_TYPE_OBJECT_ID         6
+#define KSBA_TYPE_OBJECT_DESCRIPTOR 7
+#define KSBA_TYPE_EXTERNAL          8
+#define KSBA_TYPE_REAL              9
+#define KSBA_TYPE_ENUMERATED       10
+#define KSBA_TYPE_EMBEDDED_PDV     11
+#define KSBA_TYPE_UTF8_STRING      12
+#define KSBA_TYPE_RELATIVE_OID     13
+#define KSBA_TYPE_TIME             14
+#define KSBA_TYPE_SEQUENCE         16
+#define KSBA_TYPE_SET              17
+#define KSBA_TYPE_NUMERIC_STRING   18
+#define KSBA_TYPE_PRINTABLE_STRING 19
+#define KSBA_TYPE_TELETEX_STRING   20
+#define KSBA_TYPE_VIDEOTEX_STRING  21
+#define KSBA_TYPE_IA5_STRING       22
+#define KSBA_TYPE_UTC_TIME         23
+#define KSBA_TYPE_GENERALIZED_TIME 24
+#define KSBA_TYPE_GRAPHIC_STRING   25
+#define KSBA_TYPE_VISIBLE_STRING   26
+#define KSBA_TYPE_GENERAL_STRING   27
+#define KSBA_TYPE_UNIVERSAL_STRING 28
+#define KSBA_TYPE_CHARACTER_STRING 29
+#define KSBA_TYPE_BMP_STRING       30
+#define KSBA_TYPE_DATE             31
+#define KSBA_TYPE_TIME_OF_DAY      32
+#define KSBA_TYPE_DATE_TIME        33
+#define KSBA_TYPE_DURATION         34
+#define KSBA_TYPE_OID_IRI          35
+#define KSBA_TYPE_RELATIVE_OID_IRI 36
+
+
+
 typedef gpg_error_t KsbaError _KSBA_DEPRECATED;
 
 typedef enum
@@ -69,7 +123,8 @@ typedef enum
     KSBA_CT_DIGESTED_DATA = 4,
     KSBA_CT_ENCRYPTED_DATA = 5,
     KSBA_CT_AUTH_DATA = 6,
-    KSBA_CT_PKCS12 = 7
+    KSBA_CT_PKCS12 = 7,
+    KSBA_CT_SPC_IND_DATA_CTX = 8
   }
 ksba_content_type_t;
 typedef ksba_content_type_t KsbaContentType _KSBA_DEPRECATED;
@@ -216,6 +271,11 @@ typedef unsigned char *ksba_sexp_t;
 typedef unsigned char *KsbaSexp _KSBA_DEPRECATED;
 typedef const unsigned char *ksba_const_sexp_t;
 typedef const unsigned char *KsbaConstSexp _KSBA_DEPRECATED;
+
+
+/* This is a generic object used by various functions.  */
+struct ksba_der_s;
+typedef struct ksba_der_s *ksba_der_t;
 
 
 /*-- cert.c --*/
@@ -525,6 +585,30 @@ void        ksba_name_ref (ksba_name_t name);
 void        ksba_name_release (ksba_name_t name);
 const char *ksba_name_enum (ksba_name_t name, int idx);
 char       *ksba_name_get_uri (ksba_name_t name, int idx);
+
+
+/*-- der-builder.c --*/
+void ksba_der_release (ksba_der_t d);
+
+ksba_der_t ksba_der_builder_new (unsigned int nitems);
+void ksba_der_builder_reset (ksba_der_t d);
+
+void ksba_der_add_ptr (ksba_der_t d, int cls, int tag,
+                       void *value, size_t valuelen);
+void ksba_der_add_val (ksba_der_t d, int cls, int tag,
+                       const void *value, size_t valuelen);
+void ksba_der_add_int (ksba_der_t d, const void *value, size_t valuelen,
+                       int force_positive);
+void ksba_der_add_oid (ksba_der_t d, const char *oidstr);
+void ksba_der_add_bts (ksba_der_t d, const void *value, size_t valuelen,
+                       unsigned int unusedbits);
+void ksba_der_add_der (ksba_der_t d, const void *der, size_t derlen);
+void ksba_der_add_tag (ksba_der_t d, int cls, int tag);
+void ksba_der_add_end (ksba_der_t d);
+
+gpg_error_t ksba_der_builder_get (ksba_der_t d,
+                                  unsigned char **r_obj, size_t *r_objlen);
+
 
 
 /*-- util.c --*/

@@ -25,7 +25,6 @@ LimitNOFILE=524288
 LockPersonality=yes
 MemoryDenyWriteExecute=yes
 NoNewPrivileges=yes
-PrivateNetwork=yes
 RestrictAddressFamilies=AF_UNIX AF_NETLINK AF_ALG
 RestrictNamespaces=mnt
 RestrictRealtime=yes

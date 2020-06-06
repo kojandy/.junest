@@ -5483,7 +5483,7 @@ label: "EC-ACC"
 trusted: true
 nss-mozilla-ca-policy: true
 modifiable: false
-nss-server-distrust-after: "%00"
+nss-server-distrust-after: "191228000000Z"
 nss-email-distrust-after: "%00"
 -----BEGIN CERTIFICATE-----
 MIIFVjCCBD6gAwIBAgIQ7is969Qh3hSoYqwE893EATANBgkqhkiG9w0BAQUFADCB
@@ -5603,7 +5603,7 @@ label: "EE Certification Centre Root CA"
 trusted: true
 nss-mozilla-ca-policy: true
 modifiable: false
-nss-server-distrust-after: "%00"
+nss-server-distrust-after: "170901000000Z"
 nss-email-distrust-after: "%00"
 -----BEGIN CERTIFICATE-----
 MIIEAzCCAuugAwIBAgIQVID5oHPtPwBMyonY43HmSjANBgkqhkiG9w0BAQUFADB1
@@ -7418,7 +7418,7 @@ label: "GeoTrust Global CA"
 trusted: true
 nss-mozilla-ca-policy: true
 modifiable: false
-nss-server-distrust-after: "%00"
+nss-server-distrust-after: "200101000000Z"
 nss-email-distrust-after: "%00"
 -----BEGIN CERTIFICATE-----
 MIIDVDCCAjygAwIBAgIDAjRWMA0GCSqGSIb3DQEBBQUAMEIxCzAJBgNVBAYTAlVT
@@ -7519,7 +7519,7 @@ label: "GeoTrust Primary Certification Authority"
 trusted: true
 nss-mozilla-ca-policy: true
 modifiable: false
-nss-server-distrust-after: "%00"
+nss-server-distrust-after: "190430000000Z"
 nss-email-distrust-after: "%00"
 -----BEGIN CERTIFICATE-----
 MIIDfDCCAmSgAwIBAgIQGKy1av1pthU6Y2yv2vrEoTANBgkqhkiG9w0BAQUFADBY
@@ -7617,7 +7617,7 @@ label: "GeoTrust Primary Certification Authority - G2"
 trusted: true
 nss-mozilla-ca-policy: true
 modifiable: false
-nss-server-distrust-after: "%00"
+nss-server-distrust-after: "200101000000Z"
 nss-email-distrust-after: "%00"
 -----BEGIN CERTIFICATE-----
 MIICrjCCAjWgAwIBAgIQPLL0SAoA4v7rJDteYD7DazAKBggqhkjOPQQDAzCBmDEL
@@ -7696,7 +7696,7 @@ label: "GeoTrust Primary Certification Authority - G3"
 trusted: true
 nss-mozilla-ca-policy: true
 modifiable: false
-nss-server-distrust-after: "%00"
+nss-server-distrust-after: "190430000000Z"
 nss-email-distrust-after: "%00"
 -----BEGIN CERTIFICATE-----
 MIID/jCCAuagAwIBAgIQFaxulBmyeUtB9iepwxgPHzANBgkqhkiG9w0BAQsFADCB
@@ -7806,7 +7806,7 @@ label: "GeoTrust Universal CA"
 trusted: true
 nss-mozilla-ca-policy: true
 modifiable: false
-nss-server-distrust-after: "%00"
+nss-server-distrust-after: "180930000000Z"
 nss-email-distrust-after: "%00"
 -----BEGIN CERTIFICATE-----
 MIIFaDCCA1CgAwIBAgIBATANBgkqhkiG9w0BAQUFADBFMQswCQYDVQQGEwJVUzEW
@@ -7956,7 +7956,7 @@ label: "GeoTrust Universal CA 2"
 trusted: true
 nss-mozilla-ca-policy: true
 modifiable: false
-nss-server-distrust-after: "%00"
+nss-server-distrust-after: "200101000000Z"
 nss-email-distrust-after: "%00"
 -----BEGIN CERTIFICATE-----
 MIIFbDCCA1SgAwIBAgIBATANBgkqhkiG9w0BAQUFADBHMQswCQYDVQQGEwJVUzEW
@@ -15171,7 +15171,7 @@ label: "Taiwan GRCA"
 trusted: true
 nss-mozilla-ca-policy: true
 modifiable: false
-nss-server-distrust-after: "%00"
+nss-server-distrust-after: "190919000000Z"
 nss-email-distrust-after: "%00"
 -----BEGIN CERTIFICATE-----
 MIIFcjCCA1qgAwIBAgIQH51ZWtcvwgZEpYAIaeNe9jANBgkqhkiG9w0BAQUFADA/
@@ -15462,7 +15462,7 @@ label: "thawte Primary Root CA"
 trusted: true
 nss-mozilla-ca-policy: true
 modifiable: false
-nss-server-distrust-after: "%00"
+nss-server-distrust-after: "190430000000Z"
 nss-email-distrust-after: "%00"
 -----BEGIN CERTIFICATE-----
 MIIEIDCCAwigAwIBAgIQNE7VVyDV7exJ9C/ON9srbTANBgkqhkiG9w0BAQUFADCB
@@ -15564,7 +15564,7 @@ label: "thawte Primary Root CA - G2"
 trusted: true
 nss-mozilla-ca-policy: true
 modifiable: false
-nss-server-distrust-after: "%00"
+nss-server-distrust-after: "180930000000Z"
 nss-email-distrust-after: "%00"
 -----BEGIN CERTIFICATE-----
 MIICiDCCAg2gAwIBAgIQNfwmXNmET8k9Jj1Xm67XVjAKBggqhkjOPQQDAzCBhDEL
@@ -15642,7 +15642,7 @@ label: "thawte Primary Root CA - G3"
 trusted: true
 nss-mozilla-ca-policy: true
 modifiable: false
-nss-server-distrust-after: "%00"
+nss-server-distrust-after: "190430000000Z"
 nss-email-distrust-after: "%00"
 -----BEGIN CERTIFICATE-----
 MIIEKjCCAxKgAwIBAgIQYAGXt0an6rS0mtZLL/eQ+zANBgkqhkiG9w0BAQsFADCB
@@ -17613,7 +17613,7 @@ label: "VeriSign Class 3 Public Primary Certification Authority - G4"
 trusted: true
 nss-mozilla-ca-policy: true
 modifiable: false
-nss-server-distrust-after: "%00"
+nss-server-distrust-after: "190131000000Z"
 nss-email-distrust-after: "%00"
 -----BEGIN CERTIFICATE-----
 MIIDhDCCAwqgAwIBAgIQL4D+I4wOIg9IZxIokYesszAKBggqhkjOPQQDAzCByjEL
@@ -17698,7 +17698,7 @@ label: "VeriSign Class 3 Public Primary Certification Authority - G5"
 trusted: true
 nss-mozilla-ca-policy: true
 modifiable: false
-nss-server-distrust-after: "%00"
+nss-server-distrust-after: "190430000000Z"
 nss-email-distrust-after: "%00"
 -----BEGIN CERTIFICATE-----
 MIIE0zCCA7ugAwIBAgIQGNrRniZ96LtKIVjNzGs7SjANBgkqhkiG9w0BAQUFADCB
@@ -17809,7 +17809,7 @@ label: "VeriSign Universal Root Certification Authority"
 trusted: true
 nss-mozilla-ca-policy: true
 modifiable: false
-nss-server-distrust-after: "%00"
+nss-server-distrust-after: "190430000000Z"
 nss-email-distrust-after: "%00"
 -----BEGIN CERTIFICATE-----
 MIIEuTCCA6GgAwIBAgIQQBrEZCGzEyEDDrvkEhrFHTANBgkqhkiG9w0BAQsFADCB

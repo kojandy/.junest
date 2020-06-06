@@ -4,7 +4,7 @@
 <registry xmlns="http://www.iana.org/assignments" id="service-names-port-numbers">
   <title>Service Name and Transport Protocol Port Number Registry</title>
   <category>Service Names and Transport Protocol Port Numbers</category>
-  <updated>2020-04-28</updated>
+  <updated>2020-06-01</updated>
   <xref type="rfc" data="rfc6335"/>
   <expert>TCP/UDP: Joe Touch; Eliot Lear, Allison Mankin, Markku Kojo, Kumiko Ono, Martin Stiemerling, 
 Lars Eggert, Alexey Melnikov, Wes Eddy, Alexander Zimmermann, Brian Trammell, and Jana Iyengar
@@ -6564,9 +6564,10 @@ common service discovery mechanisms.</note>
     <description>cmd like exec, but automatic authentication is performed as for login server</description>
     <number>514</number>
   </record>
-  <record>
+  <record updated="2020-06-01">
     <name>syslog</name>
     <protocol>udp</protocol>
+    <xref type="rfc" data="rfc5426"/>
     <description/>
     <number>514</number>
   </record>
@@ -67037,13 +67038,16 @@ common service discovery mechanisms.</note>
     <description>Reserved</description>
     <number>6080</number>
   </record>
-  <record date="2014-03-27">
+  <record date="2014-03-27" updated="2020-05-04">
     <name>geneve</name>
     <protocol>udp</protocol>
-    <xref type="draft" data="draft-gross-geneve-00"/>
+    <assignee>
+      <xref type="person" data="IESG"/>
+    </assignee>
+    <xref type="draft" data="RFC-ietf-nvo3-geneve-16"/>
     <description>Generic Network Virtualization Encapsulation (Geneve)</description>
     <number>6081</number>
-    <xref type="person" data="Jesse_Gross"/>
+    <xref type="person" data="IETF_Chair"/>
   </record>
   <record>
     <protocol>tcp</protocol>
@@ -77323,15 +77327,17 @@ common service discovery mechanisms.</note>
     <description>Unassigned</description>
     <number>8779-8785</number>
   </record>
-  <record>
+  <record date="2003-03">
     <name>msgclnt</name>
     <protocol>tcp</protocol>
+    <xref type="person" data="Michael_O_Brien"/>
     <description>Message Client</description>
     <number>8786</number>
   </record>
-  <record>
+  <record date="2003-03">
     <name>msgclnt</name>
     <protocol>udp</protocol>
+    <xref type="person" data="Michael_O_Brien"/>
     <description>Message Client</description>
     <number>8786</number>
   </record>
@@ -84873,7 +84879,27 @@ common service discovery mechanisms.</note>
   </record>
   <record>
     <description>Unassigned</description>
-    <number>18464-18633</number>
+    <number>18464-18515</number>
+  </record>
+  <record>
+    <protocol>tcp</protocol>
+    <description>Reserved</description>
+    <number>18516</number>
+  </record>
+  <record date="2020-05-13">
+	<name>heythings</name>
+    <protocol>udp</protocol>
+    <assignee>
+      <xref type="person" data="Guangdong_OPPO_Mobile_Telecommunications_Corp_Ltd"/>
+    </assignee>
+    <description>HeyThings Device communicate service</description>
+    <number>18516</number>
+	<xref type="person" data="Zhai_Zhaoxuan"/>
+	<note>Defined TXT keys: heythings</note>
+  </record>
+  <record>
+    <description>Unassigned</description>
+    <number>18517-18633</number>
   </record>
   <record date="2009-02-27">
     <name>rds-ib</name>
@@ -91948,6 +91974,16 @@ common service discovery mechanisms.</note>
     <note>Defined TXT keys: None</note>
     <xref type="person" data="David_Kramer_2"/>
   </record>
+  <record date="2020-05-13">
+    <name>behnke-cc</name>
+    <protocol>tcp</protocol>
+    <assignee>
+      <xref type="person" data="Telefonbau_Behnke_GmbH"/>
+    </assignee>
+    <description>Behnke doorphones / emergency phones</description>
+    <note>Defined TXT keys: None</note>
+    <xref type="person" data="Thomas_Kraemer"/>
+  </record>
   <record date="2013-10-15">
     <name>bender</name>
     <assignee>
@@ -92122,6 +92158,28 @@ common service discovery mechanisms.</note>
     <description>JSON RPC Bridge Protocol</description>
     <note>Defined TXT keys:  path, version</note>
     <xref type="person" data="Michel_Stam_2"/>
+  </record>
+  <record date="2020-04-29">
+    <name>brski-proxy</name>
+    <protocol>tcp</protocol>
+    <assignee>
+      <xref type="person" data="IESG"/>
+    </assignee>
+    <description>The Bootstrapping Remote Secure Key Infrastructures Proxy</description>
+	<xref type="draft" data="RFC-ietf-anima-bootstrapping-keyinfra-41"/>
+    <note>Defined TXT keys: None</note>
+    <xref type="person" data="IETF_Chair"/>
+  </record>
+  <record date="2020-04-29">
+    <name>brski-registrar</name>
+    <protocol>tcp</protocol>
+    <assignee>
+      <xref type="person" data="IESG"/>
+    </assignee>
+    <description>The Bootstrapping Remote Secure Key Infrastructures Registrar</description>
+	<xref type="draft" data="RFC-ietf-anima-bootstrapping-keyinfra-41"/>
+    <note>Defined TXT keys: None</note>
+    <xref type="person" data="IETF_Chair"/>
   </record>
   <record>
     <name>bsqdea</name>
@@ -94260,6 +94318,16 @@ There is no possibility of name conflict because (by definition) GUIDs are globa
     <description>Logic Pro Distributed Audio</description>
     <note>Defined TXT keys: None</note>
     <xref type="person" data="Nikolaus_Gerteis"/>
+  </record>
+  <record date="2020-05-06">
+    <name>logsheetserver</name>
+    <protocol>tcp</protocol>
+    <assignee>
+      <xref type="person" data="X2_Studios_Ltd"/>
+    </assignee>
+    <description>logSheet Server Synchronization Server</description>
+    <note>Defined TXT keys: lssvers</note>
+    <xref type="person" data="Jason_McNeil"/>
   </record>
   <record>
     <name>lonbridge</name>
@@ -106642,6 +106710,11 @@ implementations.  See RFC 3692 for details.</footnote>
       <uri>mailto:iana&amp;pqgruber.com</uri>
       <updated>2019-12-31</updated>
     </person>
+    <person id="Guangdong_OPPO_Mobile_Telecommunications_Corp_Ltd">
+      <org>Guangdong OPPO Mobile Telecommunications Corp.,Ltd.</org>
+      <uri>mailto:zhaizhaoxuan&amp;oppo.com</uri>
+      <updated>2020-05-13</updated>
+    </person>
     <person id="Guhan_Suriyanarayana">
       <name>Guhan Suriyanarayanan</name>
       <uri>mailto:guhans&amp;microsoft.com</uri>
@@ -108203,6 +108276,11 @@ implementations.  See RFC 3692 for details.</footnote>
       <name>Jason McManus</name>
       <uri>mailto:jasonm&amp;sleepdep.net</uri>
     </person>
+    <person id="Jason_McNeil">
+      <name>Jason McNeil</name>
+      <uri>mailto:jmcneil&amp;x2studios.com</uri>
+      <updated>2020-05-06</updated>
+    </person>
     <person id="Jason_Reskin">
       <name>Jason Reskin</name>
       <uri>mailto:cases&amp;unistellar.fogbugz.com</uri>
@@ -108651,7 +108729,8 @@ implementations.  See RFC 3692 for details.</footnote>
     </person>
     <person id="Jeremy_Maiden">
       <name>Jeremy Maiden</name>
-      <uri>mailto:jeremy&amp;komarr.demon.co.uk</uri>
+      <uri>mailto:jeremy&amp;3507.uk</uri>
+	  <updated>2020-05-01</updated>
     </person>
     <person id="Jeremy_McClintock">
       <name>Jeremy McClintock</name>
@@ -113272,8 +113351,8 @@ implementations.  See RFC 3692 for details.</footnote>
     </person>
     <person id="Michael_O_Brien">
       <name>Michael O'Brien</name>
-      <uri>mailto:mobrien02&amp;comcast.net</uri>
-      <updated>2003-03</updated>
+      <uri>mailto:mobrien03&amp;gmail.com</uri>
+      <updated>2020-05-11</updated>
     </person>
     <person id="Michael_O_Connor">
       <name>Michael O'Connor</name>
@@ -120431,6 +120510,11 @@ implementations.  See RFC 3692 for details.</footnote>
       <uri>mailto:czimmermann&amp;teledyne.com</uri>
       <updated>2012-09-19</updated>
     </person>
+    <person id="Telefonbau_Behnke_GmbH">
+      <org>Telefonbau Behnke GmbH</org>
+      <uri>mailto:info&amp;behnke-online.de</uri>
+      <updated>2020-05-13</updated>
+    </person>
     <person id="Telepathy_project">
       <name>Telepathy project</name>
       <uri>mailto:telepathy&amp;lists.freedesktop.org</uri>
@@ -120689,6 +120773,12 @@ implementations.  See RFC 3692 for details.</footnote>
     <person id="Thomas_Koell">
       <name>Thomas Koell</name>
       <uri>mailto:info&amp;sf.com</uri>
+    </person>
+    <person id="Thomas_Kraemer">
+      <name>Thomas Kraemer</name>
+      <org>Telefonbau Behnke GmbH</org>
+      <uri>mailto:thomas_kraemer&amp;behnke-online.de</uri>
+      <updated>2020-05-13</updated>
     </person>
     <person id="Thomas_Kuiper">
       <name>Thomas Kuiper</name>
@@ -122480,6 +122570,11 @@ implementations.  See RFC 3692 for details.</footnote>
       <name>Wyatt Williams</name>
       <uri>mailto:wyattw&amp;icall.com</uri>
     </person>
+    <person id="X2_Studios_Ltd">
+      <org>X2 Studios Ltd</org>
+      <uri>mailto:support&amp;x2studios.com</uri>
+      <updated>2020-05-06</updated>
+    </person>
     <person id="Xavier_Roques">
       <name>Xavier Roques</name>
       <uri>mailto:xroques&amp;infovista.fr</uri>
@@ -122822,6 +122917,12 @@ implementations.  See RFC 3692 for details.</footnote>
       <org>ZeroMQ.org</org>
       <uri>mailto:ph&amp;imatix.com</uri>
       <updated>2012-11-01</updated>
+    </person>
+    <person id="Zhai_Zhaoxuan">
+      <name>Zhai Zhaoxuan</name>
+      <org>Guangdong OPPO Mobile Telecommunications Corp.,Ltd.</org>
+      <uri>mailto:zhaizhaoxuan&amp;oppo.com</uri>
+      <updated>2020-05-13</updated>
     </person>
     <person id="Zhang_Xinnan">
       <name>Zhang Xinnan</name>

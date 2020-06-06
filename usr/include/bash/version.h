@@ -14,4 +14,4 @@
 #define DEFAULT_COMPAT_LEVEL 50
 
 /* A version string for use by sccs and the what command. */
-#define SCCSVERSION "@(#)Bash version 5.0.16(1) release GNU"
+#define SCCSVERSION "@(#)Bash version 5.0.17(1) release GNU"

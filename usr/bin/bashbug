@@ -31,7 +31,7 @@ OS="linux-gnu"
 CC="gcc"
 CFLAGS="-march=x86-64 -mtune=generic -O2 -pipe -fno-plt -DDEFAULT_PATH_VALUE='"/usr/local/sbin:/usr/local/bin:/usr/bin"' -DSTANDARD_UTILS_PATH='"/usr/bin"' -DSYS_BASHRC='"/etc/bash.bashrc"' -DSYS_BASH_LOGOUT='"/etc/bash.bash_logout"' -DNON_INTERACTIVE_LOGIN_SHELLS -Wno-parentheses -Wno-format-security"
 RELEASE="5.0"
-PATCHLEVEL="16"
+PATCHLEVEL="17"
 RELSTATUS="release"
 MACHTYPE="x86_64-pc-linux-gnu"
 
