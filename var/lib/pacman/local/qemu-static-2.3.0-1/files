@@ -1,6 +1,0 @@
-%FILES%
-usr/
-usr/bin/
-usr/bin/qemu-x86_64-static-arm
-usr/bin/qemu-x86_64-static-x86
-

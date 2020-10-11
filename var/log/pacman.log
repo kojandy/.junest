@@ -699,3 +699,10 @@ filesystem: 755  package: 2755
 [2020-10-11T02:24:12+0000] [ALPM-SCRIPTLET]   Skipped: Current root is not booted.
 [2020-10-11T02:24:12+0000] [ALPM] running 'detect-old-perl-modules.hook'...
 [2020-10-11T02:28:52+0000] [PACMAN] Running 'pacman -Scc'
+[2020-10-11T02:34:18+0000] [PACMAN] Running 'pacman -Rsn bubblewrap groot-git qemu-static'
+[2020-10-11T02:34:18+0000] [ALPM] transaction started
+[2020-10-11T02:34:18+0000] [ALPM] removed qemu-static (2.3.0-1)
+[2020-10-11T02:34:18+0000] [ALPM] removed groot-git (1.0.1-1)
+[2020-10-11T02:34:18+0000] [ALPM] removed bubblewrap (0.4.1-1)
+[2020-10-11T02:34:18+0000] [ALPM] transaction completed
+[2020-10-11T02:34:18+0000] [ALPM] running '30-systemd-update.hook'...
