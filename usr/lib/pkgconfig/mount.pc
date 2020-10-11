@@ -16,7 +16,8 @@ includedir=/usr/include
 
 Name: mount
 Description: mount library
-Version: 2.35.2
+Version: 2.36.0
 Requires.private: blkid  
 Cflags: -I${includedir}/libmount
 Libs: -L${libdir} -lmount
+Libs.private: 

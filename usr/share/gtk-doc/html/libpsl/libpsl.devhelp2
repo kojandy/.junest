@@ -6,6 +6,13 @@
     </sub>
     <sub name="API Index" link="api-index-full.html"/>
     <sub name="Index of deprecated API" link="deprecated-api-index.html"/>
+    <sub name="Index of symbols included in 0.1" link="ix03.html"/>
+    <sub name="New symbols included in 0.2.5" link="ix04.html"/>
+    <sub name="New symbols included in 0.4" link="ix05.html"/>
+    <sub name="New symbols included in 0.10.0" link="ix06.html"/>
+    <sub name="Index of symbols included in 0.11.0" link="ix07.html"/>
+    <sub name="Index of symbols included in 0.16" link="ix08.html"/>
+    <sub name="Index of symbols included in 0.19" link="ix09.html"/>
   </chapters>
   <functions>
     <keyword type="function" name="psl_load_file ()" link="libpsl-Public-Suffix-List-functions.html#psl-load-file" since="0.1"/>
@@ -30,6 +37,7 @@
     <keyword type="function" name="psl_check_version_number ()" link="libpsl-Public-Suffix-List-functions.html#psl-check-version-number" since="0.11.0"/>
     <keyword type="function" name="psl_str_to_utf8lower ()" link="libpsl-Public-Suffix-List-functions.html#psl-str-to-utf8lower" since="0.4"/>
     <keyword type="function" name="psl_free_string ()" link="libpsl-Public-Suffix-List-functions.html#psl-free-string" since="0.19"/>
+    <keyword type="macro" name="PSL_API" link="libpsl-Public-Suffix-List-functions.html#PSL-API:CAPS"/>
     <keyword type="macro" name="PSL_VERSION" link="libpsl-Public-Suffix-List-functions.html#PSL-VERSION:CAPS"/>
     <keyword type="macro" name="PSL_VERSION_MAJOR" link="libpsl-Public-Suffix-List-functions.html#PSL-VERSION-MAJOR:CAPS"/>
     <keyword type="macro" name="PSL_VERSION_MINOR" link="libpsl-Public-Suffix-List-functions.html#PSL-VERSION-MINOR:CAPS"/>

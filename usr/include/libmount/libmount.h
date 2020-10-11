@@ -40,10 +40,10 @@ extern "C" {
 # include <sys/mount.h>
 #endif
 
-#define LIBMOUNT_VERSION   "2.35.2"
+#define LIBMOUNT_VERSION   "2.36.0"
 #define LIBMOUNT_MAJOR_VERSION   2
-#define LIBMOUNT_MINOR_VERSION   35
-#define LIBMOUNT_PATCH_VERSION   2
+#define LIBMOUNT_MINOR_VERSION   36
+#define LIBMOUNT_PATCH_VERSION   0
 
 /**
  * libmnt_cache:
@@ -912,6 +912,7 @@ extern int mnt_context_set_syscall_status(struct libmnt_context *cxt, int status
 #define MNT_MS_FEC_DEVICE (1 << 22)
 #define MNT_MS_FEC_OFFSET (1 << 23)
 #define MNT_MS_FEC_ROOTS (1 << 24)
+#define MNT_MS_ROOT_HASH_SIG (1 << 25)
 
 /*
  * mount(2) MS_* masks (MNT_MAP_LINUX map)

@@ -215,6 +215,7 @@
   /* End of DW_CC_*.  */
 
 #define DWARF_ALL_KNOWN_DW_CFA \
+  DWARF_ONE_KNOWN_DW_CFA (AARCH64_negate_ra_state, DW_CFA_AARCH64_negate_ra_state) \
   DWARF_ONE_KNOWN_DW_CFA (GNU_args_size, DW_CFA_GNU_args_size) \
   DWARF_ONE_KNOWN_DW_CFA (GNU_negative_offset_extended, DW_CFA_GNU_negative_offset_extended) \
   DWARF_ONE_KNOWN_DW_CFA (GNU_window_save, DW_CFA_GNU_window_save) \

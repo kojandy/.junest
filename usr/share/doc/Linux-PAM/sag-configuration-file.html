@@ -179,9 +179,19 @@
              equivalent to ok with the side effect of terminating the module
              stack and PAM immediately returning to the application.
           </p></dd><dt><span class="term">N (an unsigned integer)</span></dt><dd><p>
-	     equivalent to ok with the side effect of jumping over the
-	     next N modules in the stack. Note that N equal to 0 is not
-	     allowed (and it would be identical to ok in such case).
+             jump over the next N modules in the stack.
+             Note that N equal to 0 is not allowed,
+             it would be treated as <span class="emphasis"><em>ignore</em></span> in such case.
+             The side effect depends on the PAM function call:
+             for <span class="emphasis"><em>pam_authenticate</em></span>,
+             <span class="emphasis"><em>pam_acct_mgmt</em></span>,
+             <span class="emphasis"><em>pam_chauthtok</em></span>, and
+             <span class="emphasis"><em>pam_open_session</em></span>
+             it is <span class="emphasis"><em>ignore</em></span>;
+             for <span class="emphasis"><em>pam_setcred</em></span> and
+             <span class="emphasis"><em>pam_close_session</em></span> it is
+             one of <span class="emphasis"><em>ignore</em></span>, <span class="emphasis"><em>ok</em></span>,
+             or <span class="emphasis"><em>bad</em></span> depending on the module's return value.
           </p></dd><dt><span class="term">reset</span></dt><dd><p>
              clear all memory of the state of the module stack and
              start again with the next stacked module.

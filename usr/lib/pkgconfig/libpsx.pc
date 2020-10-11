@@ -5,7 +5,7 @@ includedir=/usr/include
 
 Name: libpsx
 Description: libpsx - linux posix syscall API for pthreads
-Version: 2.34
+Version: 2.43
 Libs: -L${libdir} -lpsx -lpthread -Wl,-wrap,pthread_create
 Libs.private: 
 Cflags: -I${includedir}

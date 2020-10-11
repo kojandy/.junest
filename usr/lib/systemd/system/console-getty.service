@@ -27,7 +27,6 @@ UtmpIdentifier=cons
 TTYPath=/dev/console
 TTYReset=yes
 TTYVHangup=yes
-KillMode=process
 IgnoreSIGPIPE=no
 SendSIGHUP=yes
 

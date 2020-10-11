@@ -76,6 +76,13 @@
             user access to a service if their official password is blank.
             The <code class="option">nullok</code> argument overrides this default.
           </p></dd><dt><span class="term">
+          <code class="option">nullresetok</code>
+        </span></dt><dd><p>
+            Allow users to authenticate with blank password if password reset
+            is enforced even if <code class="option">nullok</code> is not set. If password
+            reset is not required and <code class="option">nullok</code> is not set the
+            authentication with blank password will be denied.
+          </p></dd><dt><span class="term">
           <code class="option">try_first_pass</code>
         </span></dt><dd><p>
             Before prompting the user for their password, the module first
@@ -142,28 +149,38 @@
           <code class="option">sha256</code>
         </span></dt><dd><p>
             When a user changes their password next,
-            encrypt it with the SHA256 algorithm. If the
-            SHA256 algorithm is not known to the <span class="citerefentry"><span class="refentrytitle">crypt</span>(3)</span> function,
-            fall back to MD5.
+            encrypt it with the SHA256 algorithm. The
+            SHA256 algorithm must be supported by the <span class="citerefentry"><span class="refentrytitle">crypt</span>(3)</span> function.
           </p></dd><dt><span class="term">
           <code class="option">sha512</code>
         </span></dt><dd><p>
             When a user changes their password next,
-            encrypt it with the SHA512 algorithm. If the
-            SHA512 algorithm is not known to the <span class="citerefentry"><span class="refentrytitle">crypt</span>(3)</span> function,
-            fall back to MD5.
+            encrypt it with the SHA512 algorithm. The
+            SHA512 algorithm must be supported by the <span class="citerefentry"><span class="refentrytitle">crypt</span>(3)</span> function.
           </p></dd><dt><span class="term">
           <code class="option">blowfish</code>
         </span></dt><dd><p>
             When a user changes their password next,
-            encrypt it with the blowfish algorithm. If the
-            blowfish algorithm is not known to the <span class="citerefentry"><span class="refentrytitle">crypt</span>(3)</span> function,
-            fall back to MD5.
+            encrypt it with the blowfish algorithm. The
+            blowfish algorithm must be supported by the <span class="citerefentry"><span class="refentrytitle">crypt</span>(3)</span> function.
+          </p></dd><dt><span class="term">
+          <code class="option">gost_yescrypt</code>
+        </span></dt><dd><p>
+            When a user changes their password next,
+            encrypt it with the gost-yescrypt algorithm. The
+            gost-yescrypt algorithm must be supported by the <span class="citerefentry"><span class="refentrytitle">crypt</span>(3)</span> function.
+          </p></dd><dt><span class="term">
+          <code class="option">yescrypt</code>
+        </span></dt><dd><p>
+            When a user changes their password next,
+            encrypt it with the yescrypt algorithm. The
+            yescrypt algorithm must be supported by the <span class="citerefentry"><span class="refentrytitle">crypt</span>(3)</span> function.
           </p></dd><dt><span class="term">
           <code class="option">rounds=<em class="replaceable"><code>n</code></em></code>
         </span></dt><dd><p>
-            Set the optional number of rounds of the SHA256, SHA512
-            and blowfish password hashing algorithms to
+            Set the optional number of rounds of the SHA256, SHA512,
+            blowfish, gost-yescrypt, and yescrypt password hashing
+            algorithms to
             <em class="replaceable"><code>n</code></em>.
           </p></dd><dt><span class="term">
           <code class="option">broken_shadow</code>
@@ -207,7 +224,7 @@ account    required   pam_unix.so
 # Change the user's password, but at first check the strength
 # with pam_cracklib(8)
 password   required   pam_cracklib.so retry=3 minlen=6 difok=3
-password   required   pam_unix.so use_authtok nullok md5
+password   required   pam_unix.so use_authtok nullok yescrypt
 session    required   pam_unix.so
       </pre><p>
     </p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="sag-pam_unix-author"></a>6.37.6. AUTHOR</h3></div></div></div><p>

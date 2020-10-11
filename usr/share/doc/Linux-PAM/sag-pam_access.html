@@ -216,6 +216,9 @@
     </p><p>+:john foo:2001:db8:0:101::1</p><p>
       User <span class="emphasis"><em>john</em></span> should get access from IPv6 net/mask.
     </p><p>+:john:2001:db8:0:101::/64</p><p>
+      Members of group <span class="emphasis"><em>wheel</em></span> should be allowed to get access
+      from all sources.
+    </p><p>+:(wheel):ALL</p><p>
       Disallow console logins to all but the shutdown, sync and all
       other accounts, which are a member of the wheel group.
     </p><p>-:ALL EXCEPT (wheel) shutdown sync:LOCAL</p><p>

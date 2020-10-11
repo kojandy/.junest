@@ -228,6 +228,19 @@ const struct pam_conv *pam_conversation;
 pam_handle_t **pamh;
  
 
+int pam_start_confdir( service_name,      
+                       user,              
+                       pam_conversation,  
+                       confdir,           
+                       pamh);             
+
+const char *service_name;
+const char *user;
+const struct pam_conv *pam_conversation;
+const char *confdir;
+pam_handle_t **pamh;
+ 
+
 3.1.1.1. DESCRIPTION
 
 The pam_start function creates the PAM context and initiates the PAM
@@ -257,8 +270,13 @@ error case is the content of pamh undefined.
 The pam_handle_t is a blind structure and the application should not attempt to
 probe it directly for information. Instead the PAM library provides the
 functions pam_set_item(3) and pam_get_item(3). The PAM handle cannot be used
-for mulitiple authentications at the same time as long as pam_end was not
-called on it before.
+for multiple authentications at the same time as long as pam_end was not called
+on it before.
+
+The pam_start_confdir function behaves like the pam_start function but it also
+allows setting confdir argument with a path to a directory to override the
+default (/etc/pam.d) path for service policy files. If the confdir is NULL, the
+function works exactly the same as pam_start.
 
 3.1.1.2. RETURN VALUES
 
@@ -272,7 +290,7 @@ PAM_BUF_ERR
 
 PAM_SUCCESS
 
-    Transaction was successful created.
+    Transaction was successfully started.
 
 PAM_SYSTEM_ERR
 
@@ -341,7 +359,7 @@ const void *item;
 3.1.3.1. DESCRIPTION
 
 The pam_set_item function allows applications and PAM service modules to access
-and to update PAM informations of item_type. For this a copy of the object
+and to update PAM information of item_type. For this a copy of the object
 pointed to by the item argument is created. The following item_types are
 supported:
 
@@ -444,7 +462,7 @@ an initialized pam_conv structure. In the case of PAM_FAIL_DELAY, item is a
 function pointer: void (*delay_fn)(int retval, unsigned usec_delay, void
 *appdata_ptr)
 
-Both, PAM_AUTHTOK and PAM_OLDAUTHTOK, will be reseted before returning to the
+Both, PAM_AUTHTOK and PAM_OLDAUTHTOK, will be reset before returning to the
 application. Which means an application is not able to access the
 authentication tokens.
 
@@ -482,7 +500,7 @@ const void **item;
 3.1.4.1. DESCRIPTION
 
 The pam_get_item function allows applications and PAM service modules to access
-and retrieve PAM informations of item_type. Upon successful return, item
+and retrieve PAM information of item_type. Upon successful return, item
 contains a pointer to the value of the corresponding item. Note, this is a
 pointer to the actual data and should not be free()'ed or over-written! The
 following values are supported for item_type:
@@ -668,8 +686,8 @@ that serves multiple authentication requests from a single event loop, the
 application might want to simply mark a given connection as blocked until an
 application timer expires. For this reason the delay function can be changed
 with the PAM_FAIL_DELAY item. It can be queried and set with pam_get_item(3)
-and pam_set_item (3) respectively. The value used to set it should be a
-function pointer of the following prototype:
+and pam_set_item(3) respectively. The value used to set it should be a function
+pointer of the following prototype:
 
 void (*delay_fn)(int retval, unsigned usec_delay, void *appdata_ptr);
 
@@ -678,8 +696,13 @@ The arguments being the retval return code of the module stack, the usec_delay
 micro-second delay that libpam is requesting and the appdata_ptr that the
 application has associated with the current pamh. This last value was set by
 the application when it called pam_start(3) or explicitly with pam_set_item(3).
-Note, if PAM_FAIL_DELAY item is unset (or set to NULL), then no delay will be
-performed.
+
+Note that the PAM_FAIL_DELAY item is set to NULL by default. This indicates
+that PAM should perform a random delay as described above when authentication
+fails and a delay has been suggested. If an application does not want the PAM
+library to perform any delay on authentication failure, then the application
+must define a custom delay function that executes no statements and set the
+PAM_FAIL_DELAY item to point to this function.
 
 3.1.6.2. RETURN VALUES
 
@@ -830,7 +853,7 @@ PAM_SUCCESS
 PAM_SYSTEM_ERR
 
     A NULL pointer was submitted as PAM handle, the function was called by a
-    module or another system error occured.
+    module or another system error occurred.
 
 PAM_USER_UNKNOWN
 
@@ -1092,7 +1115,7 @@ NAME
     variable from the PAM environment.
 
 pam_putenv() operates on a copy of name_value, which means in contrast to 
-putenv(3), the application is responsible to free the data.
+putenv(3), the application is responsible for freeing the data.
 
 3.1.13.2. RETURN VALUES
 
@@ -1245,9 +1268,9 @@ also be convenient for the application that related things come at once: a
 windows based application can then present a single form with many messages/
 prompts on at once.
 
-In passing, it is worth noting that there is a descrepency between the way
+In passing, it is worth noting that there is a discrepancy between the way
 Linux-PAM handles the const struct pam_message **msg conversation function
-argument from the way that Solaris' PAM (and derivitives, known to include HP/
+argument and the way that Solaris' PAM (and derivatives, known to include HP/
 UX, are there others?) does. Linux-PAM interprets the msg argument as entirely
 equivalent to the following prototype const struct pam_message *msg[] (which,
 in spirit, is consistent with the commonly used prototypes for argv argument to
@@ -1457,7 +1480,7 @@ In addition to simply slotting into the appropriate pam_conv(3), this function
 provides some time-out facilities. The function exports five variables that can
 be used by an application programmer to limit the amount of time this
 conversation function will spend waiting for the user to type something. The
-five variabls are as follows:
+five variables are as follows:
 
 time_t pam_misc_conv_warn_time;
 
@@ -1469,11 +1492,11 @@ time_t pam_misc_conv_warn_time;
 
 const char *pam_misc_conv_warn_line;
 
-    Used in conjuction with pam_misc_conv_warn_time, this variable is a pointer
-    to the string that will be displayed when it becomes time to warn the user
-    that the timeout is approaching. Its default value is a translated version
-    of “...Time is running out...”, but this can be changed by the application
-    prior to passing control to Linux-PAM.
+    Used in conjunction with pam_misc_conv_warn_time, this variable is a
+    pointer to the string that will be displayed when it becomes time to warn
+    the user that the timeout is approaching. Its default value is a translated
+    version of “...Time is running out...”, but this can be changed by the
+    application prior to passing control to Linux-PAM.
 
 time_t pam_misc_conv_die_time;
 
@@ -1485,7 +1508,7 @@ time_t pam_misc_conv_die_time;
 
 const char *pam_misc_conv_die_line;
 
-    Used in conjuction with pam_misc_conv_die_time, this variable is a pointer
+    Used in conjunction with pam_misc_conv_die_time, this variable is a pointer
     to the string that will be displayed when the conversation times out. Its
     default value is a translated version of “...Sorry, your time is up!”, but
     this can be changed by the application prior to passing control to 
@@ -1493,7 +1516,7 @@ const char *pam_misc_conv_die_line;
 
 int pam_misc_conv_died;
 
-    Following a return from the Linux-PAM libraray, the value of this variable
+    Following a return from the Linux-PAM library, the value of this variable
     indicates whether the conversation has timed out. A value of 1 indicates
     the time-out occurred.
 

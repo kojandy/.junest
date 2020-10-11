@@ -9,7 +9,7 @@
       The function exports five variables that can be used by an
       application programmer to limit the amount of time this conversation
       function will spend waiting for the user to type something. The
-      five variabls are as follows:
+      five variables are as follows:
     </p><div class="variablelist"><dl class="variablelist"><dt><span class="term"><span class="type">time_t</span> <code class="varname">pam_misc_conv_warn_time</code>;</span></dt><dd><p>
             This variable contains the <span class="emphasis"><em>time</em></span> (as
             returned by <span class="citerefentry"><span class="refentrytitle">time</span>(2)</span>) that the user should be first warned that
@@ -19,7 +19,7 @@
             sometime in the future, but this should be done prior to
             passing control to the <span class="emphasis"><em>Linux-PAM</em></span> library.
           </p></dd><dt><span class="term"><span class="type">const char *</span><code class="varname">pam_misc_conv_warn_line</code>;</span></dt><dd><p>
-            Used in conjuction with
+            Used in conjunction with
             <code class="varname">pam_misc_conv_warn_time</code>, this variable is
             a pointer to the string that will be displayed when it becomes
             time to warn the user that the timeout is approaching. Its
@@ -36,7 +36,7 @@
             be done prior to passing control to the
             <span class="emphasis"><em>Linux-PAM</em></span> library.
           </p></dd><dt><span class="term"><span class="type">const char *</span><code class="varname">pam_misc_conv_die_line</code>;</span></dt><dd><p>
-            Used in conjuction with
+            Used in conjunction with
             <code class="varname">pam_misc_conv_die_time</code>, this variable is
             a pointer to the string that will be displayed when the
             conversation times out. Its default value is a translated
@@ -46,7 +46,7 @@
             <span class="emphasis"><em>Linux-PAM</em></span>.
           </p></dd><dt><span class="term"><span class="type">int</span> <code class="varname">pam_misc_conv_died</code>;</span></dt><dd><p>
             Following a return from the <span class="emphasis"><em>Linux-PAM</em></span>
-            libraray, the value of this variable indicates whether the
+            library, the value of this variable indicates whether the
             conversation has timed out. A value of
             <span class="returnvalue">1</span> indicates the time-out occurred.
           </p></dd></dl></div><p>

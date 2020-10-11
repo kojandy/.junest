@@ -5,7 +5,7 @@ includedir=/usr/include
 
 Name: libcap
 Description: libcap - linux capabilities library
-Version: 2.34
+Version: 2.43
 Libs: -L${libdir} -lcap
 Libs.private: 
 Cflags: -I${includedir}

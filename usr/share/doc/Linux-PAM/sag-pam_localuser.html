@@ -30,8 +30,16 @@
     </p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="sag-pam_localuser-return_values"></a>6.17.4. RETURN VALUES</h3></div></div></div><p>
       </p><div class="variablelist"><dl class="variablelist"><dt><span class="term">PAM_SUCCESS</span></dt><dd><p>
               The new localuser was set successfully.
+            </p></dd><dt><span class="term">PAM_BUF_ERR</span></dt><dd><p>
+              Memory buffer error.
+            </p></dd><dt><span class="term">PAM_CONV_ERR</span></dt><dd><p>
+              The conversation method supplied by the application
+              failed to obtain the username.
+            </p></dd><dt><span class="term">PAM_INCOMPLETE</span></dt><dd><p>
+              The conversation method supplied by the application
+              returned PAM_CONV_AGAIN.
             </p></dd><dt><span class="term">PAM_SERVICE_ERR</span></dt><dd><p>
-              No username was given.
+              The user name is not valid or the passwd file is unavailable.
             </p></dd><dt><span class="term">PAM_PERM_DENIED</span></dt><dd><p>
               The user is not listed in the passwd file.
             </p></dd></dl></div><p>

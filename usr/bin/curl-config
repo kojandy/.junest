@@ -6,7 +6,7 @@
 #                            | (__| |_| |  _ <| |___
 #                             \___|\___/|_| \_\_____|
 #
-# Copyright (C) 2001 - 2018, Daniel Stenberg, <daniel@haxx.se>, et al.
+# Copyright (C) 2001 - 2020, Daniel Stenberg, <daniel@haxx.se>, et al.
 #
 # This software is licensed as described in the file COPYING, which
 # you should have received as part of this distribution. The terms
@@ -84,7 +84,7 @@ while test $# -gt 0; do
         ;;
 
     --feature|--features)
-        for feature in SSL IPv6 UnixSockets libz AsynchDNS IDN GSS-API PSL SPNEGO Kerberos NTLM NTLM_WB TLS-SRP HTTP2 HTTPS-proxy ""; do
+        for feature in AsynchDNS GSS-API HTTP2 HTTPS-proxy IDN IPv6 Kerberos NTLM NTLM_WB PSL SPNEGO SSL TLS-SRP UnixSockets libz zstd ""; do
             test -n "$feature" && echo "$feature"
         done
         ;;
@@ -96,7 +96,7 @@ while test $# -gt 0; do
         ;;
 
     --version)
-        echo libcurl 7.70.0
+        echo libcurl 7.72.0
         exit 0
         ;;
 
@@ -108,11 +108,11 @@ while test $# -gt 0; do
         # dash as that's used for things like version 1.2.3-CVS
         cpatch=`echo $checkfor | cut -d. -f3 | cut -d- -f1`
 
-        vmajor=`echo 7.70.0 | cut -d. -f1`
-        vminor=`echo 7.70.0 | cut -d. -f2`
+        vmajor=`echo 7.72.0 | cut -d. -f1`
+        vminor=`echo 7.72.0 | cut -d. -f2`
         # when extracting the patch part we strip off everything after a
         # dash as that's used for things like version 1.2.3-CVS
-        vpatch=`echo 7.70.0 | cut -d. -f3 | cut -d- -f1`
+        vpatch=`echo 7.72.0 | cut -d. -f3 | cut -d- -f1`
 
         if test "$vmajor" -gt "$cmajor"; then
             exit 0;
@@ -128,12 +128,12 @@ while test $# -gt 0; do
             fi
         fi
 
-        echo "requested version $checkfor is newer than existing 7.70.0"
+        echo "requested version $checkfor is newer than existing 7.72.0"
         exit 1
         ;;
 
     --vernum)
-        echo 074600
+        echo 074800
         exit 0
         ;;
 
@@ -160,8 +160,8 @@ while test $# -gt 0; do
         else
            CURLLIBDIR=""
         fi
-        if test "Xno" = "Xyes"; then
-          echo ${CURLLIBDIR}-lcurl -lnghttp2 -lidn2 -lssh2 -lssh2 -lpsl -lssl -lcrypto -lssl -lcrypto -lgssapi_krb5 -lkrb5 -lk5crypto -lcom_err -lz
+        if test "Xyes" = "Xno"; then
+          echo ${CURLLIBDIR}-lcurl -lnghttp2 -lidn2 -lssh2 -lssh2 -lpsl -lssl -lcrypto -lssl -lcrypto -lgssapi_krb5 -lkrb5 -lk5crypto -lcom_err -lzstd -lz
         else
           echo ${CURLLIBDIR}-lcurl
         fi
@@ -172,7 +172,7 @@ while test $# -gt 0; do
 
     --static-libs)
         if test "Xyes" != "Xno" ; then
-          echo ${exec_prefix}/lib/libcurl.a -Wl,-O1,--sort-common,--as-needed,-z,relro,-z,now -lnghttp2 -lidn2 -lssh2 -lssh2 -lpsl -lssl -lcrypto -lssl -lcrypto -lgssapi_krb5 -lkrb5 -lk5crypto -lcom_err -lz
+          echo ${exec_prefix}/lib/libcurl.a -Wl,-O1,--sort-common,--as-needed,-z,relro,-z,now -lnghttp2 -lidn2 -lssh2 -lssh2 -lpsl -lssl -lcrypto -lssl -lcrypto -lgssapi_krb5 -lkrb5 -lk5crypto -lcom_err -lzstd -lz
         else
           echo "curl was built with static libraries disabled" >&2
           exit 1

@@ -42,11 +42,11 @@ extern "C" {
  * instead.  The purpose of this macro is to let autoconf (using the
  * AM_PATH_GPGME macro) check that this header matches the installed
  * library.  */
-#define GPGME_VERSION "1.13.1"
+#define GPGME_VERSION "1.14.0"
 
 /* The version number of this header.  It may be used to handle minor
  * API incompatibilities.  */
-#define GPGME_VERSION_NUMBER 0x010d01
+#define GPGME_VERSION_NUMBER 0x010e00
 
 
 /* System specific typedefs.  */
@@ -316,7 +316,7 @@ typedef enum
 gpgme_sig_mode_t;
 
 
-/* The available validities for a trust item or key.  */
+/* The available validities for a key.  */
 typedef enum
   {
     GPGME_VALIDITY_UNKNOWN   = 0,
@@ -382,6 +382,7 @@ gpgme_protocol_t;
 #define GPGME_KEYLIST_MODE_SIG_NOTATIONS	8
 #define GPGME_KEYLIST_MODE_WITH_SECRET       	16
 #define GPGME_KEYLIST_MODE_WITH_TOFU       	32
+#define GPGME_KEYLIST_MODE_WITH_KEYGRIP       	64
 #define GPGME_KEYLIST_MODE_EPHEMERAL            128
 #define GPGME_KEYLIST_MODE_VALIDATE		256
 
@@ -409,6 +410,7 @@ gpgme_pinentry_mode_t;
 #define GPGME_EXPORT_MODE_RAW                  32
 #define GPGME_EXPORT_MODE_PKCS12               64
 #define GPGME_EXPORT_MODE_NOUID               128  /* Experimental(!)*/
+#define GPGME_EXPORT_MODE_SSH                 256
 
 typedef unsigned int gpgme_export_mode_t;
 
@@ -603,7 +605,7 @@ struct _gpgme_subkey
   /* The name of the curve for ECC algorithms or NULL.  */
   char *curve;
 
-  /* The keygrip of the subkey in hex digit form or NULL if not availabale.  */
+  /* The keygrip of the subkey in hex digit form or NULL if not available.  */
   char *keygrip;
 };
 typedef struct _gpgme_subkey *gpgme_subkey_t;
@@ -731,6 +733,9 @@ struct _gpgme_user_id
 
   /* Time of the last refresh of this user id.  0 if unknown.  */
   unsigned long last_update;
+
+  /* The string to exactly identify a userid.  Might be NULL.  */
+  char *uidhash;
 };
 typedef struct _gpgme_user_id *gpgme_user_id_t;
 
@@ -1053,7 +1058,7 @@ typedef enum
     GPGME_EVENT_START,
     GPGME_EVENT_DONE,
     GPGME_EVENT_NEXT_KEY,
-    GPGME_EVENT_NEXT_TRUSTITEM
+    GPGME_EVENT_NEXT_TRUSTITEM  /* NOT USED.  */
   }
 gpgme_event_io_t;
 
@@ -2001,63 +2006,32 @@ gpgme_error_t gpgme_op_passwd (gpgme_ctx_t ctx, gpgme_key_t key,
 
 
 /*
- * Trust items and operations.
+ * Trust items and operations.  DO NOT USE.
+ * Note: This does not work because the experimental support in the
+ * GnuPG engine has been removed a very long time; for API and ABI
+ * compatibilty we keep the functions but let them return an error.
+ * See https://dev.gnupg.org/T4834
  */
-
-/* An object to hold data of a trust item.
- * This structure shall be considered read-only and an application
- * must not allocate such a structure on its own.  */
 struct _gpgme_trust_item
 {
-  /* Internal to GPGME, do not use.  */
   unsigned int _refs;
-
-  /* The key ID to which the trust item belongs.  */
   char *keyid;
-
-  /* Internal to GPGME, do not use.  */
   char _keyid[16 + 1];
-
-  /* The type of the trust item, 1 refers to a key, 2 to a user ID.  */
   int type;
-
-  /* The trust level.  */
   int level;
-
-  /* The owner trust if TYPE is 1.  */
   char *owner_trust;
-
-  /* Internal to GPGME, do not use.  */
   char _owner_trust[2];
-
-  /* The calculated validity.  */
   char *validity;
-
-  /* Internal to GPGME, do not use.  */
   char _validity[2];
-
-  /* The user name if TYPE is 2.  */
   char *name;
 };
 typedef struct _gpgme_trust_item *gpgme_trust_item_t;
-
-/* Start a trustlist operation within CTX, searching for trust items
-   which match PATTERN.  */
 gpgme_error_t gpgme_op_trustlist_start (gpgme_ctx_t ctx,
 					const char *pattern, int max_level);
-
-/* Return the next trust item from the trustlist in R_ITEM.  */
 gpgme_error_t gpgme_op_trustlist_next (gpgme_ctx_t ctx,
 				       gpgme_trust_item_t *r_item);
-
-/* Terminate a pending trustlist operation within CTX.  */
 gpgme_error_t gpgme_op_trustlist_end (gpgme_ctx_t ctx);
-
-/* Acquire a reference to ITEM.  */
 void gpgme_trust_item_ref (gpgme_trust_item_t item);
-
-/* Release a reference to ITEM.  If this was the last one the trust
- * item is destroyed.  */
 void gpgme_trust_item_unref (gpgme_trust_item_t item);
 
 
@@ -2739,22 +2713,16 @@ unsigned long gpgme_key_sig_get_ulong_attr (gpgme_key_t key, int uid_idx,
 gpgme_error_t gpgme_op_import_ext (gpgme_ctx_t ctx, gpgme_data_t keydata,
 				   int *nr) _GPGME_DEPRECATED(0,4);
 
-/* Release the trust item ITEM.  Deprecated, use
- * gpgme_trust_item_unref.  */
+/* DO NOT USE.  */
 void gpgme_trust_item_release (gpgme_trust_item_t item) _GPGME_DEPRECATED(0,4);
 
-/* Return the value of the attribute WHAT of ITEM, which has to be
- * representable by a string.  Deprecated, use trust item structure
- * directly.  */
+/* DO NOT USE.  */
 const char *gpgme_trust_item_get_string_attr (gpgme_trust_item_t item,
 					      _gpgme_attr_t what,
 					      const void *reserved, int idx)
      _GPGME_DEPRECATED(0,4);
 
-/* Return the value of the attribute WHAT of KEY, which has to be
- * representable by an integer.  IDX specifies a running index if the
- * attribute appears more than once in the key.  Deprecated, use trust
- * item structure directly.  */
+/* DO NOT USE.  */
 int gpgme_trust_item_get_int_attr (gpgme_trust_item_t item, _gpgme_attr_t what,
 				   const void *reserved, int idx)
      _GPGME_DEPRECATED(0,4);

@@ -89,7 +89,7 @@
               the value NULL.
           </p></dd></dl></div></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="mwg-pam_set_item"></a>2.1.3. Setting PAM items</h3></div></div></div><div class="funcsynopsis"><pre class="funcsynopsisinfo">#include &lt;security/pam_modules.h&gt;</pre><table border="0" class="funcprototype-table" summary="Function synopsis" style="cellspacing: 0; cellpadding: 0;"><tr><td><code class="funcdef">int <b class="fsfunc">pam_set_item</b>(</code></td><td><var class="pdparam">pamh</var>, </td><td> </td></tr><tr><td> </td><td><var class="pdparam">item_type</var>, </td><td> </td></tr><tr><td> </td><td><var class="pdparam">item</var><code>)</code>;</td><td> </td></tr></table><div class="paramdef-list"><code>pam_handle_t *<var class="pdparam">pamh</var></code>;<br><code>int <var class="pdparam">item_type</var></code>;<br><code>const void *<var class="pdparam">item</var></code>;</div><div class="funcprototype-spacer"> </div></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="mwg-pam_set_item-description"></a>2.1.3.1. DESCRIPTION</h4></div></div></div><p>
       The <code class="function">pam_set_item</code> function allows applications
-      and PAM service modules to access and to update PAM informations
+      and PAM service modules to access and to update PAM information
       of <span class="emphasis"><em>item_type</em></span>. For this a copy
       of the object pointed to by the <span class="emphasis"><em>item</em></span> argument
       is created. The following <span class="emphasis"><em>item_type</em></span>s are
@@ -189,7 +189,7 @@
       PAM_FAIL_DELAY, <span class="emphasis"><em>item</em></span> is a function pointer:
       <code class="function">void (*delay_fn)(int retval, unsigned usec_delay, void *appdata_ptr)</code>
     </p><p>
-      Both, PAM_AUTHTOK and PAM_OLDAUTHTOK, will be reseted before
+      Both, PAM_AUTHTOK and PAM_OLDAUTHTOK, will be reset before
       returning to the application. Which means an application is not
       able to access the authentication tokens.
     </p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="mwg-pam_set_item-return_values"></a>2.1.3.2. RETURN VALUES</h4></div></div></div><div class="variablelist"><dl class="variablelist"><dt><span class="term">PAM_BAD_ITEM</span></dt><dd><p>
@@ -204,7 +204,7 @@
              argument was invalid.
           </p></dd></dl></div></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="mwg-pam_get_item"></a>2.1.4. Getting PAM items</h3></div></div></div><div class="funcsynopsis"><pre class="funcsynopsisinfo">#include &lt;security/pam_modules.h&gt;</pre><table border="0" class="funcprototype-table" summary="Function synopsis" style="cellspacing: 0; cellpadding: 0;"><tr><td><code class="funcdef">int <b class="fsfunc">pam_get_item</b>(</code></td><td><var class="pdparam">pamh</var>, </td><td> </td></tr><tr><td> </td><td><var class="pdparam">item_type</var>, </td><td> </td></tr><tr><td> </td><td><var class="pdparam">item</var><code>)</code>;</td><td> </td></tr></table><div class="paramdef-list"><code>const pam_handle_t *<var class="pdparam">pamh</var></code>;<br><code>int <var class="pdparam">item_type</var></code>;<br><code>const void **<var class="pdparam">item</var></code>;</div><div class="funcprototype-spacer"> </div></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="mwg-pam_get_item-description"></a>2.1.4.1. DESCRIPTION</h4></div></div></div><p>
       The <code class="function">pam_get_item</code> function allows applications
-      and PAM service modules to access and retrieve PAM informations
+      and PAM service modules to access and retrieve PAM information
       of <span class="emphasis"><em>item_type</em></span>. Upon successful return,
       <span class="emphasis"><em>item</em></span> contains a pointer to the value of the
       corresponding item. Note, this is a pointer to the
@@ -349,6 +349,13 @@
           </p></dd><dt><span class="term">PAM_CONV_ERR</span></dt><dd><p>
              The conversation method supplied by the
              application failed to obtain the username.
+          </p></dd><dt><span class="term">PAM_BUF_ERR</span></dt><dd><p>
+             Memory buffer error.
+          </p></dd><dt><span class="term">PAM_ABORT</span></dt><dd><p>
+            Error resuming an old conversation.
+          </p></dd><dt><span class="term">PAM_CONV_AGAIN</span></dt><dd><p>
+            The conversation method supplied by the application
+            is waiting for an event.
           </p></dd></dl></div></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="mwg-pam_conv"></a>2.1.6. The conversation function</h3></div></div></div><div class="funcsynopsis"><pre class="funcsynopsisinfo">#include &lt;security/pam_appl.h&gt;</pre></div><pre class="programlisting">
 struct pam_message {
     int msg_style;
@@ -419,10 +426,10 @@ struct pam_conv {
       things come at once: a windows based application can then present a
       single form with many messages/prompts on at once.
     </p><p>
-      In passing, it is worth noting that there is a descrepency between
+      In passing, it is worth noting that there is a discrepancy between
       the way Linux-PAM handles the const struct pam_message **msg
-      conversation function argument from the way that Solaris' PAM
-      (and derivitives, known to include HP/UX, are there others?) does.
+      conversation function argument and the way that Solaris' PAM
+      (and derivatives, known to include HP/UX, are there others?) does.
       Linux-PAM interprets the msg argument as entirely equivalent to the
       following prototype
   const struct pam_message *msg[] (which, in spirit, is consistent with
@@ -480,7 +487,7 @@ struct pam_conv {
           </p></dd></dl></div><p>
       <code class="function">pam_putenv</code>() operates on a copy of
       <span class="emphasis"><em>name_value</em></span>, which means in contrast to
-      <span class="citerefentry"><span class="refentrytitle">putenv</span>(3)</span>, the application is responsible to free the data.
+      <span class="citerefentry"><span class="refentrytitle">putenv</span>(3)</span>, the application is responsible for freeing the data.
     </p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="adg-pam_putenv-return_values"></a>2.1.7.2. RETURN VALUES</h4></div></div></div><div class="variablelist"><dl class="variablelist"><dt><span class="term">PAM_PERM_DENIED</span></dt><dd><p>
              Argument <span class="emphasis"><em>name_value</em></span> given is a NULL pointer.
           </p></dd><dt><span class="term">PAM_BAD_ITEM</span></dt><dd><p>

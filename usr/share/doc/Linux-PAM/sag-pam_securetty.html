@@ -3,9 +3,12 @@
       ]</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="sag-pam_securetty-description"></a>6.28.1. DESCRIPTION</h3></div></div></div><p>
       pam_securetty is a PAM module that allows root logins only if the
       user is logging in on a "secure" tty, as defined by the listing
-      in <code class="filename">/etc/securetty</code>. pam_securetty also checks
-      to make sure that <code class="filename">/etc/securetty</code> is a plain
-      file and not world writable. It will also allow root logins on
+      in the <code class="filename">securetty</code> file. pam_securetty checks at
+      first, if <code class="filename">/etc/securetty</code> exists. If not and
+      it was built with vendordir support, it will use
+      <code class="filename">%vendordir%/securetty</code>. pam_securetty also
+      checks that the <code class="filename">securetty</code> files are plain
+      files and not world writable. It will also allow root logins on
       the tty specified with <code class="option">console=</code> switch on the
       kernel command line and on ttys from the
       <code class="filename">/sys/class/tty/console/active</code>.
@@ -28,7 +31,7 @@
             Do not automatically allow root logins on the kernel console
             device, as specified on the kernel command line or by the sys file,
             if it is not also specified in the
-            <code class="filename">/etc/securetty</code> file.
+            <code class="filename">securetty</code> file.
           </p></dd></dl></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="sag-pam_securetty-types"></a>6.28.3. MODULE TYPES PROVIDED</h3></div></div></div><p>
       Only the <code class="option">auth</code> module type is provided.
     </p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="sag-pam_securetty-return_values"></a>6.28.4. RETURN VALUES</h3></div></div></div><div class="variablelist"><dl class="variablelist"><dt><span class="term">PAM_SUCCESS</span></dt><dd><p>
@@ -38,16 +41,20 @@
           </p></dd><dt><span class="term">PAM_AUTH_ERR</span></dt><dd><p>
             Authentication is rejected. Either root is attempting to
             log in via an unacceptable device, or the
-            <code class="filename">/etc/securetty</code> file is world writable or
+            <code class="filename">securetty</code> file is world writable or
             not a normal file.
+          </p></dd><dt><span class="term">PAM_BUF_ERR</span></dt><dd><p>
+            Memory buffer error.
+          </p></dd><dt><span class="term">PAM_CONV_ERR</span></dt><dd><p>
+            The conversation method supplied by the application
+            failed to obtain the username.
           </p></dd><dt><span class="term">PAM_INCOMPLETE</span></dt><dd><p>
-            An application error occurred. pam_securetty was not able
-            to get information it required from the application that
-            called it.
+            The conversation method supplied by the application
+            returned PAM_CONV_AGAIN.
           </p></dd><dt><span class="term">PAM_SERVICE_ERR</span></dt><dd><p>
             An error occurred while the module was determining the
             user's name or tty, or the module could not open
-            <code class="filename">/etc/securetty</code>.
+            the <code class="filename">securetty</code> file.
           </p></dd><dt><span class="term">PAM_USER_UNKNOWN</span></dt><dd><p>
             The module could not find the user name in the
             <code class="filename">/etc/passwd</code> file to verify whether

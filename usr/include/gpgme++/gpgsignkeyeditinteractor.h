@@ -50,7 +50,13 @@ public:
 
     void setCheckLevel(unsigned int checkLevel);
     void setUserIDsToSign(const std::vector<unsigned int> &userIDsToSign);
+    void setKey(const Key &key);
     void setSigningOptions(int options);
+
+    /* Set this if it is ok to overwrite an existing signature. In that
+     * case the context has to have the flag "extended-edit" set to 1 through
+     * Context::setFlag before calling edit.*/
+    void setDupeOk(bool value);
 
 private:
     const char *action(Error &err) const override;

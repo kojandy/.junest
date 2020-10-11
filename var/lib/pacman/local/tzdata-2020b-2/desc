@@ -1,0 +1,39 @@
+%NAME%
+tzdata
+
+%VERSION%
+2020b-2
+
+%BASE%
+tzdata
+
+%DESC%
+Sources for time zone and daylight saving time data
+
+%URL%
+https://www.iana.org/time-zones
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1602177066
+
+%INSTALLDATE%
+1602383015
+
+%PACKAGER%
+Andreas Radke <andyrtr@archlinux.org>
+
+%SIZE%
+2257028
+
+%REASON%
+1
+
+%LICENSE%
+custom: public domain
+
+%VALIDATION%
+pgp
+

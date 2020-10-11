@@ -1,6 +1,6 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>3.1. What can be expected by the application</title><meta name="generator" content="DocBook XSL Stylesheets Vsnapshot"><link rel="home" href="Linux-PAM_ADG.html" title="The Linux-PAM Application Developers' Guide"><link rel="up" href="adg-interface.html" title="Chapter 3.  The public interface to Linux-PAM"><link rel="prev" href="adg-interface.html" title="Chapter 3.  The public interface to Linux-PAM"><link rel="next" href="adg-interface-of-app-expected.html" title="3.2. What is expected of an application"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">3.1. What can be expected by the application</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="adg-interface.html">Prev</a> </td><th width="60%" align="center">Chapter 3. 
       The public interface to <span class="emphasis"><em>Linux-PAM</em></span>
-    </th><td width="20%" align="right"> <a accesskey="n" href="adg-interface-of-app-expected.html">Next</a></td></tr></table><hr></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="adg-interface-by-app-expected"></a>3.1. What can be expected by the application</h2></div></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="adg-pam_start"></a>3.1.1. Initialization of PAM transaction</h3></div></div></div><div class="funcsynopsis"><pre class="funcsynopsisinfo">#include &lt;security/pam_appl.h&gt;</pre><table border="0" class="funcprototype-table" summary="Function synopsis" style="cellspacing: 0; cellpadding: 0;"><tr><td><code class="funcdef">int <b class="fsfunc">pam_start</b>(</code></td><td><var class="pdparam">service_name</var>, </td><td> </td></tr><tr><td> </td><td><var class="pdparam">user</var>, </td><td> </td></tr><tr><td> </td><td><var class="pdparam">pam_conversation</var>, </td><td> </td></tr><tr><td> </td><td><var class="pdparam">pamh</var><code>)</code>;</td><td> </td></tr></table><div class="paramdef-list"><code>const char *<var class="pdparam">service_name</var></code>;<br><code>const char *<var class="pdparam">user</var></code>;<br><code>const struct pam_conv *<var class="pdparam">pam_conversation</var></code>;<br><code>pam_handle_t **<var class="pdparam">pamh</var></code>;</div><div class="funcprototype-spacer"> </div></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="adg-pam_start-description"></a>3.1.1.1. DESCRIPTION</h4></div></div></div><p>
+    </th><td width="20%" align="right"> <a accesskey="n" href="adg-interface-of-app-expected.html">Next</a></td></tr></table><hr></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="adg-interface-by-app-expected"></a>3.1. What can be expected by the application</h2></div></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="adg-pam_start"></a>3.1.1. Initialization of PAM transaction</h3></div></div></div><div class="funcsynopsis"><pre class="funcsynopsisinfo">#include &lt;security/pam_appl.h&gt;</pre><table border="0" class="funcprototype-table" summary="Function synopsis" style="cellspacing: 0; cellpadding: 0;"><tr><td><code class="funcdef">int <b class="fsfunc">pam_start</b>(</code></td><td><var class="pdparam">service_name</var>, </td><td> </td></tr><tr><td> </td><td><var class="pdparam">user</var>, </td><td> </td></tr><tr><td> </td><td><var class="pdparam">pam_conversation</var>, </td><td> </td></tr><tr><td> </td><td><var class="pdparam">pamh</var><code>)</code>;</td><td> </td></tr></table><div class="paramdef-list"><code>const char *<var class="pdparam">service_name</var></code>;<br><code>const char *<var class="pdparam">user</var></code>;<br><code>const struct pam_conv *<var class="pdparam">pam_conversation</var></code>;<br><code>pam_handle_t **<var class="pdparam">pamh</var></code>;</div><div class="funcprototype-spacer"> </div><table border="0" class="funcprototype-table" summary="Function synopsis" style="cellspacing: 0; cellpadding: 0;"><tr><td><code class="funcdef">int <b class="fsfunc">pam_start_confdir</b>(</code></td><td><var class="pdparam">service_name</var>, </td><td> </td></tr><tr><td> </td><td><var class="pdparam">user</var>, </td><td> </td></tr><tr><td> </td><td><var class="pdparam">pam_conversation</var>, </td><td> </td></tr><tr><td> </td><td><var class="pdparam">confdir</var>, </td><td> </td></tr><tr><td> </td><td><var class="pdparam">pamh</var><code>)</code>;</td><td> </td></tr></table><div class="paramdef-list"><code>const char *<var class="pdparam">service_name</var></code>;<br><code>const char *<var class="pdparam">user</var></code>;<br><code>const struct pam_conv *<var class="pdparam">pam_conversation</var></code>;<br><code>const char *<var class="pdparam">confdir</var></code>;<br><code>pam_handle_t **<var class="pdparam">pamh</var></code>;</div><div class="funcprototype-spacer"> </div></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="adg-pam_start-description"></a>3.1.1.1. DESCRIPTION</h4></div></div></div><p>
       The <code class="function">pam_start</code> function creates the PAM context
       and initiates the PAM transaction. It is the first of the PAM
       functions that needs to be called by an application. The transaction
@@ -36,15 +36,23 @@
       information. Instead the PAM library provides the functions
       <span class="citerefentry"><span class="refentrytitle">pam_set_item</span>(3)</span> and
       <span class="citerefentry"><span class="refentrytitle">pam_get_item</span>(3)</span>.
-      The PAM handle cannot be used for mulitiple authentications at the
+      The PAM handle cannot be used for multiple authentications at the
       same time as long as <code class="function">pam_end</code> was not called on
       it before.
+    </p><p>
+      The <code class="function">pam_start_confdir</code> function behaves
+      like the <code class="function">pam_start</code> function but it also
+      allows setting <span class="emphasis"><em>confdir</em></span> argument with
+      a path to a directory to override the default
+      (<code class="filename">/etc/pam.d</code>) path for service policy
+      files. If the <span class="emphasis"><em>confdir</em></span> is NULL, the function
+      works exactly the same as <code class="function">pam_start</code>.
     </p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="adg-pam_start-return_values"></a>3.1.1.2. RETURN VALUES</h4></div></div></div><div class="variablelist"><dl class="variablelist"><dt><span class="term">PAM_ABORT</span></dt><dd><p>
               General failure.
           </p></dd><dt><span class="term">PAM_BUF_ERR</span></dt><dd><p>
               Memory buffer error.
           </p></dd><dt><span class="term">PAM_SUCCESS</span></dt><dd><p>
-             Transaction was successful created.
+             Transaction was successfully started.
           </p></dd><dt><span class="term">PAM_SYSTEM_ERR</span></dt><dd><p>
               System error, for example a NULL pointer was submitted
               instead of a pointer to data.
@@ -86,7 +94,7 @@
               as PAM handle or the function was called by a module.
           </p></dd></dl></div></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="adg-pam_set_item"></a>3.1.3. Setting PAM items</h3></div></div></div><div class="funcsynopsis"><pre class="funcsynopsisinfo">#include &lt;security/pam_modules.h&gt;</pre><table border="0" class="funcprototype-table" summary="Function synopsis" style="cellspacing: 0; cellpadding: 0;"><tr><td><code class="funcdef">int <b class="fsfunc">pam_set_item</b>(</code></td><td><var class="pdparam">pamh</var>, </td><td> </td></tr><tr><td> </td><td><var class="pdparam">item_type</var>, </td><td> </td></tr><tr><td> </td><td><var class="pdparam">item</var><code>)</code>;</td><td> </td></tr></table><div class="paramdef-list"><code>pam_handle_t *<var class="pdparam">pamh</var></code>;<br><code>int <var class="pdparam">item_type</var></code>;<br><code>const void *<var class="pdparam">item</var></code>;</div><div class="funcprototype-spacer"> </div></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="adg-pam_set_item-description"></a>3.1.3.1. DESCRIPTION</h4></div></div></div><p>
       The <code class="function">pam_set_item</code> function allows applications
-      and PAM service modules to access and to update PAM informations
+      and PAM service modules to access and to update PAM information
       of <span class="emphasis"><em>item_type</em></span>. For this a copy
       of the object pointed to by the <span class="emphasis"><em>item</em></span> argument
       is created. The following <span class="emphasis"><em>item_type</em></span>s are
@@ -186,7 +194,7 @@
       PAM_FAIL_DELAY, <span class="emphasis"><em>item</em></span> is a function pointer:
       <code class="function">void (*delay_fn)(int retval, unsigned usec_delay, void *appdata_ptr)</code>
     </p><p>
-      Both, PAM_AUTHTOK and PAM_OLDAUTHTOK, will be reseted before
+      Both, PAM_AUTHTOK and PAM_OLDAUTHTOK, will be reset before
       returning to the application. Which means an application is not
       able to access the authentication tokens.
     </p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="adg-pam_set_item-return_values"></a>3.1.3.2. RETURN VALUES</h4></div></div></div><div class="variablelist"><dl class="variablelist"><dt><span class="term">PAM_BAD_ITEM</span></dt><dd><p>
@@ -201,7 +209,7 @@
              argument was invalid.
           </p></dd></dl></div></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="adg-pam_get_item"></a>3.1.4. Getting PAM items</h3></div></div></div><div class="funcsynopsis"><pre class="funcsynopsisinfo">#include &lt;security/pam_modules.h&gt;</pre><table border="0" class="funcprototype-table" summary="Function synopsis" style="cellspacing: 0; cellpadding: 0;"><tr><td><code class="funcdef">int <b class="fsfunc">pam_get_item</b>(</code></td><td><var class="pdparam">pamh</var>, </td><td> </td></tr><tr><td> </td><td><var class="pdparam">item_type</var>, </td><td> </td></tr><tr><td> </td><td><var class="pdparam">item</var><code>)</code>;</td><td> </td></tr></table><div class="paramdef-list"><code>const pam_handle_t *<var class="pdparam">pamh</var></code>;<br><code>int <var class="pdparam">item_type</var></code>;<br><code>const void **<var class="pdparam">item</var></code>;</div><div class="funcprototype-spacer"> </div></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="adg-pam_get_item-description"></a>3.1.4.1. DESCRIPTION</h4></div></div></div><p>
       The <code class="function">pam_get_item</code> function allows applications
-      and PAM service modules to access and retrieve PAM informations
+      and PAM service modules to access and retrieve PAM information
       of <span class="emphasis"><em>item_type</em></span>. Upon successful return,
       <span class="emphasis"><em>item</em></span> contains a pointer to the value of the
       corresponding item. Note, this is a pointer to the
@@ -358,7 +366,7 @@
       set with
       <span class="citerefentry"><span class="refentrytitle">pam_get_item</span>(3)</span>
       and
-      <span class="citerefentry"><span class="refentrytitle">pam_set_item </span>(3)</span>  respectively. The value used to set it should be
+      <span class="citerefentry"><span class="refentrytitle">pam_set_item</span>(3)</span>  respectively. The value used to set it should be
       a function pointer of the following prototype:
       </p><pre class="programlisting">
 void (*delay_fn)(int retval, unsigned usec_delay, void *appdata_ptr);
@@ -371,8 +379,14 @@ void (*delay_fn)(int retval, unsigned usec_delay, void *appdata_ptr);
       by the application when it called
       <span class="citerefentry"><span class="refentrytitle">pam_start</span>(3)</span> or explicitly with
       <span class="citerefentry"><span class="refentrytitle">pam_set_item</span>(3)</span>.
-      Note, if PAM_FAIL_DELAY item is unset (or set to NULL), then no delay
-      will be performed.
+    </p><p>
+      Note that the PAM_FAIL_DELAY item is set to NULL by default. This
+      indicates that PAM should perform a random delay as described
+      above when authentication fails and a delay has been suggested.
+      If an application does not want the PAM library to perform any
+      delay on authentication failure, then the application must define
+      a custom delay function that executes no statements and set
+      the PAM_FAIL_DELAY item to point to this function.
     </p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="adg-pam_fail_delay-return_values"></a>3.1.6.2. RETURN VALUES</h4></div></div></div><div class="variablelist"><dl class="variablelist"><dt><span class="term">PAM_SUCCESS</span></dt><dd><p>
             Delay was successful adjusted.
           </p></dd><dt><span class="term">PAM_SYSTEM_ERR</span></dt><dd><p>
@@ -455,7 +469,7 @@ void (*delay_fn)(int retval, unsigned usec_delay, void *appdata_ptr);
           </p></dd><dt><span class="term">PAM_SYSTEM_ERR</span></dt><dd><p>
              A NULL pointer was submitted as PAM handle, the
              function was called by a module or another system
-             error occured.
+             error occurred.
           </p></dd><dt><span class="term">PAM_USER_UNKNOWN</span></dt><dd><p>
               User is not known to an authentication module.
           </p></dd></dl></div></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="adg-pam_acct_mgmt"></a>3.1.9. Account validation management</h3></div></div></div><div class="funcsynopsis"><pre class="funcsynopsisinfo">#include &lt;security/pam_appl.h&gt;</pre><table border="0" class="funcprototype-table" summary="Function synopsis" style="cellspacing: 0; cellpadding: 0;"><tr><td><code class="funcdef">int <b class="fsfunc">pam_acct_mgmt</b>(</code></td><td><var class="pdparam">pamh</var>, </td><td> </td></tr><tr><td> </td><td><var class="pdparam">flags</var><code>)</code>;</td><td> </td></tr></table><div class="paramdef-list"><code>pam_handle_t *<var class="pdparam">pamh</var></code>;<br><code>int <var class="pdparam">flags</var></code>;</div><div class="funcprototype-spacer"> </div></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="adg-pam_acct_mgmt-description"></a>3.1.9.1. DESCRIPTION</h4></div></div></div><p>
@@ -600,7 +614,7 @@ void (*delay_fn)(int retval, unsigned usec_delay, void *appdata_ptr);
           </p></dd></dl></div><p>
       <code class="function">pam_putenv</code>() operates on a copy of
       <span class="emphasis"><em>name_value</em></span>, which means in contrast to
-      <span class="citerefentry"><span class="refentrytitle">putenv</span>(3)</span>, the application is responsible to free the data.
+      <span class="citerefentry"><span class="refentrytitle">putenv</span>(3)</span>, the application is responsible for freeing the data.
     </p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="adg-pam_putenv-return_values"></a>3.1.13.2. RETURN VALUES</h4></div></div></div><div class="variablelist"><dl class="variablelist"><dt><span class="term">PAM_PERM_DENIED</span></dt><dd><p>
              Argument <span class="emphasis"><em>name_value</em></span> given is a NULL pointer.
           </p></dd><dt><span class="term">PAM_BAD_ITEM</span></dt><dd><p>

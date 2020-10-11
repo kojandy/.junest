@@ -23,7 +23,7 @@ extern "C" {
  *
  * Library version string
  */
-#define LIBSMARTCOLS_VERSION   "2.35.2"
+#define LIBSMARTCOLS_VERSION   "2.36.0"
 
 /**
  * libscols_iter:

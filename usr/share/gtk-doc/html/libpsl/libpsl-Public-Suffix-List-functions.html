@@ -8,7 +8,7 @@
 <link rel="up" href="libpsl.html" title="Libpsl Overview">
 <link rel="prev" href="libpsl.html" title="Libpsl Overview">
 <link rel="next" href="api-index-full.html" title="API Index">
-<meta name="generator" content="GTK-Doc V1.32 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.32.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -225,6 +225,10 @@
 <tbody>
 <tr>
 <td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="libpsl-Public-Suffix-List-functions.html#PSL-API:CAPS" title="PSL_API">PSL_API</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
 <td class="function_name"><a class="link" href="libpsl-Public-Suffix-List-functions.html#PSL-VERSION:CAPS" title="PSL_VERSION">PSL_VERSION</a></td>
 </tr>
 <tr>
@@ -308,14 +312,14 @@ To free the allocated resources, call <a class="link" href="libpsl-Public-Suffix
 <a name="psl-load-file.returns"></a><h4>Returns</h4>
 <p> Pointer to a PSL context or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> on failure.</p>
 </div>
-<p class="since">Since: 0.1</p>
+<p class="since">Since: <a class="link" href="ix03.html#api-index-0.1">0.1</a></p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="psl-load-fp"></a><h3>psl_load_fp ()</h3>
 <pre class="programlisting"><a class="link" href="libpsl-Public-Suffix-List-functions.html#psl-ctx-t" title="psl_ctx_t"><span class="returnvalue">psl_ctx_t</span></a> *
 psl_load_fp (<em class="parameter"><code><span class="type">FILE</span> *fp</code></em>);</pre>
-<p>This function loads the public suffixes from a FILE pointer.
+<p>This function loads the public suffixes from a <code class="literal">FILE</code> pointer.
 To free the allocated resources, call <a class="link" href="libpsl-Public-Suffix-List-functions.html#psl-free" title="psl_free ()"><code class="function">psl_free()</code></a>.</p>
 <p>The suffixes are expected to be UTF-8 encoded (lowercase + NFKC) if they are international.</p>
 <div class="refsect3">
@@ -328,7 +332,7 @@ To free the allocated resources, call <a class="link" href="libpsl-Public-Suffix
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>fp</p></td>
-<td class="parameter_description"><p>FILE pointer</p></td>
+<td class="parameter_description"><p><code class="literal">FILE</code> pointer</p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
@@ -337,7 +341,7 @@ To free the allocated resources, call <a class="link" href="libpsl-Public-Suffix
 <a name="psl-load-fp.returns"></a><h4>Returns</h4>
 <p> Pointer to a PSL context or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> on failure.</p>
 </div>
-<p class="since">Since: 0.1</p>
+<p class="since">Since: <a class="link" href="ix03.html#api-index-0.1">0.1</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -373,7 +377,7 @@ psl_latest (<em class="parameter"><code>const <span class="type">char</span> *fn
 <a name="psl-latest.returns"></a><h4>Returns</h4>
 <p> Pointer to a PSL context or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> on failure.</p>
 </div>
-<p class="since">Since: 0.16</p>
+<p class="since">Since: <a class="link" href="ix08.html#api-index-0.16">0.16</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -388,9 +392,9 @@ When using the builtin psl context, you can provide UTF-8 (lowercase + NFKC) or 
 representations of domains to functions like <a class="link" href="libpsl-Public-Suffix-List-functions.html#psl-is-public-suffix" title="psl_is_public_suffix ()"><code class="function">psl_is_public_suffix()</code></a>.</p>
 <div class="refsect3">
 <a name="psl-builtin.returns"></a><h4>Returns</h4>
-<p> Pointer to the built in PSL data or NULL if this data is not available.</p>
+<p> Pointer to the built in PSL data or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if this data is not available.</p>
 </div>
-<p class="since">Since: 0.1</p>
+<p class="since">Since: <a class="link" href="ix03.html#api-index-0.1">0.1</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -414,7 +418,7 @@ psl_free (<em class="parameter"><code><a class="link" href="libpsl-Public-Suffix
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since: 0.1</p>
+<p class="since">Since: <a class="link" href="ix03.html#api-index-0.1">0.1</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -460,7 +464,7 @@ Use helper function <a class="link" href="libpsl-Public-Suffix-List-functions.ht
 <a name="psl-is-public-suffix.returns"></a><h4>Returns</h4>
 <p> 1 if domain is a public suffix, 0 if not.</p>
 </div>
-<p class="since">Since: 0.1</p>
+<p class="since">Since: <a class="link" href="ix03.html#api-index-0.1">0.1</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -517,7 +521,7 @@ Use helper function <a class="link" href="libpsl-Public-Suffix-List-functions.ht
 <a name="psl-is-public-suffix2.returns"></a><h4>Returns</h4>
 <p> 1 if domain is a public suffix, 0 if not.</p>
 </div>
-<p class="since">Since: 0.1</p>
+<p class="since">Since: <a class="link" href="ix03.html#api-index-0.1">0.1</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -565,7 +569,7 @@ or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><c
 does not contain a public suffix (or if <em class="parameter"><code>psl</code></em>
 is <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>).</p>
 </div>
-<p class="since">Since: 0.1</p>
+<p class="since">Since: <a class="link" href="ix03.html#api-index-0.1">0.1</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -613,7 +617,7 @@ or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><c
 does not contain a private suffix (or if <em class="parameter"><code>psl</code></em>
 is <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>).</p>
 </div>
-<p class="since">Since: 0.1</p>
+<p class="since">Since: <a class="link" href="ix03.html#api-index-0.1">0.1</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -625,7 +629,7 @@ psl_suffix_count (<em class="parameter"><code>const <a class="link" href="libpsl
 The number of exceptions within the Public Suffix List are not included.</p>
 <p>If the information is not available, the return value is -1 (since 0.19).
 This is the case with DAFSA blobs or if <em class="parameter"><code>psl</code></em>
- is NULL.</p>
+ is <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p>
 <div class="refsect3">
 <a name="psl-suffix-count.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -645,7 +649,7 @@ This is the case with DAFSA blobs or if <em class="parameter"><code>psl</code></
 <a name="psl-suffix-count.returns"></a><h4>Returns</h4>
 <p> Number of public suffixes entries in PSL context or -1 if this information is not available.</p>
 </div>
-<p class="since">Since: 0.1</p>
+<p class="since">Since: <a class="link" href="ix03.html#api-index-0.1">0.1</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -656,7 +660,7 @@ psl_suffix_exception_count (<em class="parameter"><code>const <a class="link" hr
 .</p>
 <p>If the information is not available, the return value is -1 (since 0.19).
 This is the case with DAFSA blobs or if <em class="parameter"><code>psl</code></em>
- is NULL.</p>
+ is <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p>
 <div class="refsect3">
 <a name="psl-suffix-exception-count.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -676,7 +680,7 @@ This is the case with DAFSA blobs or if <em class="parameter"><code>psl</code></
 <a name="psl-suffix-exception-count.returns"></a><h4>Returns</h4>
 <p> Number of public suffix exceptions in PSL context or -1 if this information is not available.</p>
 </div>
-<p class="since">Since: 0.1</p>
+<p class="since">Since: <a class="link" href="ix03.html#api-index-0.1">0.1</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -687,7 +691,7 @@ psl_suffix_wildcard_count (<em class="parameter"><code>const <a class="link" hre
 .</p>
 <p>If the information is not available, the return value is -1 (since 0.19).
 This is the case with DAFSA blobs or if <em class="parameter"><code>psl</code></em>
- is NULL.</p>
+ is <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p>
 <div class="refsect3">
 <a name="psl-suffix-wildcard-count.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -707,7 +711,7 @@ This is the case with DAFSA blobs or if <em class="parameter"><code>psl</code></
 <a name="psl-suffix-wildcard-count.returns"></a><h4>Returns</h4>
 <p> Number of public suffix wildcards in PSL context or -1 if this information is not available.</p>
 </div>
-<p class="since">Since: 0.10.0</p>
+<p class="since">Since: <a class="link" href="ix06.html#api-index-0.10.0">0.10.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -720,7 +724,7 @@ psl_builtin_file_time (<em class="parameter"><code><span class="type">void</span
 <a name="psl-builtin-file-time.returns"></a><h4>Returns</h4>
 <p> time_t value or 0.</p>
 </div>
-<p class="since">Since: 0.1</p>
+<p class="since">Since: <a class="link" href="ix03.html#api-index-0.1">0.1</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -734,7 +738,7 @@ The returned string is in lowercase hex encoding, e.g. "2af1e9e3044eda0678bb0594
 <a name="psl-builtin-sha1sum.returns"></a><h4>Returns</h4>
 <p> String containing SHA1 checksum or an empty string.</p>
 </div>
-<p class="since">Since: 0.1</p>
+<p class="since">Since: <a class="link" href="ix03.html#api-index-0.1">0.1</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -747,7 +751,7 @@ psl_builtin_filename (<em class="parameter"><code><span class="type">void</span>
 <a name="psl-builtin-filename.returns"></a><h4>Returns</h4>
 <p> String containing the PSL file name or an empty string.</p>
 </div>
-<p class="since">Since: 0.1</p>
+<p class="since">Since: <a class="link" href="ix03.html#api-index-0.1">0.1</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -762,7 +766,7 @@ The mtime is taken as reference.</p>
 <a name="psl-builtin-outdated.returns"></a><h4>Returns</h4>
 <p> 1 if the built-in is outdated, 0 otherwise.</p>
 </div>
-<p class="since">Since: 0.10.0</p>
+<p class="since">Since: <a class="link" href="ix06.html#api-index-0.10.0">0.10.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -820,7 +824,7 @@ but NOT for 'forgot.his.name' since 'forgot.his.name' is a public suffix.</p></l
 <a name="psl-is-cookie-domain-acceptable.returns"></a><h4>Returns</h4>
 <p> 1 if acceptable, 0 if not acceptable.</p>
 </div>
-<p class="since">Since: 0.1</p>
+<p class="since">Since: <a class="link" href="ix03.html#api-index-0.1">0.1</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -834,7 +838,7 @@ This file will be considered by <a class="link" href="libpsl-Public-Suffix-List-
 <a name="psl-dist-filename.returns"></a><h4>Returns</h4>
 <p> String containing a PSL file name or an empty string.</p>
 </div>
-<p class="since">Since: 0.16</p>
+<p class="since">Since: <a class="link" href="ix08.html#api-index-0.16">0.16</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -846,7 +850,7 @@ psl_get_version (<em class="parameter"><code><span class="type">void</span></cod
 <a name="psl-get-version.returns"></a><h4>Returns</h4>
 <p> String containing version of libpsl.</p>
 </div>
-<p class="since">Since: 0.2.5</p>
+<p class="since">Since: <a class="link" href="ix04.html#api-index-0.2.5">0.2.5</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -876,7 +880,7 @@ The version number must be a hexadecimal number like 0x000a01 (V0.10.1).</p>
 the version of the library, else return 0; If the argument is 0, the function returns
 the library version number without performing a check.</p>
 </div>
-<p class="since">Since: 0.11.0</p>
+<p class="since">Since: <a class="link" href="ix07.html#api-index-0.11.0">0.11.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -938,7 +942,7 @@ PSL_ERR_TO_LOWER: Failed to convert unicode to lowercase
 PSL_ERR_TO_UTF8: Failed to convert unicode to UTF-8
 PSL_ERR_NO_MEM: Failed to allocate memory</p>
 </div>
-<p class="since">Since: 0.4</p>
+<p class="since">Since: <a class="link" href="ix05.html#api-index-0.4">0.4</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -962,14 +966,20 @@ returning a lowercase string</p>
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since: 0.19</p>
+<p class="since">Since: <a class="link" href="ix09.html#api-index-0.19">0.19</a></p>
 </div>
 </div>
 <div class="refsect1">
 <a name="libpsl-Public-Suffix-List-functions.other_details"></a><h2>Types and Values</h2>
 <div class="refsect2">
+<a name="PSL-API:CAPS"></a><h3>PSL_API</h3>
+<pre class="programlisting">#  define PSL_API __attribute__ ((__visibility__("default")))
+</pre>
+</div>
+<hr>
+<div class="refsect2">
 <a name="PSL-VERSION:CAPS"></a><h3>PSL_VERSION</h3>
-<pre class="programlisting">#define PSL_VERSION "0.21.0"
+<pre class="programlisting">#define PSL_VERSION "0.21.1"
 </pre>
 </div>
 <hr>
@@ -987,13 +997,13 @@ returning a lowercase string</p>
 <hr>
 <div class="refsect2">
 <a name="PSL-VERSION-NUMBER:CAPS"></a><h3>PSL_VERSION_NUMBER</h3>
-<pre class="programlisting">#define PSL_VERSION_NUMBER 0x001500
+<pre class="programlisting">#define PSL_VERSION_NUMBER 0x001501
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="PSL-VERSION-PATCH:CAPS"></a><h3>PSL_VERSION_PATCH</h3>
-<pre class="programlisting">#define PSL_VERSION_PATCH 0
+<pre class="programlisting">#define PSL_VERSION_PATCH 1
 </pre>
 </div>
 <hr>
@@ -1097,6 +1107,6 @@ Positive values are reserved for non-error return codes.</p>
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.32</div>
+<hr>Generated by GTK-Doc V1.32.1</div>
 </body>
 </html>

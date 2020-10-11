@@ -5,7 +5,7 @@ includedir=/usr/include
 
 Name: json-c
 Description: A JSON implementation in C
-Version: 0.14
+Version: 0.15
 Requires:
 Libs.private: 
 Libs: -L${libdir} -ljson-c

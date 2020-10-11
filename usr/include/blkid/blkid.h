@@ -30,8 +30,8 @@
 extern "C" {
 #endif
 
-#define BLKID_VERSION   "2.35.2"
-#define BLKID_DATE      "20-May-2020"
+#define BLKID_VERSION   "2.36.0"
+#define BLKID_DATE      "23-Jul-2020"
 
 /**
  * blkid_dev:
@@ -324,6 +324,8 @@ extern unsigned long blkid_topology_get_optimal_io_size(blkid_topology tp)
 extern unsigned long blkid_topology_get_logical_sector_size(blkid_topology tp)
 			__ul_attribute__((nonnull));
 extern unsigned long blkid_topology_get_physical_sector_size(blkid_topology tp)
+			__ul_attribute__((nonnull));
+extern unsigned long blkid_topology_get_dax(blkid_topology tp)
 			__ul_attribute__((nonnull));
 
 /*

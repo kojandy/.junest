@@ -67,7 +67,7 @@ and discusses strategies for maintaining a secure system.
     6.31. pam_succeed_if - test account characteristics
     6.32. pam_tally - login counter (tallying) module
     6.33. pam_tally2 - login counter (tallying) module
-    6.34. pam_time - time controled access
+    6.34. pam_time - time controlled access
     6.35. pam_timestamp - authenticate using cached successful authentication
         attempts
     6.36. pam_umask - set the file mode creation mask
@@ -401,9 +401,12 @@ done
 
 N (an unsigned integer)
 
-    equivalent to ok with the side effect of jumping over the next N modules in
-    the stack. Note that N equal to 0 is not allowed (and it would be identical
-    to ok in such case).
+    jump over the next N modules in the stack. Note that N equal to 0 is not
+    allowed, it would be treated as ignore in such case. The side effect
+    depends on the PAM function call: for pam_authenticate, pam_acct_mgmt, 
+    pam_chauthtok, and pam_open_session it is ignore; for pam_setcred and 
+    pam_close_session it is one of ignore, ok, or bad depending on the module's
+    return value.
 
 reset
 
@@ -798,6 +801,10 @@ User john should get access from IPv6 net/mask.
 
 +:john:2001:db8:0:101::/64
 
+Members of group wheel should be allowed to get access from all sources.
+
++:(wheel):ALL
+
 Disallow console logins to all but the shutdown, sync and all other accounts,
 which are a member of the wheel group.
 
@@ -844,7 +851,7 @@ Palindrome
 
 Case Change Only
 
-    Is the new password the the old one with only a change of case?
+    Is the new password the old one with only a change of case?
 
 Similar
 
@@ -998,9 +1005,10 @@ reject_username
 
 gecoscheck
 
-    Check whether the words from the GECOS field (usualy full name of the user)
-    longer than 3 characters in straight or reversed form are contained in the
-    new password. If any such word is found the new password is rejected.
+    Check whether the words from the GECOS field (usually full name of the
+    user) longer than 3 characters in straight or reversed form are contained
+    in the new password. If any such word is found the new password is
+    rejected.
 
 enforce_for_root
 
@@ -1320,11 +1328,11 @@ option.
 
 Second a file (/etc/environment by default) with simple KEY=VAL pairs on
 separate lines will be read. With the envfile option an alternate file can be
-specified. And with the readenv option this can be completly disabled.
+specified. And with the readenv option this can be completely disabled.
 
 Third it will read a user configuration file ($HOME/.pam_environment by
-default). The default file file can be changed with the user_envfile option and
-it can be turned on and off with the user_readenv option.
+default). The default file can be changed with the user_envfile option and it
+can be turned on and off with the user_readenv option.
 
 Since setting of PAM environment variables can have side effects to other
 modules, this module should be the last one on the stack.
@@ -1388,14 +1396,14 @@ readenv=0|1
 user_envfile=filename
 
     Indicate an alternative .pam_environment file to override the default.The
-    syntax is the same as for /etc/environment. The filename is relative to the
-    user home directory. This can be useful when different services need
-    different environments.
+    syntax is the same as for /etc/security/pam_env.conf. The filename is
+    relative to the user home directory. This can be useful when different
+    services need different environments.
 
 user_readenv=0|1
 
     Turns on or off the reading of the user specific environment file. 0 is
-    off, 1 is on. By default this option is on.
+    off, 1 is on. By default this option is off.
 
 6.6.4. MODULE TYPES PROVIDED
 
@@ -1487,7 +1495,7 @@ environment variables: PAM_RHOST, PAM_RUSER, PAM_SERVICE, PAM_TTY, PAM_USER and
 PAM_TYPE, which contains one of the module types: account, auth, password,
 open_session and close_session.
 
-Commands called by pam_exec need to be aware of that the user can have controll
+Commands called by pam_exec need to be aware of that the user can have control
 over the environment.
 
 6.7.2. OPTIONS
@@ -1537,6 +1545,20 @@ All module types (auth, account, password and session) are provided.
 PAM_SUCCESS
 
     The external command was run successfully.
+
+PAM_BUF_ERR
+
+    Memory buffer error.
+
+PAM_CONV_ERR
+
+    The conversation method supplied by the application failed to obtain the
+    username.
+
+PAM_INCOMPLETE
+
+    The conversation method supplied by the application returned
+    PAM_CONV_AGAIN.
 
 PAM_SERVICE_ERR
 
@@ -1829,6 +1851,9 @@ The third field, the users field, is a logic list of users, or a UNIX group, or
 a netgroup of users to whom this rule applies. Group names are preceded by a
 '%' symbol, while netgroup names are preceded by a '@' symbol.
 
+A logic list namely means individual tokens that are optionally prefixed with
+'!' (logical not) and separated with '&' (logical and) and '|' (logical or).
+
 For these items the simple wildcard '*' may be used only once. With UNIX groups
 or netgroups no wildcards or logic operators are allowed.
 
@@ -2030,16 +2055,18 @@ pam_keyinit.so [ debug ] [ force ] [ revoke ]
 The pam_keyinit PAM module ensures that the invoking process has a session
 keyring other than the user default session keyring.
 
-The session component of the module checks to see if the process's session
-keyring is the user default, and, if it is, creates a new anonymous session
-keyring with which to replace it.
+The module checks to see if the process's session keyring is the 
+user-session-keyring(7), and, if it is, creates a new session-keyring(7) with
+which to replace it. If a new session keyring is created, it will install a
+link to the user-keyring(7) in the session keyring so that keys common to the
+user will be automatically accessible through it. The session keyring of the
+invoking process will thenceforth be inherited by all its children unless they
+override it.
 
-If a new session keyring is created, it will install a link to the user common
-keyring in the session keyring so that keys common to the user will be
-automatically accessible through it.
-
-The session keyring of the invoking process will thenceforth be inherited by
-all its children unless they override it.
+In order to allow other PAM modules to attach tokens to the keyring, this
+module provides both an auth (limited to pam_setcred(3) and a session
+component. The session keyring is created in the module called. Moreover this
+module should be included as early as possible in a PAM configuration.
 
 This module is intended primarily for use by login processes. Be aware that
 after the session keyring has been replaced, the old session keyring and the
@@ -2048,9 +2075,6 @@ keys it contains will no longer be accessible.
 This module should not, generally, be invoked by programs like su, since it is
 usually desirable for the key set to percolate through to the alternate
 context. The keys have their own permissions system to manage this.
-
-This module should be included as early as possible in a PAM configuration, so
-that other PAM modules can attach tokens to the keyring.
 
 The keyutils package is used to manipulate keys more directly. This can be
 obtained from:
@@ -2127,7 +2151,7 @@ pam_keyinit was written by David Howells, <dhowells@redhat.com>.
 6.14. pam_lastlog - display date of last login
 
 pam_lastlog.so [ debug ] [ silent ] [ never ] [ nodate ] [ nohost ] [ noterm ]
-[ nowtmp ] [ noupdate ] [ showfailed ] [ inactive=<days> ]
+[ nowtmp ] [ noupdate ] [ showfailed ] [ inactive=<days> ] [ unlimited ]
 
 6.14.1. DESCRIPTION
 
@@ -2137,9 +2161,14 @@ login of the user. In addition, the module maintains the /var/log/lastlog file.
 Some applications may perform this function themselves. In such cases, this
 module is not necessary.
 
+The module checks LASTLOG_UID_MAX option in /etc/login.defs and does not update
+or display last login records for users with UID higher than its value. If the
+option is not present or its value is invalid, no user ID limit is applied.
+
 If the module is called in the auth or account phase, the accounts that were
 not used recently enough will be disallowed to log in. The check is not
-performed for the root account so the root is never locked out.
+performed for the root account so the root is never locked out. It is also not
+performed for users with UID higher than the LASTLOG_UID_MAX value.
 
 6.14.2. OPTIONS
 
@@ -2150,7 +2179,7 @@ debug
 silent
 
     Don't inform the user about any previous login, just update the /var/log/
-    lastlog file.
+    lastlog file. This option does not affect display of bad login attempts.
 
 never
 
@@ -2189,9 +2218,15 @@ inactive=<days>
     number of days after the last login of the user when the user will be
     locked out by the module. The default value is 90.
 
+unlimited
+
+    If the fsize limit is set, this option can be used to override it,
+    preventing failures on systems with large UID values that lead lastlog to
+    become a huge sparse file.
+
 6.14.3. MODULE TYPES PROVIDED
 
-The auth and account module type allows to lock out users which did not login
+The auth and account module type allows one to lock out users who did not login
 recently enough. The session module type is provided for displaying the
 information about the last login and/or updating the lastlog and wtmp files.
 
@@ -2443,7 +2478,9 @@ debug
 set_all
 
     Set the limits for which no value is specified in the configuration file to
-    the one from the process with the PID 1.
+    the one from the process with the PID 1. Please note that if the init
+    process is systemd these limits will not be the kernel default limits and
+    this option should not be used.
 
 utmp_early
 
@@ -2681,9 +2718,23 @@ PAM_SUCCESS
 
     The new localuser was set successfully.
 
+PAM_BUF_ERR
+
+    Memory buffer error.
+
+PAM_CONV_ERR
+
+    The conversation method supplied by the application failed to obtain the
+    username.
+
+PAM_INCOMPLETE
+
+    The conversation method supplied by the application returned
+    PAM_CONV_AGAIN.
+
 PAM_SERVICE_ERR
 
-    No username was given.
+    The user name is not valid or the passwd file is unavailable.
 
 PAM_PERM_DENIED
 
@@ -2855,7 +2906,7 @@ pam_mail was written by Andrew G. Morgan <morgan@kernel.org>.
 
 6.20. pam_mkhomedir - create users home directory
 
-pam_mkhomedir.so [ silent ] [ umask=mode ] [ skel=skeldir ]
+pam_mkhomedir.so [ silent ] [ debug ] [ umask=mode ] [ skel=skeldir ]
 
 6.20.1. DESCRIPTION
 
@@ -2873,6 +2924,10 @@ The new users home directory will not be removed after logout of the user.
 silent
 
     Don't print informative messages.
+
+debug
+
+    Turns on debugging via syslog(3).
 
 umask=mask
 
@@ -2892,10 +2947,6 @@ Only the session module type is provided.
 PAM_BUF_ERR
 
     Memory buffer error.
-
-PAM_CRED_INSUFFICIENT
-
-    Insufficient credentials to access authentication data.
 
 PAM_PERM_DENIED
 
@@ -2933,28 +2984,60 @@ pam_mkhomedir was written by Jason Gunthorpe <jgg@debian.org>.
 
 6.21. pam_motd - display the motd file
 
-pam_motd.so [ motd=/path/filename ]
+pam_motd.so [ motd=/path/filename ] [ motd_dir=/path/dirname.d ]
 
 6.21.1. DESCRIPTION
 
 pam_motd is a PAM module that can be used to display arbitrary motd (message of
-the day) files after a successful login. By default the /etc/motd file is
-shown. The message size is limited to 64KB.
+the day) files after a successful login. By default, pam_motd shows files in
+the following locations:
+
+/etc/motd
+/run/motd
+/usr/lib/motd
+/etc/motd.d/
+/run/motd.d/
+/usr/lib/motd.d/
+
+Each message size is limited to 64KB.
+
+If /etc/motd does not exist, then /run/motd is shown. If /run/motd does not
+exist, then /usr/lib/motd is shown.
+
+Similar overriding behavior applies to the directories. Files in /etc/motd.d/
+override files with the same name in /run/motd.d/ and /usr/lib/motd.d/. Files
+in /run/motd.d/ override files with the same name in /usr/lib/motd.d/.
+
+Files the in the directories listed above are displayed in lexicographic order
+by name.
+
+To silence a message, a symbolic link with target /dev/null may be placed in /
+etc/motd.d with the same filename as the message to be silenced. Example:
+Creating a symbolic link as follows silences /usr/lib/motd.d/my_motd.
+
+ln -s /dev/null /etc/motd.d/my_motd
+
+The MOTD_SHOWN=pam environment variable is set after showing the motd files,
+even when all of them were silenced using symbolic links.
 
 6.21.2. OPTIONS
 
 motd=/path/filename
 
-    The /path/filename file is displayed as message of the day.
+    The /path/filename file is displayed as message of the day. Multiple paths
+    to try can be specified as a colon-separated list. By default this option
+    is set to /etc/motd:/run/motd:/usr/lib/motd.
 
 motd_dir=/path/dirname.d
 
     The /path/dirname.d directory is scanned and each file contained inside of
-    it is displayed.
+    it is displayed. Multiple directories to scan can be specified as a
+    colon-separated list. By default this option is set to /etc/motd.d:/run/
+    motd.d:/usr/lib/motd.d.
 
-When no options are given, the default is to display both /etc/motd and the
-contents of /etc/motd.d. Specifying either option (or both) will disable this
-default behavior.
+When no options are given, the default behavior applies for both options.
+Specifying either option (or both) will disable the default behavior for both
+options.
 
 6.21.3. MODULE TYPES PROVIDED
 
@@ -2962,9 +3045,17 @@ Only the session module type is provided.
 
 6.21.4. RETURN VALUES
 
+PAM_ABORT
+
+    Not all relevant data or options could be obtained.
+
+PAM_BUF_ERR
+
+    Memory buffer error.
+
 PAM_IGNORE
 
-    This is the only return value of this module.
+    This is the default return value of this module.
 
 6.21.5. EXAMPLES
 
@@ -3084,7 +3175,10 @@ contain the user name and will be shared among all users.
 
 mntopts=value - value of this flag is passed to the mount call when the tmpfs
 mount is done. It allows for example the specification of the maximum size of
-the tmpfs instance that is created by the mount call. See mount(8) for details.
+the tmpfs instance that is created by the mount call. In addition to options
+specified in the tmpfs(5) manual the nosuid, noexec, and nodev flags can be
+used to respectively disable setuid bit effect, disable running executables,
+and disable devices to be interpreted on the mounted tmpfs filesystem.
 
 The directory where polyinstantiated instances are to be created, must exist
 and must have, by default, the mode of 0000. The requirement that the instance
@@ -3281,7 +3375,7 @@ successok
 
 6.23.3. MODULE TYPES PROVIDED
 
-The auth and acct module types are provided.
+The auth and account module types are provided.
 
 6.23.4. RETURN VALUES
 
@@ -3543,7 +3637,7 @@ debug
 
 6.27.3. MODULE TYPES PROVIDED
 
-The auth, acct and password module types are provided.
+The auth, account and password module types are provided.
 
 6.27.4. RETURN VALUES
 
@@ -3578,11 +3672,12 @@ pam_securetty.so [ debug ]
 6.28.1. DESCRIPTION
 
 pam_securetty is a PAM module that allows root logins only if the user is
-logging in on a "secure" tty, as defined by the listing in /etc/securetty.
-pam_securetty also checks to make sure that /etc/securetty is a plain file and
-not world writable. It will also allow root logins on the tty specified with
-console= switch on the kernel command line and on ttys from the /sys/class/tty/
-console/active.
+logging in on a "secure" tty, as defined by the listing in the securetty file.
+pam_securetty checks at first, if /etc/securetty exists. If not and it was
+built with vendordir support, it will use %vendordir%/securetty. pam_securetty
+also checks that the securetty files are plain files and not world writable. It
+will also allow root logins on the tty specified with console= switch on the
+kernel command line and on ttys from the /sys/class/tty/console/active.
 
 This module has no effect on non-root users and requires that the application
 fills in the PAM_TTY item correctly.
@@ -3600,7 +3695,7 @@ noconsole
 
     Do not automatically allow root logins on the kernel console device, as
     specified on the kernel command line or by the sys file, if it is not also
-    specified in the /etc/securetty file.
+    specified in the securetty file.
 
 6.28.3. MODULE TYPES PROVIDED
 
@@ -3616,18 +3711,27 @@ PAM_SUCCESS
 PAM_AUTH_ERR
 
     Authentication is rejected. Either root is attempting to log in via an
-    unacceptable device, or the /etc/securetty file is world writable or not a
+    unacceptable device, or the securetty file is world writable or not a
     normal file.
+
+PAM_BUF_ERR
+
+    Memory buffer error.
+
+PAM_CONV_ERR
+
+    The conversation method supplied by the application failed to obtain the
+    username.
 
 PAM_INCOMPLETE
 
-    An application error occurred. pam_securetty was not able to get
-    information it required from the application that called it.
+    The conversation method supplied by the application returned
+    PAM_CONV_AGAIN.
 
 PAM_SERVICE_ERR
 
     An error occurred while the module was determining the user's name or tty,
-    or the module could not open /etc/securetty.
+    or the module could not open the securetty file.
 
 PAM_USER_UNKNOWN
 
@@ -3891,13 +3995,13 @@ field notin item:item:...
 
     Field is not contained in the list of items separated by colons.
 
-user ingroup group
+user ingroup group[:group:....]
 
-    User is in given group.
+    User is in given group(s).
 
-user notingroup group
+user notingroup group[:group:....]
 
-    User is not in given group.
+    User is not in given group(s).
 
 user innetgr netgroup
 
@@ -3927,9 +4031,10 @@ PAM_SERVICE_ERR
 
 6.31.5. EXAMPLES
 
-To emulate the behaviour of pam_wheel, except there is no fallback to group 0:
+To emulate the behaviour of pam_wheel, except there is no fallback to group 0
+being only approximated by checking also the root group membership:
 
-auth required pam_succeed_if.so quiet user ingroup wheel
+auth required pam_succeed_if.so quiet user ingroup wheel:root
 
 
 Given that the type matches, only loads the othermodule rule if the UID is over
@@ -3996,7 +4101,9 @@ GLOBAL OPTIONS
 
     silent
 
-        Don't print informative messages.
+        Don't print informative messages. The messages printed without the 
+        silent option leak presence of accounts on the system because they are
+        not printed for non-existing accounts.
 
     no_log_info
 
@@ -4160,7 +4267,9 @@ GLOBAL OPTIONS
 
     silent
 
-        Don't print informative messages.
+        Don't print informative messages. The messages printed without the 
+        silent option leak presence of accounts on the system because they are
+        not printed for non-existing accounts.
 
     no_log_info
 
@@ -4295,9 +4404,9 @@ session  optional       pam_mail.so standard
 
 pam_tally2 was written by Tim Baverstock and Tomas Mraz.
 
-6.34. pam_time - time controled access
+6.34. pam_time - time controlled access
 
-pam_time.so [ debug ] [ noaudit ]
+pam_time.so [ conffile=conf-file ] [ debug ] [ noaudit ]
 
 6.34.1. DESCRIPTION
 
@@ -4309,7 +4418,7 @@ of day, the day of week, the service they are applying for and their terminal
 from which they are making their request.
 
 By default rules for time/port access are taken from config file /etc/security/
-time.conf.
+time.conf. An alternative file can be specified with the conffile option.
 
 If Linux PAM is compiled with audit support the module will report when it
 denies access.
@@ -4344,6 +4453,9 @@ rule applies to.
 The third field, the users field, is a logic list of users or a netgroup of
 users to whom this rule applies.
 
+A logic list namely means individual tokens that are optionally prefixed with
+'!' (logical not) and separated with '&' (logical and) and '|' (logical or).
+
 For these items the simple wildcard '*' may be used only once. With netgroups
 no wildcards or logic operators are allowed.
 
@@ -4369,6 +4481,11 @@ to be remedied.
 Poorly formatted rules are logged as errors using syslog(3).
 
 6.34.3. OPTIONS
+
+conffile=/path/to/time.conf
+
+    Indicate an alternative time.conf style configuration file to override the
+    default.
 
 debug
 
@@ -4512,7 +4629,8 @@ pam_timestamp was written by Nalin Dahyabhai.
 
 6.36. pam_umask - set the file mode creation mask
 
-pam_umask.so [ debug ] [ silent ] [ usergroups ] [ umask=mask ]
+pam_umask.so [ debug ] [ silent ] [ usergroups ] [ nousergroups ] [ umask=mask
+]
 
 6.36.1. DESCRIPTION
 
@@ -4552,6 +4670,12 @@ usergroups
     the umask group bits are set to be the same as owner bits (examples: 022 ->
     002, 077 -> 007).
 
+nousergroups
+
+    This is the direct opposite of the usergroups option described above, which
+    can be useful in case pam_umask has been compiled with usergroups enabled
+    by default and you want to disable it at runtime.
+
 umask=mask
 
     Sets the calling process's file mode creation mask (umask) to mask & 0777.
@@ -4566,6 +4690,20 @@ Only the session type is provided.
 PAM_SUCCESS
 
     The new umask was set successfully.
+
+PAM_BUF_ERR
+
+    Memory buffer error.
+
+PAM_CONV_ERR
+
+    The conversation method supplied by the application failed to obtain the
+    username.
+
+PAM_INCOMPLETE
+
+    The conversation method supplied by the application returned
+    PAM_CONV_AGAIN.
 
 PAM_SERVICE_ERR
 
@@ -4658,6 +4796,12 @@ nullok
     service if their official password is blank. The nullok argument overrides
     this default.
 
+nullresetok
+
+    Allow users to authenticate with blank password if password reset is
+    enforced even if nullok is not set. If password reset is not required and
+    nullok is not set the authentication with blank password will be denied.
+
 try_first_pass
 
     Before prompting the user for their password, the module first tries the
@@ -4717,25 +4861,35 @@ bigcrypt
 sha256
 
     When a user changes their password next, encrypt it with the SHA256
-    algorithm. If the SHA256 algorithm is not known to the crypt(3) function,
-    fall back to MD5.
+    algorithm. The SHA256 algorithm must be supported by the crypt(3) function.
 
 sha512
 
     When a user changes their password next, encrypt it with the SHA512
-    algorithm. If the SHA512 algorithm is not known to the crypt(3) function,
-    fall back to MD5.
+    algorithm. The SHA512 algorithm must be supported by the crypt(3) function.
 
 blowfish
 
     When a user changes their password next, encrypt it with the blowfish
-    algorithm. If the blowfish algorithm is not known to the crypt(3) function,
-    fall back to MD5.
+    algorithm. The blowfish algorithm must be supported by the crypt(3)
+    function.
+
+gost_yescrypt
+
+    When a user changes their password next, encrypt it with the gost-yescrypt
+    algorithm. The gost-yescrypt algorithm must be supported by the crypt(3)
+    function.
+
+yescrypt
+
+    When a user changes their password next, encrypt it with the yescrypt
+    algorithm. The yescrypt algorithm must be supported by the crypt(3)
+    function.
 
 rounds=n
 
-    Set the optional number of rounds of the SHA256, SHA512 and blowfish
-    password hashing algorithms to n.
+    Set the optional number of rounds of the SHA256, SHA512, blowfish,
+    gost-yescrypt, and yescrypt password hashing algorithms to n.
 
 broken_shadow
 
@@ -4779,7 +4933,7 @@ account    required   pam_unix.so
 # Change the user's password, but at first check the strength
 # with pam_cracklib(8)
 password   required   pam_cracklib.so retry=3 minlen=6 difok=3
-password   required   pam_unix.so use_authtok nullok md5
+password   required   pam_unix.so use_authtok nullok yescrypt
 session    required   pam_unix.so
 
 
@@ -4951,7 +5105,7 @@ use_uid ]
 6.40.1. DESCRIPTION
 
 The pam_wheel PAM module is used to enforce the so-called wheel group. By
-default it permits root access to the system if the applicant user is a member
+default it permits access to the target user if the applicant user is a member
 of the wheel group. If no group with this name exist, the module is using the
 group with the group-ID 0.
 

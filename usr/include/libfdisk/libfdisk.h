@@ -35,11 +35,11 @@ extern "C" {
  *
  * Library version string
  */
-#define LIBFDISK_VERSION   "2.35.2"
+#define LIBFDISK_VERSION   "2.36.0"
 
 #define LIBFDISK_MAJOR_VERSION   2
-#define LIBFDISK_MINOR_VERSION   35
-#define LIBFDISK_PATCH_VERSION   2
+#define LIBFDISK_MINOR_VERSION   36
+#define LIBFDISK_PATCH_VERSION   0
 
 /**
  * fdisk_context:
@@ -264,7 +264,13 @@ int fdisk_parttype_set_typestr(struct fdisk_parttype *t, const char *str);
 int fdisk_parttype_set_code(struct fdisk_parttype *t, int code);
 size_t fdisk_label_get_nparttypes(const struct fdisk_label *lb);
 struct fdisk_parttype *fdisk_label_get_parttype(const struct fdisk_label *lb, size_t n);
+int fdisk_label_get_parttype_shortcut(
+	                        const struct fdisk_label *lb, size_t n,
+		                const char **typestr,
+			        const char **shortcut,
+				const char **alias);
 int fdisk_label_has_code_parttypes(const struct fdisk_label *lb);
+int fdisk_label_has_parttypes_shortcuts(const struct fdisk_label *lb);
 struct fdisk_parttype *fdisk_label_get_parttype_from_code(
 				const struct fdisk_label *lb,
 				unsigned int code);
@@ -277,6 +283,37 @@ struct fdisk_parttype *fdisk_copy_parttype(const struct fdisk_parttype *type);
 struct fdisk_parttype *fdisk_label_parse_parttype(
 				const struct fdisk_label *lb,
 				const char *str);
+struct fdisk_parttype *fdisk_label_advparse_parttype(
+				const struct fdisk_label *lb,
+				const char *str,
+				int flags);
+
+/**
+ * fdisk_parttype_parser_flags:
+ * @FDISK_PARTTYPE_PARSE_DATA: parse hex or UUID from string
+ * @FDISK_PARTTYPE_PARSE_DATALAST: try hex or UUID as the last possibility (don't use!)
+ * @FDISK_PARTTYPE_PARSE_SHORTCUT: try input as type shortcut (e.g 'L' for linux partition)
+ * @FDISK_PARTTYPE_PARSE_ALIAS: try input as type alias (e.g. 'linux' for linux partition)
+ * @FDISK_PARTTYPE_PARSE_DEPRECATED: accept also deprecated aliases and shortcuts
+ * @FDISK_PARTTYPE_PARSE_DEFAULT: recommended flags for new code
+ * @FDISK_PARTTYPE_PARSE_NOUNKNOWN: ignore unknown types
+ * @FDISK_PARTTYPE_PARSE_SEQNUM: use input as sequntial number of type (e.g. list-types fdisk dialog)
+ */
+enum fdisk_parttype_parser_flags {
+	FDISK_PARTTYPE_PARSE_DATA       = (1 << 1),
+	FDISK_PARTTYPE_PARSE_DATALAST   = (1 << 2),
+	FDISK_PARTTYPE_PARSE_SHORTCUT   = (1 << 3),
+	FDISK_PARTTYPE_PARSE_ALIAS      = (1 << 4),
+	FDISK_PARTTYPE_PARSE_DEPRECATED = (1 << 5),
+	FDISK_PARTTYPE_PARSE_NOUNKNOWN  = (1 << 6),
+	FDISK_PARTTYPE_PARSE_SEQNUM     = (1 << 7),
+
+	FDISK_PARTTYPE_PARSE_DEFAULT = (FDISK_PARTTYPE_PARSE_DATA | \
+				        FDISK_PARTTYPE_PARSE_SHORTCUT | \
+				        FDISK_PARTTYPE_PARSE_ALIAS | \
+					FDISK_PARTTYPE_PARSE_SEQNUM )
+};
+
 const char *fdisk_parttype_get_string(const struct fdisk_parttype *t);
 unsigned int fdisk_parttype_get_code(const struct fdisk_parttype *t);
 const char *fdisk_parttype_get_name(const struct fdisk_parttype *t);
@@ -399,6 +436,7 @@ extern int fdisk_get_disklabel_item(struct fdisk_context *cxt, int id, struct fd
 
 extern int fdisk_get_disklabel_id(struct fdisk_context *cxt, char **id);
 extern int fdisk_set_disklabel_id(struct fdisk_context *cxt);
+extern int fdisk_set_disklabel_id_from_string(struct fdisk_context *cxt, const char *str);
 
 extern int fdisk_get_partition(struct fdisk_context *cxt, size_t partno, struct fdisk_partition **pa);
 extern int fdisk_set_partition(struct fdisk_context *cxt, size_t partno, struct fdisk_partition *pa);
@@ -723,9 +761,12 @@ enum fdisk_labelitem_sgi {
 #define GPT_FLAG_GUIDSPECIFIC	4
 
 extern int fdisk_gpt_is_hybrid(struct fdisk_context *cxt);
-extern int fdisk_gpt_set_npartitions(struct fdisk_context *cxt, uint32_t entries);
+extern int fdisk_gpt_set_npartitions(struct fdisk_context *cxt, uint32_t nents);
 extern int fdisk_gpt_get_partition_attrs(struct fdisk_context *cxt, size_t partnum, uint64_t *attrs);
 extern int fdisk_gpt_set_partition_attrs(struct fdisk_context *cxt, size_t partnum, uint64_t attrs);
+
+extern void fdisk_gpt_disable_relocation(struct fdisk_label *lb, int disable);
+extern void fdisk_gpt_enable_minimize(struct fdisk_label *lb, int enable);
 
 /**
  * fdisk_labelitem_gpt:

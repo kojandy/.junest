@@ -475,3 +475,227 @@ filesystem: 755  package: 2755
 [2020-06-06T08:37:40+0000] [ALPM] running 'detect-old-perl-modules.hook'...
 [2020-06-06T08:37:40+0000] [ALPM] running 'update-ca-trust.hook'...
 [2020-06-06T08:55:38+0000] [PACMAN] Running 'pacman -Scc'
+[2020-10-11T02:22:45+0000] [PACMAN] Running 'pacman -Syu'
+[2020-10-11T02:22:45+0000] [PACMAN] synchronizing package lists
+[2020-10-11T02:22:46+0000] [PACMAN] starting full system upgrade
+[2020-10-11T02:23:25+0000] [ALPM] transaction started
+[2020-10-11T02:23:25+0000] [ALPM] removed libutil-linux (2.35.2-1)
+[2020-10-11T02:23:25+0000] [ALPM] upgraded archlinux-keyring (20200603-1 -> 20200820-1)
+[2020-10-11T02:23:25+0000] [ALPM-SCRIPTLET] ==> Appending keys from archlinux.gpg...
+[2020-10-11T02:23:28+0000] [ALPM-SCRIPTLET] ==> Locally signing trusted keys in keyring...
+[2020-10-11T02:23:28+0000] [ALPM-SCRIPTLET]   -> Locally signing key D8AFDDA07A5B6EDFA7D8CCDAD6D055F927843F1C...
+[2020-10-11T02:23:28+0000] [ALPM-SCRIPTLET]   -> Locally signing key DDB867B92AA789C165EEFA799B729B06A680C281...
+[2020-10-11T02:23:28+0000] [ALPM-SCRIPTLET]   -> Locally signing key 91FFE0700E80619CEB73235CA88E23E377514E00...
+[2020-10-11T02:23:28+0000] [ALPM-SCRIPTLET]   -> Locally signing key 0E8B644079F599DFC1DDC3973348882F6AC6A4C2...
+[2020-10-11T02:23:28+0000] [ALPM-SCRIPTLET]   -> Locally signing key AB19265E5D7D20687D303246BA1DFB64FFF979E7...
+[2020-10-11T02:23:28+0000] [ALPM-SCRIPTLET] ==> Importing owner trust values...
+[2020-10-11T02:23:28+0000] [ALPM-SCRIPTLET] ==> Disabling revoked keys in keyring...
+[2020-10-11T02:23:28+0000] [ALPM-SCRIPTLET]   -> Disabling key 8F76BEEA0289F9E1D3E229C05F946DED983D4366...
+[2020-10-11T02:23:28+0000] [ALPM-SCRIPTLET]   -> Disabling key 63F395DE2D6398BBE458F281F2DBB4931985A992...
+[2020-10-11T02:23:28+0000] [ALPM-SCRIPTLET]   -> Disabling key 50F33E2E5B0C3D900424ABE89BDCF497A4BBCC7F...
+[2020-10-11T02:23:28+0000] [ALPM-SCRIPTLET]   -> Disabling key 27FFC4769E19F096D41D9265A04F9397CDFD6BB0...
+[2020-10-11T02:23:28+0000] [ALPM-SCRIPTLET]   -> Disabling key 39F880E50E49A4D11341E8F939E4F17F295AFBF4...
+[2020-10-11T02:23:28+0000] [ALPM-SCRIPTLET]   -> Disabling key 8840BD07FC24CB7CE394A07CCF7037A4F27FB7DA...
+[2020-10-11T02:23:28+0000] [ALPM-SCRIPTLET]   -> Disabling key 5559BC1A32B8F76B3FCCD9555FA5E5544F010D48...
+[2020-10-11T02:23:28+0000] [ALPM-SCRIPTLET]   -> Disabling key 0B20CA1931F5DA3A70D0F8D2EA6836E1AB441196...
+[2020-10-11T02:23:28+0000] [ALPM-SCRIPTLET]   -> Disabling key 07DFD3A0BC213FA12EDC217559B3122E2FA915EC...
+[2020-10-11T02:23:28+0000] [ALPM-SCRIPTLET]   -> Disabling key 4FCF887689C41B09506BE8D5F3E1D5C5D30DB0AD...
+[2020-10-11T02:23:28+0000] [ALPM-SCRIPTLET]   -> Disabling key 5A2257D19FF7E1E0E415968CE62F853100F0D0F0...
+[2020-10-11T02:23:28+0000] [ALPM-SCRIPTLET]   -> Disabling key D921CABED130A5690EF1896E81AF739EC0711BF1...
+[2020-10-11T02:23:28+0000] [ALPM-SCRIPTLET]   -> Disabling key 7FA647CD89891DEDC060287BB9113D1ED21E1A55...
+[2020-10-11T02:23:28+0000] [ALPM-SCRIPTLET]   -> Disabling key BC1FBE4D2826A0B51E47ED62E2539214C6C11350...
+[2020-10-11T02:23:28+0000] [ALPM-SCRIPTLET]   -> Disabling key 4A8B17E20B88ACA61860009B5CED81B7C2E5C0D2...
+[2020-10-11T02:23:28+0000] [ALPM-SCRIPTLET]   -> Disabling key 5696C003B0854206450C8E5BE613C09CB4440678...
+[2020-10-11T02:23:28+0000] [ALPM-SCRIPTLET]   -> Disabling key 684148BB25B49E986A4944C55184252D824B18E8...
+[2020-10-11T02:23:28+0000] [ALPM-SCRIPTLET]   -> Disabling key 8CF934E339CAD8ABF342E822E711306E3C4F88BC...
+[2020-10-11T02:23:28+0000] [ALPM-SCRIPTLET]   -> Disabling key F5A361A3A13554B85E57DDDAAF7EF7873CFD4BB6...
+[2020-10-11T02:23:28+0000] [ALPM-SCRIPTLET]   -> Disabling key 5E7585ADFF106BFFBBA319DC654B877A0864983E...
+[2020-10-11T02:23:28+0000] [ALPM-SCRIPTLET]   -> Disabling key 65EEFE022108E2B708CBFCF7F9E712E59AF5F22A...
+[2020-10-11T02:23:28+0000] [ALPM-SCRIPTLET]   -> Disabling key 40440DC037C05620984379A6761FAD69BA06C6A9...
+[2020-10-11T02:23:28+0000] [ALPM-SCRIPTLET]   -> Disabling key 34C5D94FE7E7913E86DC427E7FB1A3800C84C0A5...
+[2020-10-11T02:23:28+0000] [ALPM-SCRIPTLET]   -> Disabling key 81D7F8241DB38BC759C80FCE3A726C6170E80477...
+[2020-10-11T02:23:28+0000] [ALPM-SCRIPTLET]   -> Disabling key E7210A59715F6940CF9A4E36A001876699AD6E84...
+[2020-10-11T02:23:28+0000] [ALPM-SCRIPTLET]   -> Disabling key 5357F3B111688D88C1D88119FCF2CB179205AC90...
+[2020-10-11T02:23:28+0000] [ALPM-SCRIPTLET]   -> Disabling key 4D913AECD81726D9A6C74F0ADA6426DD215B37AD...
+[2020-10-11T02:23:28+0000] [ALPM-SCRIPTLET]   -> Disabling key FB871F0131FEA4FB5A9192B4C8880A6406361833...
+[2020-10-11T02:23:29+0000] [ALPM-SCRIPTLET]   -> Disabling key 66BD74A036D522F51DD70A3C7F2A16726521E06D...
+[2020-10-11T02:23:29+0000] [ALPM-SCRIPTLET]   -> Disabling key B1F2C889CB2CCB2ADA36D963097D629E437520BD...
+[2020-10-11T02:23:29+0000] [ALPM-SCRIPTLET]   -> Disabling key 9515D8A8EAB88E49BB65EDBCE6B456CAF15447D5...
+[2020-10-11T02:23:29+0000] [ALPM-SCRIPTLET]   -> Disabling key 76B4192E902C0A52642C63C273B8ED52F1D357C1...
+[2020-10-11T02:23:29+0000] [ALPM-SCRIPTLET]   -> Disabling key 40776A5221EF5AD468A4906D42A1DB15EC133BAD...
+[2020-10-11T02:23:29+0000] [ALPM-SCRIPTLET]   -> Disabling key D4DE5ABDE2A7287644EAC7E36D1A9E70E19DAA50...
+[2020-10-11T02:23:29+0000] [ALPM-SCRIPTLET]   -> Disabling key 44D4A033AC140143927397D47EFD567D4C7EA887...
+[2020-10-11T02:23:29+0000] [ALPM-SCRIPTLET] ==> Updating trust database...
+[2020-10-11T02:23:29+0000] [ALPM-SCRIPTLET] gpg: next trustdb check due at 2021-01-01
+[2020-10-11T02:23:30+0000] [ALPM] upgraded linux-api-headers (5.6.11-1 -> 5.8-1)
+[2020-10-11T02:23:35+0000] [ALPM] upgraded tzdata (2020a-1 -> 2020b-2)
+[2020-10-11T02:23:35+0000] [ALPM] upgraded iana-etc (20200601-1 -> 20200905-1)
+[2020-10-11T02:23:35+0000] [ALPM] warning: /etc/nsswitch.conf installed as /etc/nsswitch.conf.pacnew
+[2020-10-11T02:23:35+0000] [ALPM] warning: directory permissions differ on /var/spool/mail/
+filesystem: 775  package: 1777
+[2020-10-11T02:23:35+0000] [ALPM] warning: directory permissions differ on /var/tmp/
+filesystem: 775  package: 1777
+[2020-10-11T02:23:35+0000] [ALPM] upgraded filesystem (2020.05.20-1 -> 2020.09.03-1)
+[2020-10-11T02:23:36+0000] [ALPM] warning: /etc/locale.gen installed as /etc/locale.gen.pacnew
+[2020-10-11T02:23:38+0000] [ALPM] upgraded glibc (2.31-5 -> 2.32-4)
+[2020-10-11T02:23:38+0000] [ALPM-SCRIPTLET] Generating locales...
+[2020-10-11T02:23:38+0000] [ALPM-SCRIPTLET]   ko_KR.UTF-8... done
+[2020-10-11T02:23:39+0000] [ALPM-SCRIPTLET]   en_US.UTF-8... done
+[2020-10-11T02:23:39+0000] [ALPM-SCRIPTLET] Generation complete.
+[2020-10-11T02:23:40+0000] [ALPM] upgraded gcc-libs (10.1.0-2 -> 10.2.0-3)
+[2020-10-11T02:23:40+0000] [ALPM] upgraded bash (5.0.017-1 -> 5.0.018-1)
+[2020-10-11T02:23:40+0000] [ALPM] upgraded libcap (2.34-1 -> 2.43-1)
+[2020-10-11T02:23:40+0000] [ALPM] installed libxcrypt (4.4.17-1)
+[2020-10-11T02:23:46+0000] [ALPM] upgraded perl (5.30.2-1 -> 5.32.0-3)
+[2020-10-11T02:23:53+0000] [ALPM] upgraded openssl (1.1.1.g-2 -> 1.1.1.h-1)
+[2020-10-11T02:23:53+0000] [ALPM] upgraded coreutils (8.31-3 -> 8.32-1)
+[2020-10-11T02:23:54+0000] [ALPM] upgraded libp11-kit (0.23.20-5 -> 0.23.21-1)
+[2020-10-11T02:23:54+0000] [ALPM] upgraded libgpg-error (1.38-1 -> 1.39-1)
+[2020-10-11T02:23:54+0000] [ALPM] upgraded libgcrypt (1.8.5-2 -> 1.8.6-1)
+[2020-10-11T02:23:54+0000] [ALPM] upgraded systemd-libs (245.6-2 -> 246.6-1)
+[2020-10-11T02:23:54+0000] [ALPM] upgraded p11-kit (0.23.20-5 -> 0.23.21-1)
+[2020-10-11T02:23:54+0000] [ALPM] upgraded ca-certificates-utils (20181109-3 -> 20181109-4)
+[2020-10-11T02:23:54+0000] [ALPM] upgraded ca-certificates-mozilla (3.53-1 -> 3.57-1)
+[2020-10-11T02:23:54+0000] [ALPM] upgraded ca-certificates (20181109-3 -> 20181109-4)
+[2020-10-11T02:23:54+0000] [ALPM] upgraded popt (1.16-12 -> 1.18-1)
+[2020-10-11T02:23:54+0000] [ALPM] installed util-linux-libs (2.36-4)
+[2020-10-11T02:23:54+0000] [ALPM] upgraded json-c (0.14-4 -> 0.15-1)
+[2020-10-11T02:23:54+0000] [ALPM] upgraded cryptsetup (2.3.3-1 -> 2.3.4-1)
+[2020-10-11T02:23:54+0000] [ALPM] upgraded e2fsprogs (1.45.6-2 -> 1.45.6-3)
+[2020-10-11T02:23:55+0000] [ALPM] upgraded libldap (2.4.49-1 -> 2.4.53-1)
+[2020-10-11T02:23:55+0000] [ALPM] upgraded keyutils (1.6.1-4 -> 1.6.3-1)
+[2020-10-11T02:23:55+0000] [ALPM] upgraded krb5 (1.18.1-1 -> 1.18.2-1)
+[2020-10-11T02:23:55+0000] [ALPM] upgraded libpsl (0.21.0-2 -> 0.21.1-1)
+[2020-10-11T02:23:55+0000] [ALPM] upgraded libnghttp2 (1.40.0-1 -> 1.41.0-1)
+[2020-10-11T02:23:56+0000] [ALPM] upgraded curl (7.70.0-1 -> 7.72.0-2)
+[2020-10-11T02:23:56+0000] [ALPM] upgraded libcap-ng (0.7.10-1 -> 0.7.11-2)
+[2020-10-11T02:23:56+0000] [ALPM] upgraded dbus (1.12.16-5 -> 1.12.20-1)
+[2020-10-11T02:23:56+0000] [ALPM] upgraded perl-error (0.17029-1 -> 0.17029-2)
+[2020-10-11T02:23:56+0000] [ALPM] upgraded perl-timedate (2.33-1 -> 2.33-2)
+[2020-10-11T02:23:56+0000] [ALPM] upgraded perl-mailtools (2.21-3 -> 2.21-4)
+[2020-10-11T02:23:56+0000] [ALPM] upgraded pambase (20190105.1-2 -> 20200721.1-2)
+[2020-10-11T02:23:57+0000] [ALPM] upgraded pam (1.3.1-2 -> 1.4.0-3)
+[2020-10-11T02:23:58+0000] [ALPM] upgraded shadow (4.8.1-1 -> 4.8.1-4)
+[2020-10-11T02:23:58+0000] [ALPM-SCRIPTLET] Could not set capabilities on /usr/bin/newuidmap: Permission denied
+[2020-10-11T02:23:58+0000] [ALPM-SCRIPTLET] Could not set capabilities on /usr/bin/newgidmap: Permission denied
+[2020-10-11T02:23:59+0000] [ALPM] upgraded git (2.27.0-1 -> 2.28.0-1)
+[2020-10-11T02:24:00+0000] [ALPM] upgraded glib2 (2.64.3-2 -> 2.66.1-1)
+[2020-10-11T02:24:00+0000] [ALPM] upgraded libksba (1.4.0-1 -> 1.4.0-2)
+[2020-10-11T02:24:02+0000] [ALPM] upgraded gnutls (3.6.14-1 -> 3.6.15-1)
+[2020-10-11T02:24:02+0000] [ALPM] upgraded sqlite (3.32.2-1 -> 3.33.0-2)
+[2020-10-11T02:24:03+0000] [ALPM] upgraded gnupg (2.2.20-4 -> 2.2.23-1)
+[2020-10-11T02:24:03+0000] [ALPM] upgraded gpgme (1.13.1-7 -> 1.14.0-1)
+[2020-10-11T02:24:03+0000] [ALPM] upgraded hwids (20200306-1 -> 20200813.1-1)
+[2020-10-11T02:24:03+0000] [ALPM] upgraded libnftnl (1.1.6-1 -> 1.1.7-1)
+[2020-10-11T02:24:03+0000] [ALPM] upgraded iptables (1:1.8.4-1 -> 1:1.8.5-2)
+[2020-10-11T02:24:04+0000] [ALPM] upgraded kbd (2.2.0-5 -> 2.3.0-2)
+[2020-10-11T02:24:04+0000] [ALPM] upgraded kmod (27-1 -> 27-2)
+[2020-10-11T02:24:04+0000] [ALPM] upgraded libelf (0.179-1 -> 0.181-1)
+[2020-10-11T02:24:04+0000] [ALPM] warning: /etc/pacman.d/mirrorlist installed as /etc/pacman.d/mirrorlist.pacnew
+[2020-10-11T02:24:04+0000] [ALPM] upgraded pacman-mirrorlist (20200411-1 -> 20200920-1)
+[2020-10-11T02:24:05+0000] [ALPM] upgraded pacman (5.2.1-6 -> 5.2.2-1)
+[2020-10-11T02:24:05+0000] [ALPM] installed file (5.39-1)
+[2020-10-11T02:24:06+0000] [ALPM] upgraded util-linux (2.35.2-1 -> 2.36-4)
+[2020-10-11T02:24:08+0000] [ALPM] warning: directory permissions differ on /var/log/journal/
+filesystem: 755  package: 2755
+[2020-10-11T02:24:08+0000] [ALPM] upgraded systemd (245.6-2 -> 246.6-1)
+[2020-10-11T02:24:08+0000] [ALPM-SCRIPTLET] Creating group mem with gid 918.
+[2020-10-11T02:24:08+0000] [ALPM-SCRIPTLET] Creating group ftp with gid 11.
+[2020-10-11T02:24:08+0000] [ALPM-SCRIPTLET] Creating group log with gid 19.
+[2020-10-11T02:24:08+0000] [ALPM-SCRIPTLET] Creating group smmsp with gid 917.
+[2020-10-11T02:24:08+0000] [ALPM-SCRIPTLET] Creating group proc with gid 916.
+[2020-10-11T02:24:08+0000] [ALPM-SCRIPTLET] Creating group lock with gid 54.
+[2020-10-11T02:24:08+0000] [ALPM-SCRIPTLET] Creating group network with gid 90.
+[2020-10-11T02:24:08+0000] [ALPM-SCRIPTLET] Creating group power with gid 98.
+[2020-10-11T02:24:08+0000] [ALPM-SCRIPTLET] Creating group wheel with gid 915.
+[2020-10-11T02:24:08+0000] [ALPM-SCRIPTLET] Creating group kvm with gid 914.
+[2020-10-11T02:24:08+0000] [ALPM-SCRIPTLET] Creating group optical with gid 913.
+[2020-10-11T02:24:08+0000] [ALPM-SCRIPTLET] Creating group render with gid 912.
+[2020-10-11T02:24:08+0000] [ALPM-SCRIPTLET] Creating group storage with gid 911.
+[2020-10-11T02:24:08+0000] [ALPM-SCRIPTLET] Creating group rfkill with gid 910.
+[2020-10-11T02:24:08+0000] [ALPM-SCRIPTLET] Creating user ftp (n/a) with uid 14 and gid 11.
+[2020-10-11T02:24:08+0000] [ALPM-SCRIPTLET] Creating group http with gid 909.
+[2020-10-11T02:24:08+0000] [ALPM-SCRIPTLET] Creating user http (n/a) with uid 909 and gid 909.
+[2020-10-11T02:24:08+0000] [ALPM-SCRIPTLET] Creating group nobody with gid 908.
+[2020-10-11T02:24:08+0000] [ALPM-SCRIPTLET] Creating group dbus with gid 81.
+[2020-10-11T02:24:08+0000] [ALPM-SCRIPTLET] Creating user dbus (System Message Bus) with uid 81 and gid 81.
+[2020-10-11T02:24:08+0000] [ALPM-SCRIPTLET] Creating group git with gid 907.
+[2020-10-11T02:24:08+0000] [ALPM-SCRIPTLET] Creating user git (git daemon user) with uid 907 and gid 907.
+[2020-10-11T02:24:08+0000] [ALPM-SCRIPTLET] Creating group systemd-journal-remote with gid 906.
+[2020-10-11T02:24:08+0000] [ALPM-SCRIPTLET] Creating user systemd-journal-remote (systemd Journal Remote) with uid 906 and gid 906.
+[2020-10-11T02:24:08+0000] [ALPM-SCRIPTLET] Creating group systemd-timesync with gid 905.
+[2020-10-11T02:24:08+0000] [ALPM-SCRIPTLET] Creating user systemd-timesync (systemd Time Synchronization) with uid 905 and gid 905.
+[2020-10-11T02:24:08+0000] [ALPM-SCRIPTLET] Creating group systemd-coredump with gid 904.
+[2020-10-11T02:24:08+0000] [ALPM-SCRIPTLET] Creating user systemd-coredump (systemd Core Dumper) with uid 904 and gid 904.
+[2020-10-11T02:24:08+0000] [ALPM-SCRIPTLET] /etc/gshadow: Group "mem" already exists.
+[2020-10-11T02:24:08+0000] [ALPM-SCRIPTLET] Failed to write files: File exists
+[2020-10-11T02:24:08+0000] [ALPM] transaction completed
+[2020-10-11T02:24:09+0000] [ALPM] running '20-systemd-sysusers.hook'...
+[2020-10-11T02:24:09+0000] [ALPM-SCRIPTLET] Creating group mem with gid 918.
+[2020-10-11T02:24:09+0000] [ALPM-SCRIPTLET] Creating group ftp with gid 11.
+[2020-10-11T02:24:09+0000] [ALPM-SCRIPTLET] Creating group log with gid 19.
+[2020-10-11T02:24:09+0000] [ALPM-SCRIPTLET] Creating group smmsp with gid 917.
+[2020-10-11T02:24:09+0000] [ALPM-SCRIPTLET] Creating group proc with gid 916.
+[2020-10-11T02:24:09+0000] [ALPM-SCRIPTLET] Creating group lock with gid 54.
+[2020-10-11T02:24:09+0000] [ALPM-SCRIPTLET] Creating group network with gid 90.
+[2020-10-11T02:24:09+0000] [ALPM-SCRIPTLET] Creating group power with gid 98.
+[2020-10-11T02:24:09+0000] [ALPM-SCRIPTLET] Creating group wheel with gid 915.
+[2020-10-11T02:24:09+0000] [ALPM-SCRIPTLET] Creating group kvm with gid 914.
+[2020-10-11T02:24:09+0000] [ALPM-SCRIPTLET] Creating group optical with gid 913.
+[2020-10-11T02:24:09+0000] [ALPM-SCRIPTLET] Creating group render with gid 912.
+[2020-10-11T02:24:09+0000] [ALPM-SCRIPTLET] Creating group storage with gid 911.
+[2020-10-11T02:24:09+0000] [ALPM-SCRIPTLET] Creating group rfkill with gid 910.
+[2020-10-11T02:24:09+0000] [ALPM-SCRIPTLET] Creating user ftp (n/a) with uid 14 and gid 11.
+[2020-10-11T02:24:09+0000] [ALPM-SCRIPTLET] Creating group http with gid 909.
+[2020-10-11T02:24:09+0000] [ALPM-SCRIPTLET] Creating user http (n/a) with uid 909 and gid 909.
+[2020-10-11T02:24:09+0000] [ALPM-SCRIPTLET] Creating group nobody with gid 908.
+[2020-10-11T02:24:09+0000] [ALPM-SCRIPTLET] Creating group dbus with gid 81.
+[2020-10-11T02:24:09+0000] [ALPM-SCRIPTLET] Creating user dbus (System Message Bus) with uid 81 and gid 81.
+[2020-10-11T02:24:09+0000] [ALPM-SCRIPTLET] Creating group git with gid 907.
+[2020-10-11T02:24:09+0000] [ALPM-SCRIPTLET] Creating user git (git daemon user) with uid 907 and gid 907.
+[2020-10-11T02:24:09+0000] [ALPM-SCRIPTLET] Creating group systemd-journal-remote with gid 906.
+[2020-10-11T02:24:09+0000] [ALPM-SCRIPTLET] Creating user systemd-journal-remote (systemd Journal Remote) with uid 906 and gid 906.
+[2020-10-11T02:24:09+0000] [ALPM-SCRIPTLET] Creating group systemd-timesync with gid 905.
+[2020-10-11T02:24:09+0000] [ALPM-SCRIPTLET] Creating user systemd-timesync (systemd Time Synchronization) with uid 905 and gid 905.
+[2020-10-11T02:24:09+0000] [ALPM-SCRIPTLET] Creating group systemd-coredump with gid 904.
+[2020-10-11T02:24:09+0000] [ALPM-SCRIPTLET] Creating user systemd-coredump (systemd Core Dumper) with uid 904 and gid 904.
+[2020-10-11T02:24:09+0000] [ALPM-SCRIPTLET] /etc/gshadow: Group "mem" already exists.
+[2020-10-11T02:24:09+0000] [ALPM-SCRIPTLET] Failed to write files: File exists
+[2020-10-11T02:24:09+0000] [ALPM] running '30-systemd-catalog.hook'...
+[2020-10-11T02:24:09+0000] [ALPM] running '30-systemd-daemon-reload.hook'...
+[2020-10-11T02:24:09+0000] [ALPM-SCRIPTLET]   Skipped: Current root is not booted.
+[2020-10-11T02:24:09+0000] [ALPM] running '30-systemd-hwdb.hook'...
+[2020-10-11T02:24:09+0000] [ALPM] running '30-systemd-sysctl.hook'...
+[2020-10-11T02:24:09+0000] [ALPM-SCRIPTLET]   Skipped: Current root is not booted.
+[2020-10-11T02:24:09+0000] [ALPM] running '30-systemd-tmpfiles.hook'...
+[2020-10-11T02:24:09+0000] [ALPM-SCRIPTLET] /usr/lib/tmpfiles.d/static-nodes-permissions.conf:17: Failed to resolve group 'kvm'.
+[2020-10-11T02:24:09+0000] [ALPM-SCRIPTLET] /usr/lib/tmpfiles.d/systemd-tmp.conf:11: Failed to replace specifiers in '/tmp/systemd-private-%b-*': Permission denied
+[2020-10-11T02:24:09+0000] [ALPM-SCRIPTLET] /usr/lib/tmpfiles.d/systemd-tmp.conf:12: Failed to replace specifiers in '/tmp/systemd-private-%b-*/tmp': Permission denied
+[2020-10-11T02:24:09+0000] [ALPM-SCRIPTLET] /usr/lib/tmpfiles.d/systemd-tmp.conf:13: Failed to replace specifiers in '/var/tmp/systemd-private-%b-*': Permission denied
+[2020-10-11T02:24:09+0000] [ALPM-SCRIPTLET] /usr/lib/tmpfiles.d/systemd-tmp.conf:14: Failed to replace specifiers in '/var/tmp/systemd-private-%b-*/tmp': Permission denied
+[2020-10-11T02:24:09+0000] [ALPM-SCRIPTLET] /usr/lib/tmpfiles.d/systemd-tmp.conf:22: Failed to replace specifiers in '/var/lib/systemd/coredump/.#core*.%b*': Permission denied
+[2020-10-11T02:24:09+0000] [ALPM-SCRIPTLET] Failed to parse ACL "d:group::r-x,d:group:adm:r-x,d:group:wheel:r-x,group::r-x,group:adm:r-x,group:wheel:r-x": No such process. Ignoring
+[2020-10-11T02:24:09+0000] [ALPM-SCRIPTLET] Failed to parse ACL "d:group:adm:r-x,d:group:wheel:r-x,group:adm:r-x,group:wheel:r-x": No such process. Ignoring
+[2020-10-11T02:24:09+0000] [ALPM-SCRIPTLET] Failed to parse ACL "group:adm:r--,group:wheel:r--": No such process. Ignoring
+[2020-10-11T02:24:09+0000] [ALPM-SCRIPTLET] Failed to parse ACL "d:group::r-x,d:group:adm:r-x,d:group:wheel:r-x,group::r-x,group:adm:r-x,group:wheel:r-x": No such process. Ignoring
+[2020-10-11T02:24:09+0000] [ALPM-SCRIPTLET] Failed to parse ACL "d:group:adm:r-x,d:group:wheel:r-x,group:adm:r-x,group:wheel:r-x": No such process. Ignoring
+[2020-10-11T02:24:09+0000] [ALPM-SCRIPTLET] Failed to parse ACL "group:adm:r--,group:wheel:r--": No such process. Ignoring
+[2020-10-11T02:24:09+0000] [ALPM-SCRIPTLET] fchownat() of /run/systemd/netif failed: No such file or directory
+[2020-10-11T02:24:09+0000] [ALPM-SCRIPTLET] fchownat() of /run/systemd/netif/links failed: No such file or directory
+[2020-10-11T02:24:09+0000] [ALPM-SCRIPTLET] fchownat() of /run/systemd/netif/leases failed: No such file or directory
+[2020-10-11T02:24:09+0000] [ALPM-SCRIPTLET] fchownat() of /run/systemd/netif/lldp failed: No such file or directory
+[2020-10-11T02:24:09+0000] [ALPM-SCRIPTLET] fchownat() of /var/log/wtmp failed: No such file or directory
+[2020-10-11T02:24:09+0000] [ALPM-SCRIPTLET] fchownat() of /var/log/btmp failed: No such file or directory
+[2020-10-11T02:24:09+0000] [ALPM-SCRIPTLET] fchownat() of /var/log/lastlog failed: No such file or directory
+[2020-10-11T02:24:09+0000] [ALPM-SCRIPTLET] fchownat() of /var/log/journal failed: No such file or directory
+[2020-10-11T02:24:09+0000] [ALPM-SCRIPTLET] fchownat() of /dev/snd/seq failed: No such file or directory
+[2020-10-11T02:24:09+0000] [ALPM-SCRIPTLET] fchownat() of /dev/snd/timer failed: No such file or directory
+[2020-10-11T02:24:09+0000] [ALPM-SCRIPTLET] fchownat() of /dev/loop-control failed: No such file or directory
+[2020-10-11T02:24:09+0000] [ALPM] running '30-systemd-udev-reload.hook'...
+[2020-10-11T02:24:09+0000] [ALPM-SCRIPTLET]   Skipped: Device manager is not running.
+[2020-10-11T02:24:09+0000] [ALPM] running '30-systemd-update.hook'...
+[2020-10-11T02:24:09+0000] [ALPM] running '40-update-ca-trust.hook'...
+[2020-10-11T02:24:12+0000] [ALPM] running 'dbus-reload.hook'...
+[2020-10-11T02:24:12+0000] [ALPM-SCRIPTLET]   Skipped: Current root is not booted.
+[2020-10-11T02:24:12+0000] [ALPM] running 'detect-old-perl-modules.hook'...
+[2020-10-11T02:28:52+0000] [PACMAN] Running 'pacman -Scc'

@@ -24,11 +24,11 @@
       Second a file (<code class="filename">/etc/environment</code> by default) with simple
       <span class="emphasis"><em>KEY=VAL</em></span> pairs on separate lines will be read.
       With the <span class="emphasis"><em>envfile</em></span> option an alternate file can be specified.
-      And with the <span class="emphasis"><em>readenv</em></span> option this can be completly disabled.
+      And with the <span class="emphasis"><em>readenv</em></span> option this can be completely disabled.
     </p><p>
       Third it will read a user configuration file
       (<code class="filename">$HOME/.pam_environment</code> by default).
-      The default file file can be changed with the
+      The default file can be changed with the
       <span class="emphasis"><em>user_envfile</em></span> option
       and it can be turned on and off with the <span class="emphasis"><em>user_readenv</em></span> option.
     </p><p>
@@ -104,7 +104,7 @@
         </span></dt><dd><p>
             Indicate an alternative <code class="filename">.pam_environment</code>
             file to override the default.The syntax is the same as
-	    for <span class="emphasis"><em>/etc/environment</em></span>.
+	    for <span class="emphasis"><em>/etc/security/pam_env.conf</em></span>.
 	    The filename is relative to the user home directory.
 	    This can be useful when different services need different
 	    environments.
@@ -112,7 +112,7 @@
           <code class="option">user_readenv=<em class="replaceable"><code>0|1</code></em></code>
         </span></dt><dd><p>
             Turns on or off the reading of the user specific environment
-            file. 0 is off, 1 is on. By default this option is on.
+            file. 0 is off, 1 is on. By default this option is off.
           </p></dd></dl></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="sag-pam_env-types"></a>6.6.4. MODULE TYPES PROVIDED</h3></div></div></div><p>
       The <code class="option">auth</code> and <code class="option">session</code> module
       types are provided.

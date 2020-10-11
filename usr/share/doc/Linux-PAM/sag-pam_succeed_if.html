@@ -41,7 +41,7 @@
             Field exactly matches the given string.
           </p></dd><dt><span class="term"><code class="option">field != string</code></span></dt><dd><p>
             Field does not match the given string.
-          </p></dd><dt><span class="term"><code class="option">field =~ glob</code></span></dt><dd><p>Field matches the given glob.</p></dd><dt><span class="term"><code class="option">field !~ glob</code></span></dt><dd><p>Field does not match the given glob.</p></dd><dt><span class="term"><code class="option">field in item:item:...</code></span></dt><dd><p>Field is contained in the list of items separated by colons.</p></dd><dt><span class="term"><code class="option">field notin item:item:...</code></span></dt><dd><p>Field is not contained in the list of items separated by colons.</p></dd><dt><span class="term"><code class="option">user ingroup group</code></span></dt><dd><p>User is in given group.</p></dd><dt><span class="term"><code class="option">user notingroup group</code></span></dt><dd><p>User is not in given group.</p></dd><dt><span class="term"><code class="option">user innetgr netgroup</code></span></dt><dd><p>(user,host) is in given netgroup.</p></dd><dt><span class="term"><code class="option">user notinnetgr group</code></span></dt><dd><p>(user,host) is not in given netgroup.</p></dd></dl></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="sag-pam_succeed_if-types"></a>6.31.3. MODULE TYPES PROVIDED</h3></div></div></div><p>
+          </p></dd><dt><span class="term"><code class="option">field =~ glob</code></span></dt><dd><p>Field matches the given glob.</p></dd><dt><span class="term"><code class="option">field !~ glob</code></span></dt><dd><p>Field does not match the given glob.</p></dd><dt><span class="term"><code class="option">field in item:item:...</code></span></dt><dd><p>Field is contained in the list of items separated by colons.</p></dd><dt><span class="term"><code class="option">field notin item:item:...</code></span></dt><dd><p>Field is not contained in the list of items separated by colons.</p></dd><dt><span class="term"><code class="option">user ingroup group[:group:....]</code></span></dt><dd><p>User is in given group(s).</p></dd><dt><span class="term"><code class="option">user notingroup group[:group:....]</code></span></dt><dd><p>User is not in given group(s).</p></dd><dt><span class="term"><code class="option">user innetgr netgroup</code></span></dt><dd><p>(user,host) is in given netgroup.</p></dd><dt><span class="term"><code class="option">user notinnetgr group</code></span></dt><dd><p>(user,host) is not in given netgroup.</p></dd></dl></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="sag-pam_succeed_if-types"></a>6.31.3. MODULE TYPES PROVIDED</h3></div></div></div><p>
       All module types (<code class="option">account</code>, <code class="option">auth</code>,
       <code class="option">password</code> and <code class="option">session</code>) are provided.
     </p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="sag-pam_succeed_if-return_values"></a>6.31.4. RETURN VALUES</h3></div></div></div><div class="variablelist"><dl class="variablelist"><dt><span class="term">PAM_SUCCESS</span></dt><dd><p>
@@ -53,9 +53,9 @@
               parsed correctly.
             </p></dd></dl></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="sag-pam_succeed_if-examples"></a>6.31.5. EXAMPLES</h3></div></div></div><p>
       To emulate the behaviour of <span class="emphasis"><em>pam_wheel</em></span>, except
-      there is no fallback to group 0:
+      there is no fallback to group 0 being only approximated by checking also the root group membership:
     </p><pre class="programlisting">
-auth required pam_succeed_if.so quiet user ingroup wheel
+auth required pam_succeed_if.so quiet user ingroup wheel:root
     </pre><p>
       Given that the type matches, only loads the othermodule rule if
       the UID is over 500. Adjust the number after default to skip

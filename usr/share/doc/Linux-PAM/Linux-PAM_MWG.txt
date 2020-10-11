@@ -255,7 +255,7 @@ const void *item;
 2.1.3.1. DESCRIPTION
 
 The pam_set_item function allows applications and PAM service modules to access
-and to update PAM informations of item_type. For this a copy of the object
+and to update PAM information of item_type. For this a copy of the object
 pointed to by the item argument is created. The following item_types are
 supported:
 
@@ -358,7 +358,7 @@ an initialized pam_conv structure. In the case of PAM_FAIL_DELAY, item is a
 function pointer: void (*delay_fn)(int retval, unsigned usec_delay, void
 *appdata_ptr)
 
-Both, PAM_AUTHTOK and PAM_OLDAUTHTOK, will be reseted before returning to the
+Both, PAM_AUTHTOK and PAM_OLDAUTHTOK, will be reset before returning to the
 application. Which means an application is not able to access the
 authentication tokens.
 
@@ -396,7 +396,7 @@ const void **item;
 2.1.4.1. DESCRIPTION
 
 The pam_get_item function allows applications and PAM service modules to access
-and retrieve PAM informations of item_type. Upon successful return, item
+and retrieve PAM information of item_type. Upon successful return, item
 contains a pointer to the value of the corresponding item. Note, this is a
 pointer to the actual data and should not be free()'ed or over-written! The
 following values are supported for item_type:
@@ -571,6 +571,19 @@ PAM_CONV_ERR
     The conversation method supplied by the application failed to obtain the
     username.
 
+PAM_BUF_ERR
+
+    Memory buffer error.
+
+PAM_ABORT
+
+    Error resuming an old conversation.
+
+PAM_CONV_AGAIN
+
+    The conversation method supplied by the application is waiting for an
+    event.
+
 2.1.6. The conversation function
 
 #include <security/pam_appl.h>
@@ -644,9 +657,9 @@ also be convenient for the application that related things come at once: a
 windows based application can then present a single form with many messages/
 prompts on at once.
 
-In passing, it is worth noting that there is a descrepency between the way
+In passing, it is worth noting that there is a discrepancy between the way
 Linux-PAM handles the const struct pam_message **msg conversation function
-argument from the way that Solaris' PAM (and derivitives, known to include HP/
+argument and the way that Solaris' PAM (and derivatives, known to include HP/
 UX, are there others?) does. Linux-PAM interprets the msg argument as entirely
 equivalent to the following prototype const struct pam_message *msg[] (which,
 in spirit, is consistent with the commonly used prototypes for argv argument to
@@ -721,7 +734,7 @@ NAME
     variable from the PAM environment.
 
 pam_putenv() operates on a copy of name_value, which means in contrast to 
-putenv(3), the application is responsible to free the data.
+putenv(3), the application is responsible for freeing the data.
 
 2.1.7.2. RETURN VALUES
 
@@ -861,8 +874,8 @@ that serves multiple authentication requests from a single event loop, the
 application might want to simply mark a given connection as blocked until an
 application timer expires. For this reason the delay function can be changed
 with the PAM_FAIL_DELAY item. It can be queried and set with pam_get_item(3)
-and pam_set_item (3) respectively. The value used to set it should be a
-function pointer of the following prototype:
+and pam_set_item(3) respectively. The value used to set it should be a function
+pointer of the following prototype:
 
 void (*delay_fn)(int retval, unsigned usec_delay, void *appdata_ptr);
 
@@ -871,8 +884,13 @@ The arguments being the retval return code of the module stack, the usec_delay
 micro-second delay that libpam is requesting and the appdata_ptr that the
 application has associated with the current pamh. This last value was set by
 the application when it called pam_start(3) or explicitly with pam_set_item(3).
-Note, if PAM_FAIL_DELAY item is unset (or set to NULL), then no delay will be
-performed.
+
+Note that the PAM_FAIL_DELAY item is set to NULL by default. This indicates
+that PAM should perform a random delay as described above when authentication
+fails and a delay has been suggested. If an application does not want the PAM
+library to perform any delay on authentication failure, then the application
+must define a custom delay function that executes no statements and set the
+PAM_FAIL_DELAY item to point to this function.
 
 2.2.2.2. RETURN VALUES
 
@@ -942,13 +960,7 @@ argument and not the name of the module.
 
 3.2. Authentication management
 
-To be correctly initialized, PAM_SM_AUTH must be #define'd prior to including
-<security/pam_modules.h>. This will ensure that the prototypes for static
-modules are properly declared.
-
 3.2.1. Service function for user authentication
-
-#define PAM_SM_AUTH
 
 #include <security/pam_modules.h>
 
@@ -1012,8 +1024,6 @@ PAM_MAXTRIES
     authenticating the user. Do not try again.
 
 3.2.2. Service function to alter credentials
-
-#define PAM_SM_AUTH
 
 #include <security/pam_modules.h>
 
@@ -1098,13 +1108,7 @@ pam_setcred().
 
 3.3. Account management
 
-To be correctly initialized, PAM_SM_ACCOUNT must be #define'd prior to
-including <security/pam_modules.h>. This will ensure that the prototypes for
-static modules are properly declared.
-
 3.3.1. Service function for account management
-
-#define PAM_SM_ACCOUNT
 
 #include <security/pam_modules.h>
 
@@ -1172,13 +1176,7 @@ PAM_USER_UNKNOWN
 
 3.4. Session management
 
-To be correctly initialized, PAM_SM_SESSION must be #define'd prior to
-including <security/pam_modules.h>. This will ensure that the prototypes for
-static modules are properly declared.
-
 3.4.1. Service function to start session management
-
-#define PAM_SM_SESSION
 
 #include <security/pam_modules.h>
 
@@ -1217,8 +1215,6 @@ PAM_SUCCESS
 
 3.4.2. Service function to terminate session management
 
-#define PAM_SM_SESSION
-
 #include <security/pam_modules.h>
 
 int pam_sm_close_session( pamh,   
@@ -1256,13 +1252,7 @@ PAM_SUCCESS
 
 3.5. Authentication token management
 
-To be correctly initialized, PAM_SM_PASSWORD must be #define'd prior to
-including <security/pam_modules.h>. This will ensure that the prototypes for
-static modules are properly declared.
-
 3.5.1. Service function to alter authentication token
-
-#define PAM_SM_PASSWORD
 
 #include <security/pam_modules.h>
 

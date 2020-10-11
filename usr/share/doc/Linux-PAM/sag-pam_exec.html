@@ -33,7 +33,7 @@
      <code class="option">close_session</code>.
     </p><p>
       Commands called by pam_exec need to be aware of that the user
-      can have controll over the environment.
+      can have control over the environment.
     </p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="sag-pam_exec-options"></a>6.7.2. OPTIONS</h3></div></div></div><p>
       </p><div class="variablelist"><dl class="variablelist"><dt><span class="term">
             <code class="option">debug</code>
@@ -79,6 +79,14 @@
     </p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="sag-pam_exec-return_values"></a>6.7.4. RETURN VALUES</h3></div></div></div><p>
       </p><div class="variablelist"><dl class="variablelist"><dt><span class="term">PAM_SUCCESS</span></dt><dd><p>
               The external command was run successfully.
+            </p></dd><dt><span class="term">PAM_BUF_ERR</span></dt><dd><p>
+              Memory buffer error.
+            </p></dd><dt><span class="term">PAM_CONV_ERR</span></dt><dd><p>
+              The conversation method supplied by the application
+              failed to obtain the username.
+            </p></dd><dt><span class="term">PAM_INCOMPLETE</span></dt><dd><p>
+              The conversation method supplied by the application
+              returned PAM_CONV_AGAIN.
             </p></dd><dt><span class="term">PAM_SERVICE_ERR</span></dt><dd><p>
 	      No argument or a wrong number of arguments were given.
             </p></dd><dt><span class="term">PAM_SYSTEM_ERR</span></dt><dd><p>

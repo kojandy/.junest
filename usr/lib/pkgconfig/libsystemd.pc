@@ -15,6 +15,6 @@ includedir=/usr/include
 Name: systemd
 Description: systemd Library
 URL: https://www.freedesktop.org/wiki/Software/systemd
-Version: 245
+Version: 246
 Libs: -L${libdir} -lsystemd
 Cflags: -I${includedir}

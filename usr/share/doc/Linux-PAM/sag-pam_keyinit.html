@@ -8,16 +8,23 @@
       The pam_keyinit PAM module ensures that the invoking process has a
       session keyring other than the user default session keyring.
     </p><p>
-      The session component of the module checks to see if the process's
-      session keyring is the user default, and, if it is, creates a new
-      anonymous session keyring with which to replace it.
+      The module checks to see if the process's session keyring is the
+      <span class="citerefentry"><span class="refentrytitle">user-session-keyring</span>(7)</span>,
+      and, if it is, creates a new
+      <span class="citerefentry"><span class="refentrytitle">session-keyring</span>(7)</span>
+      with which to replace it. If a new session keyring is created, it will
+      install a link to the
+      <span class="citerefentry"><span class="refentrytitle">user-keyring</span>(7)</span>
+      in the session keyring so that keys common to the user will be
+      automatically accessible through it. The session keyring of the invoking
+      process will thenceforth be inherited by all its children unless they override it.
     </p><p>
-      If a new session keyring is created, it will install a link to the user
-      common keyring in the session keyring so that keys common to the user
-      will be automatically accessible through it.
-    </p><p>
-      The session keyring of the invoking process will thenceforth be inherited
-      by all its children unless they override it.
+      In order to allow other PAM modules to attach tokens to the keyring, this module
+      provides both an <span class="emphasis"><em>auth</em></span> (limited to
+      <span class="citerefentry"><span class="refentrytitle">pam_setcred</span>(3)</span>
+      and a <span class="emphasis"><em>session</em></span> component. The session keyring is created
+      in the module called. Moreover this module should be included as early as
+      possible in a PAM configuration.
     </p><p>
       This module is intended primarily for use by login processes.  Be aware
       that after the session keyring has been replaced, the old session keyring
@@ -27,10 +34,6 @@
       <span class="emphasis"><em>su</em></span>, since it is usually desirable for the
       key set to percolate through to the alternate context.  The keys have
       their own permissions system to manage this.
-    </p><p>
-      This module should be included as early as possible in a PAM
-      configuration, so that other PAM modules can attach tokens to the
-      keyring.
     </p><p>
       The keyutils package is used to manipulate keys more directly.  This
       can be obtained from:

@@ -7,7 +7,7 @@
 # Source: nss/lib/ckfw/builtins/nssckbi.h
 #
 # Generated from:
-# NSS_BUILTINS_LIBRARY_VERSION "2.40"
+# NSS_BUILTINS_LIBRARY_VERSION "2.44"
 #
 [p11-kit-object-v1]
 label: "ACCVRAIZ1"
@@ -493,225 +493,6 @@ LnPqZih4zR0Uv6CPLy64Lo7yFIrM6bV8+2ydDKXhlg==
 #         98:4f:b2:59:54:47:3e:34:7b:78:6d:56:93:2e:73:ea:66:28:
 #         78:cd:1d:14:bf:a0:8f:2f:2e:b8:2e:8e:f2:14:8a:cc:e9:b5:
 #         7c:fb:6c:9d:0c:a5:e1:96
-
-[p11-kit-object-v1]
-label: "AddTrust External Root"
-class: x-certificate-extension
-object-id: 2.5.29.37
-value: "0 %06%03U%1d%25%01%01%ff%04%160%14%06%08%2b%06%01%05%05%07%03%04%06%08%2b%06%01%05%05%07%03%01"
-modifiable: false
------BEGIN PUBLIC KEY-----
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAt/caM+byAAQtOeBOW+0f
-vGwPzbX6I7bO3psRM5ekKUx9k5+9SryT7QMa44/P5W1QWtaXKZRagLBJetsulf24
-yr83OC0ePpFBrXBWx/BPP+gynnTKyJBU6cZfD3idmkA8Dqxhql4Uj56HoWpQ3Nea
-Tq8Fs6ZxlJxxs1BgCscTnTgHhgKo6ahpJhiQq0ywTyOrOk+E2N/On+Fpb7vXQtdr
-ROTHre5tQV9yWnEIN7N5ZaRZoJQ39wAvDcKSctrQOHLbFKhFxF0qfbe01sTurM0T
-RLfJK91DACX6YblpalgjEbenM49WdVn1zSnXRrcKK2W200JvFbK4e/vv6V1T1TRa
-JwIDAQAB
------END PUBLIC KEY-----
-
-[p11-kit-object-v1]
-label: "AddTrust External Root"
-trusted: true
-nss-mozilla-ca-policy: true
-modifiable: false
-nss-server-distrust-after: "%00"
-nss-email-distrust-after: "%00"
------BEGIN CERTIFICATE-----
-MIIENjCCAx6gAwIBAgIBATANBgkqhkiG9w0BAQUFADBvMQswCQYDVQQGEwJTRTEU
-MBIGA1UEChMLQWRkVHJ1c3QgQUIxJjAkBgNVBAsTHUFkZFRydXN0IEV4dGVybmFs
-IFRUUCBOZXR3b3JrMSIwIAYDVQQDExlBZGRUcnVzdCBFeHRlcm5hbCBDQSBSb290
-MB4XDTAwMDUzMDEwNDgzOFoXDTIwMDUzMDEwNDgzOFowbzELMAkGA1UEBhMCU0Ux
-FDASBgNVBAoTC0FkZFRydXN0IEFCMSYwJAYDVQQLEx1BZGRUcnVzdCBFeHRlcm5h
-bCBUVFAgTmV0d29yazEiMCAGA1UEAxMZQWRkVHJ1c3QgRXh0ZXJuYWwgQ0EgUm9v
-dDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALf3GjPm8gAELTngTlvt
-H7xsD821+iO2zt6bETOXpClMfZOfvUq8k+0DGuOPz+VtUFrWlymUWoCwSXrbLpX9
-uMq/NzgtHj6RQa1wVsfwTz/oMp50ysiQVOnGXw94nZpAPA6sYapeFI+eh6FqUNzX
-mk6vBbOmcZSccbNQYArHE504B4YCqOmoaSYYkKtMsE8jqzpPhNjfzp/haW+710LX
-a0Tkx63ubUFfclpxCDezeWWkWaCUN/cALw3CknLa0Dhy2xSoRcRdKn23tNbE7qzN
-E0S3ySvdQwAl+mG5aWpYIxG3pzOPVnVZ9c0p10a3CitlttNCbxWyuHv77+ldU9U0
-WicCAwEAAaOB3DCB2TAdBgNVHQ4EFgQUrb2YejS0Jvf6xCZU7wO94CTLVBowCwYD
-VR0PBAQDAgEGMA8GA1UdEwEB/wQFMAMBAf8wgZkGA1UdIwSBkTCBjoAUrb2YejS0
-Jvf6xCZU7wO94CTLVBqhc6RxMG8xCzAJBgNVBAYTAlNFMRQwEgYDVQQKEwtBZGRU
-cnVzdCBBQjEmMCQGA1UECxMdQWRkVHJ1c3QgRXh0ZXJuYWwgVFRQIE5ldHdvcmsx
-IjAgBgNVBAMTGUFkZFRydXN0IEV4dGVybmFsIENBIFJvb3SCAQEwDQYJKoZIhvcN
-AQEFBQADggEBALCb4IUlwtYj4g+WBpKdQZic2YR5gdkeWxQHIzZlj7DYd7usQWxH
-YINRsPkyPef89iYTx4AWpb9a/IfPeHmJIZriTAcKhjW88t5RxNKWt9x+Tu5w/Rw5
-6wwCURQtjr0W4MHfRnXnJK3s9EK0hZNwEGe6nQY1ShjTK3rMUUKhemPR5ruhxSvC
-Nr4TDea9Y355e6cJDUCrat2PisP29owaQgVR1EX1n6diIWgVIEM8med8vSTYqZEX
-c4g/VhsxOBi0cQ+azcgOno4uG+GMmIPLHzHxREzGBHNJdmAPx/i9F4BrLunMTA5a
-mnkPIAou1Z5jJh5VkpTYghdae9C8x49OhgQ=
------END CERTIFICATE-----
-#Certificate:
-#    Data:
-#        Version: 3 (0x2)
-#        Serial Number: 1 (0x1)
-#        Signature Algorithm: sha1WithRSAEncryption
-#        Issuer: C = SE, O = AddTrust AB, OU = AddTrust External TTP Network, CN = AddTrust External CA Root
-#        Validity
-#            Not Before: May 30 10:48:38 2000 GMT
-#            Not After : May 30 10:48:38 2020 GMT
-#        Subject: C = SE, O = AddTrust AB, OU = AddTrust External TTP Network, CN = AddTrust External CA Root
-#        Subject Public Key Info:
-#            Public Key Algorithm: rsaEncryption
-#                RSA Public-Key: (2048 bit)
-#                Modulus:
-#                    00:b7:f7:1a:33:e6:f2:00:04:2d:39:e0:4e:5b:ed:
-#                    1f:bc:6c:0f:cd:b5:fa:23:b6:ce:de:9b:11:33:97:
-#                    a4:29:4c:7d:93:9f:bd:4a:bc:93:ed:03:1a:e3:8f:
-#                    cf:e5:6d:50:5a:d6:97:29:94:5a:80:b0:49:7a:db:
-#                    2e:95:fd:b8:ca:bf:37:38:2d:1e:3e:91:41:ad:70:
-#                    56:c7:f0:4f:3f:e8:32:9e:74:ca:c8:90:54:e9:c6:
-#                    5f:0f:78:9d:9a:40:3c:0e:ac:61:aa:5e:14:8f:9e:
-#                    87:a1:6a:50:dc:d7:9a:4e:af:05:b3:a6:71:94:9c:
-#                    71:b3:50:60:0a:c7:13:9d:38:07:86:02:a8:e9:a8:
-#                    69:26:18:90:ab:4c:b0:4f:23:ab:3a:4f:84:d8:df:
-#                    ce:9f:e1:69:6f:bb:d7:42:d7:6b:44:e4:c7:ad:ee:
-#                    6d:41:5f:72:5a:71:08:37:b3:79:65:a4:59:a0:94:
-#                    37:f7:00:2f:0d:c2:92:72:da:d0:38:72:db:14:a8:
-#                    45:c4:5d:2a:7d:b7:b4:d6:c4:ee:ac:cd:13:44:b7:
-#                    c9:2b:dd:43:00:25:fa:61:b9:69:6a:58:23:11:b7:
-#                    a7:33:8f:56:75:59:f5:cd:29:d7:46:b7:0a:2b:65:
-#                    b6:d3:42:6f:15:b2:b8:7b:fb:ef:e9:5d:53:d5:34:
-#                    5a:27
-#                Exponent: 65537 (0x10001)
-#        X509v3 extensions:
-#            X509v3 Subject Key Identifier: 
-#                AD:BD:98:7A:34:B4:26:F7:FA:C4:26:54:EF:03:BD:E0:24:CB:54:1A
-#            X509v3 Key Usage: 
-#                Certificate Sign, CRL Sign
-#            X509v3 Basic Constraints: critical
-#                CA:TRUE
-#            X509v3 Authority Key Identifier: 
-#                keyid:AD:BD:98:7A:34:B4:26:F7:FA:C4:26:54:EF:03:BD:E0:24:CB:54:1A
-#                DirName:/C=SE/O=AddTrust AB/OU=AddTrust External TTP Network/CN=AddTrust External CA Root
-#                serial:01
-#
-#    Signature Algorithm: sha1WithRSAEncryption
-#         b0:9b:e0:85:25:c2:d6:23:e2:0f:96:06:92:9d:41:98:9c:d9:
-#         84:79:81:d9:1e:5b:14:07:23:36:65:8f:b0:d8:77:bb:ac:41:
-#         6c:47:60:83:51:b0:f9:32:3d:e7:fc:f6:26:13:c7:80:16:a5:
-#         bf:5a:fc:87:cf:78:79:89:21:9a:e2:4c:07:0a:86:35:bc:f2:
-#         de:51:c4:d2:96:b7:dc:7e:4e:ee:70:fd:1c:39:eb:0c:02:51:
-#         14:2d:8e:bd:16:e0:c1:df:46:75:e7:24:ad:ec:f4:42:b4:85:
-#         93:70:10:67:ba:9d:06:35:4a:18:d3:2b:7a:cc:51:42:a1:7a:
-#         63:d1:e6:bb:a1:c5:2b:c2:36:be:13:0d:e6:bd:63:7e:79:7b:
-#         a7:09:0d:40:ab:6a:dd:8f:8a:c3:f6:f6:8c:1a:42:05:51:d4:
-#         45:f5:9f:a7:62:21:68:15:20:43:3c:99:e7:7c:bd:24:d8:a9:
-#         91:17:73:88:3f:56:1b:31:38:18:b4:71:0f:9a:cd:c8:0e:9e:
-#         8e:2e:1b:e1:8c:98:83:cb:1f:31:f1:44:4c:c6:04:73:49:76:
-#         60:0f:c7:f8:bd:17:80:6b:2e:e9:cc:4c:0e:5a:9a:79:0f:20:
-#         0a:2e:d5:9e:63:26:1e:55:92:94:d8:82:17:5a:7b:d0:bc:c7:
-#         8f:4e:86:04
-
-[p11-kit-object-v1]
-label: "AddTrust Low-Value Services Root"
-class: x-certificate-extension
-object-id: 2.5.29.37
-value: "0%16%06%03U%1d%25%01%01%ff%04%0c0%0a%06%08%2b%06%01%05%05%07%03%04"
-modifiable: false
------BEGIN PUBLIC KEY-----
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlpbUIUlg4mvoQQcM3sTg
-3BMjzcE1x/vWThEKZ171BltrpQg7WykWOueHsjQGxbwFpQN8gsspEK7hiIG91p7T
-/i1WwRXO4yadFS4Q+waPMATep7RjtP+xnK48r3e2VsW1q6LpaTo9DjN5Mj9wgpKZ
-YW2NMAiPcT+mSFcZ+CXcS2ZcpXSPmK7I+cAGIuesc9+lLvtS3LEVZSD6NWZp3t8s
-8W68MNssJBLb6zU1aJDLALCXIT10ISNlNCu7eFmj1uF2OZqkSY6MdK9upJqj2ZvS
-OFybohjMdSOEvuviTTNxjhrwwvjHHaKtA5cs+M8lxva4JDGxY12Sf2PwJclTLh+/
-TQIDAQAB
------END PUBLIC KEY-----
-
-[p11-kit-object-v1]
-label: "AddTrust Low-Value Services Root"
-trusted: true
-nss-mozilla-ca-policy: true
-modifiable: false
-nss-server-distrust-after: "%00"
-nss-email-distrust-after: "%00"
------BEGIN CERTIFICATE-----
-MIIEGDCCAwCgAwIBAgIBATANBgkqhkiG9w0BAQUFADBlMQswCQYDVQQGEwJTRTEU
-MBIGA1UEChMLQWRkVHJ1c3QgQUIxHTAbBgNVBAsTFEFkZFRydXN0IFRUUCBOZXR3
-b3JrMSEwHwYDVQQDExhBZGRUcnVzdCBDbGFzcyAxIENBIFJvb3QwHhcNMDAwNTMw
-MTAzODMxWhcNMjAwNTMwMTAzODMxWjBlMQswCQYDVQQGEwJTRTEUMBIGA1UEChML
-QWRkVHJ1c3QgQUIxHTAbBgNVBAsTFEFkZFRydXN0IFRUUCBOZXR3b3JrMSEwHwYD
-VQQDExhBZGRUcnVzdCBDbGFzcyAxIENBIFJvb3QwggEiMA0GCSqGSIb3DQEBAQUA
-A4IBDwAwggEKAoIBAQCWltQhSWDia+hBBwzexODcEyPNwTXH+9ZOEQpnXvUGW2ul
-CDtbKRY654eyNAbFvAWlA3yCyykQruGIgb3WntP+LVbBFc7jJp0VLhD7Bo8wBN6n
-tGO0/7Gcrjyvd7ZWxbWroulpOj0OM3kyP3CCkplhbY0wCI9xP6ZIVxn4JdxLZlyl
-dI+Yrsj5wAYi56xz36Uu+1LcsRVlIPo1Zmne3yzxbrww2ywkEtvrNTVokMsAsJch
-PXQhI2U0K7t4WaPW4XY5mqRJjox0r26kmqPZm9I4XJuiGMx1I4S+6+JNM3GOGvDC
-+Mcdoq0Dlyz4zyXG9rgkMbFjXZJ/Y/AlyVMuH79NAgMBAAGjgdIwgc8wHQYDVR0O
-BBYEFJWxtPCUtr3H2tERCSG+wa9J/RB7MAsGA1UdDwQEAwIBBjAPBgNVHRMBAf8E
-BTADAQH/MIGPBgNVHSMEgYcwgYSAFJWxtPCUtr3H2tERCSG+wa9J/RB7oWmkZzBl
-MQswCQYDVQQGEwJTRTEUMBIGA1UEChMLQWRkVHJ1c3QgQUIxHTAbBgNVBAsTFEFk
-ZFRydXN0IFRUUCBOZXR3b3JrMSEwHwYDVQQDExhBZGRUcnVzdCBDbGFzcyAxIENB
-IFJvb3SCAQEwDQYJKoZIhvcNAQEFBQADggEBACxtZBsfzQ3duQH6lmM0MkhHma6X
-7f1yFqZzR1r0693p9db7RcwpiURdv0Y5PejuvE1Uhh4dbOMXJ0PhiVYrqW9yTkkz
-43J8KiOavD7/KCrto/8cI7pDVwlnTUtiBi34/2ydYB7YHEt9tTEv2dB8Xfjea4MY
-eDdXL+gzB2ffHsdrKpV2ro9Xo/D0UrSpUwjP4E/TelOL/bscVjby/rK25Xa71SJl
-pz/+0WatC7xrmYbvP33zGDLKe8bjq2RGlfgmadlVg3sslgf/WSxEo8bl6ancoWOA
-WiFeIc9TVPC6b4nbqKqVz4vjccweGyBECMB6tkD9xOQ14R0WHNC8K47Wcdk=
------END CERTIFICATE-----
-#Certificate:
-#    Data:
-#        Version: 3 (0x2)
-#        Serial Number: 1 (0x1)
-#        Signature Algorithm: sha1WithRSAEncryption
-#        Issuer: C = SE, O = AddTrust AB, OU = AddTrust TTP Network, CN = AddTrust Class 1 CA Root
-#        Validity
-#            Not Before: May 30 10:38:31 2000 GMT
-#            Not After : May 30 10:38:31 2020 GMT
-#        Subject: C = SE, O = AddTrust AB, OU = AddTrust TTP Network, CN = AddTrust Class 1 CA Root
-#        Subject Public Key Info:
-#            Public Key Algorithm: rsaEncryption
-#                RSA Public-Key: (2048 bit)
-#                Modulus:
-#                    00:96:96:d4:21:49:60:e2:6b:e8:41:07:0c:de:c4:
-#                    e0:dc:13:23:cd:c1:35:c7:fb:d6:4e:11:0a:67:5e:
-#                    f5:06:5b:6b:a5:08:3b:5b:29:16:3a:e7:87:b2:34:
-#                    06:c5:bc:05:a5:03:7c:82:cb:29:10:ae:e1:88:81:
-#                    bd:d6:9e:d3:fe:2d:56:c1:15:ce:e3:26:9d:15:2e:
-#                    10:fb:06:8f:30:04:de:a7:b4:63:b4:ff:b1:9c:ae:
-#                    3c:af:77:b6:56:c5:b5:ab:a2:e9:69:3a:3d:0e:33:
-#                    79:32:3f:70:82:92:99:61:6d:8d:30:08:8f:71:3f:
-#                    a6:48:57:19:f8:25:dc:4b:66:5c:a5:74:8f:98:ae:
-#                    c8:f9:c0:06:22:e7:ac:73:df:a5:2e:fb:52:dc:b1:
-#                    15:65:20:fa:35:66:69:de:df:2c:f1:6e:bc:30:db:
-#                    2c:24:12:db:eb:35:35:68:90:cb:00:b0:97:21:3d:
-#                    74:21:23:65:34:2b:bb:78:59:a3:d6:e1:76:39:9a:
-#                    a4:49:8e:8c:74:af:6e:a4:9a:a3:d9:9b:d2:38:5c:
-#                    9b:a2:18:cc:75:23:84:be:eb:e2:4d:33:71:8e:1a:
-#                    f0:c2:f8:c7:1d:a2:ad:03:97:2c:f8:cf:25:c6:f6:
-#                    b8:24:31:b1:63:5d:92:7f:63:f0:25:c9:53:2e:1f:
-#                    bf:4d
-#                Exponent: 65537 (0x10001)
-#        X509v3 extensions:
-#            X509v3 Subject Key Identifier: 
-#                95:B1:B4:F0:94:B6:BD:C7:DA:D1:11:09:21:BE:C1:AF:49:FD:10:7B
-#            X509v3 Key Usage: 
-#                Certificate Sign, CRL Sign
-#            X509v3 Basic Constraints: critical
-#                CA:TRUE
-#            X509v3 Authority Key Identifier: 
-#                keyid:95:B1:B4:F0:94:B6:BD:C7:DA:D1:11:09:21:BE:C1:AF:49:FD:10:7B
-#                DirName:/C=SE/O=AddTrust AB/OU=AddTrust TTP Network/CN=AddTrust Class 1 CA Root
-#                serial:01
-#
-#    Signature Algorithm: sha1WithRSAEncryption
-#         2c:6d:64:1b:1f:cd:0d:dd:b9:01:fa:96:63:34:32:48:47:99:
-#         ae:97:ed:fd:72:16:a6:73:47:5a:f4:eb:dd:e9:f5:d6:fb:45:
-#         cc:29:89:44:5d:bf:46:39:3d:e8:ee:bc:4d:54:86:1e:1d:6c:
-#         e3:17:27:43:e1:89:56:2b:a9:6f:72:4e:49:33:e3:72:7c:2a:
-#         23:9a:bc:3e:ff:28:2a:ed:a3:ff:1c:23:ba:43:57:09:67:4d:
-#         4b:62:06:2d:f8:ff:6c:9d:60:1e:d8:1c:4b:7d:b5:31:2f:d9:
-#         d0:7c:5d:f8:de:6b:83:18:78:37:57:2f:e8:33:07:67:df:1e:
-#         c7:6b:2a:95:76:ae:8f:57:a3:f0:f4:52:b4:a9:53:08:cf:e0:
-#         4f:d3:7a:53:8b:fd:bb:1c:56:36:f2:fe:b2:b6:e5:76:bb:d5:
-#         22:65:a7:3f:fe:d1:66:ad:0b:bc:6b:99:86:ef:3f:7d:f3:18:
-#         32:ca:7b:c6:e3:ab:64:46:95:f8:26:69:d9:55:83:7b:2c:96:
-#         07:ff:59:2c:44:a3:c6:e5:e9:a9:dc:a1:63:80:5a:21:5e:21:
-#         cf:53:54:f0:ba:6f:89:db:a8:aa:95:cf:8b:e3:71:cc:1e:1b:
-#         20:44:08:c0:7a:b6:40:fd:c4:e4:35:e1:1d:16:1c:d0:bc:2b:
-#         8e:d6:71:d9
 
 [p11-kit-object-v1]
 label: "AffirmTrust Commercial"
@@ -2947,6 +2728,154 @@ i/nDhDwTqn6Sm1dTk/pwwpEOMfmbZ13pljheX7NzTogVZ96edhBiIL5VaZVDADlN
 #         58:5f:42:83
 
 [p11-kit-object-v1]
+label: "certSIGN Root CA G2"
+class: x-certificate-extension
+object-id: 2.5.29.37
+value: "0%16%06%03U%1d%25%01%01%ff%04%0c0%0a%06%08%2b%06%01%05%05%07%03%01"
+modifiable: false
+-----BEGIN PUBLIC KEY-----
+MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAwMV1GZF9RHR0h/4OO5bc
+2AEWzO5jkecLb847CmkafMLjr4KOhtdej1fr0yFZ/Tk3QjC+UOq2D6mI2C4taSHn
+0TcYTn2R1RZfa1sAwjlDDTaFUrlTZQ8dQuWPzwXT7twMGtm4i3giZ+RpsGjFPORs
+Wkbnzcf678TsS71qpKz9zChR75K0KaurNZpM5MQIxibM+Gmf5JzwKdNc+cYWJZ4j
+wyDBPQ8/OECw/oJEOKpaGoprY1g4tBXTthFpex5U7owaIqxylz8jWZvJIoTBB0/M
+f+JXyhJwu6Zl82l1Y72V+xuXzeSor/bRTqjZinEkzTY9vJbE8WypruXPDW4oDbAO
+tcpRe3gUwyAvf/sUVeERmf3VCqGeAuNiX+s1Syy4cug+PU+sLLsuhuKjdo/lkyrP
+pavIXI1LBv8SRqx4yxQHNeCp34vprxVPFolbvfaNxlmuiIUOwYnrH2fFRY7/bTc2
+K3hmg5FRKz3/UXd2YqHsZz4+gYPgVqlQHx96matjv4QXd/ENO9/3nGGzNZiKOrLs
+PBo3P36Pks/ZEhRk2hACFUH/T8TrHKPJ+pn3RunhGNmxuDItyxQMUNiDZYPuuVzP
+ywVaTPoZl2vWXRPTwlxUvDJzoHj18W0ey5+lpp8i3NFRnoJ5ZGApEz6j/U9yaqvi
+1OW4JFUsREuKiEScyoTTKjsCAwEAAQ==
+-----END PUBLIC KEY-----
+
+[p11-kit-object-v1]
+label: "certSIGN Root CA G2"
+trusted: true
+nss-mozilla-ca-policy: true
+modifiable: false
+nss-server-distrust-after: "%00"
+nss-email-distrust-after: "%00"
+-----BEGIN CERTIFICATE-----
+MIIFRzCCAy+gAwIBAgIJEQA0tk7GNi02MA0GCSqGSIb3DQEBCwUAMEExCzAJBgNV
+BAYTAlJPMRQwEgYDVQQKEwtDRVJUU0lHTiBTQTEcMBoGA1UECxMTY2VydFNJR04g
+Uk9PVCBDQSBHMjAeFw0xNzAyMDYwOTI3MzVaFw00MjAyMDYwOTI3MzVaMEExCzAJ
+BgNVBAYTAlJPMRQwEgYDVQQKEwtDRVJUU0lHTiBTQTEcMBoGA1UECxMTY2VydFNJ
+R04gUk9PVCBDQSBHMjCCAiIwDQYJKoZIhvcNAQEBBQADggIPADCCAgoCggIBAMDF
+dRmRfUR0dIf+DjuW3NgBFszuY5HnC2/OOwppGnzC46+CjobXXo9X69MhWf05N0Iw
+vlDqtg+piNguLWkh59E3GE59kdUWX2tbAMI5Qw02hVK5U2UPHULlj88F0+7cDBrZ
+uIt4ImfkabBoxTzkbFpG583H+u/E7Eu9aqSs/cwoUe+StCmrqzWaTOTECMYmzPhp
+n+Sc8CnTXPnGFiWeI8MgwT0PPzhAsP6CRDiqWhqKa2NYOLQV07YRaXseVO6MGiKs
+cpc/I1mbySKEwQdPzH/iV8oScLumZfNpdWO9lfsbl83kqK/20U6o2YpxJM02PbyW
+xPFsqa7lzw1uKA2wDrXKUXt4FMMgL3/7FFXhEZn91QqhngLjYl/rNUssuHLoPj1P
+rCy7Lobio3aP5ZMqz6WryFyNSwb/EkaseMsUBzXgqd+L6a8VTxaJW732jcZZroiF
+DsGJ6x9nxUWO/203Nit4ZoORUSs9/1F3dmKh7Gc+PoGD4FapUB8fepmrY7+EF3fx
+DTvf95xhszWYijqy7DwaNz9+j5LP2RIUZNoQAhVB/0/E6xyjyfqZ90bp4RjZsbgy
+LcsUDFDYg2WD7rlcz8sFWkz6GZdr1l0T08JcVLwyc6B49fFtHsufpaafItzRUZ6C
+eWRgKRM+o/1Pcmqr4tTluCRVLERLiohEnMqE0yo7AgMBAAGjQjBAMA8GA1UdEwEB
+/wQFMAMBAf8wDgYDVR0PAQH/BAQDAgEGMB0GA1UdDgQWBBSCIS1mxteg4BXrzkwJ
+d8RgnlRuAzANBgkqhkiG9w0BAQsFAAOCAgEAYN4auOfyYILVAzOBywaK8SJJ6ejq
+kX/GM15oGQOGO0MBzwdw5AgeZYWR5hEit/UCI46uuR59H35s5r0l1ZUa8gWmr4UC
+b6741jH/JclKyMeKqdmfS0mbEVeZkkMR3rYzpMzXjWR91M08KCy0mpbqTfXERMQl
+qiCA2ClV9+BB/AYm/7k29UMUA2Z44RGx2iBfRgB4ACGlHgAoYXhvqAEBj500mv/0
+OJD7uNGzcgbJceaBxXntC6Z58hMLnPddDnskk7RI24Zf3lCGeOdA5jGokHZwYa+c
+NywRtYK3qq4kNFtyDGkNzVmf9nGvnAvRCjj5BiKDUyUM/FHE5r7iOZULJK2v0ZXk
+ltd0ZGtxTgI8qoXzIKNDOXZbbFD+mpwUHmUUihW9o4JFWklWatKcsWMy5WHgUyIO
+pwpJ6st+H6jiYoD2EEVSmAYY3qXNL3+q1Ok+CHLsIwMCPKaq2LxndD0UF/tUSxfj
+03k9bWtJySgOLnRQvwzZRjoQhsmnP+mg7H/rpXdYaXHmgwo38oZJar55CJD2AhZk
+PuXaTH4MNMn5X7azKFGnpyuqSfqNZSlO42sTp5SjLVFteAxEy9/eCG/Oo2Sr05WE
+1LlSVHJ7liXMvGnjSG4N0MedJ5qq+BOS3R7fY581qRY27Iy4g/Q9iY/NtBde17MX
+QRBdJ3NghVdJIgc=
+-----END CERTIFICATE-----
+#Certificate:
+#    Data:
+#        Version: 3 (0x2)
+#        Serial Number:
+#            11:00:34:b6:4e:c6:36:2d:36
+#        Signature Algorithm: sha256WithRSAEncryption
+#        Issuer: C = RO, O = CERTSIGN SA, OU = certSIGN ROOT CA G2
+#        Validity
+#            Not Before: Feb  6 09:27:35 2017 GMT
+#            Not After : Feb  6 09:27:35 2042 GMT
+#        Subject: C = RO, O = CERTSIGN SA, OU = certSIGN ROOT CA G2
+#        Subject Public Key Info:
+#            Public Key Algorithm: rsaEncryption
+#                RSA Public-Key: (4096 bit)
+#                Modulus:
+#                    00:c0:c5:75:19:91:7d:44:74:74:87:fe:0e:3b:96:
+#                    dc:d8:01:16:cc:ee:63:91:e7:0b:6f:ce:3b:0a:69:
+#                    1a:7c:c2:e3:af:82:8e:86:d7:5e:8f:57:eb:d3:21:
+#                    59:fd:39:37:42:30:be:50:ea:b6:0f:a9:88:d8:2e:
+#                    2d:69:21:e7:d1:37:18:4e:7d:91:d5:16:5f:6b:5b:
+#                    00:c2:39:43:0d:36:85:52:b9:53:65:0f:1d:42:e5:
+#                    8f:cf:05:d3:ee:dc:0c:1a:d9:b8:8b:78:22:67:e4:
+#                    69:b0:68:c5:3c:e4:6c:5a:46:e7:cd:c7:fa:ef:c4:
+#                    ec:4b:bd:6a:a4:ac:fd:cc:28:51:ef:92:b4:29:ab:
+#                    ab:35:9a:4c:e4:c4:08:c6:26:cc:f8:69:9f:e4:9c:
+#                    f0:29:d3:5c:f9:c6:16:25:9e:23:c3:20:c1:3d:0f:
+#                    3f:38:40:b0:fe:82:44:38:aa:5a:1a:8a:6b:63:58:
+#                    38:b4:15:d3:b6:11:69:7b:1e:54:ee:8c:1a:22:ac:
+#                    72:97:3f:23:59:9b:c9:22:84:c1:07:4f:cc:7f:e2:
+#                    57:ca:12:70:bb:a6:65:f3:69:75:63:bd:95:fb:1b:
+#                    97:cd:e4:a8:af:f6:d1:4e:a8:d9:8a:71:24:cd:36:
+#                    3d:bc:96:c4:f1:6c:a9:ae:e5:cf:0d:6e:28:0d:b0:
+#                    0e:b5:ca:51:7b:78:14:c3:20:2f:7f:fb:14:55:e1:
+#                    11:99:fd:d5:0a:a1:9e:02:e3:62:5f:eb:35:4b:2c:
+#                    b8:72:e8:3e:3d:4f:ac:2c:bb:2e:86:e2:a3:76:8f:
+#                    e5:93:2a:cf:a5:ab:c8:5c:8d:4b:06:ff:12:46:ac:
+#                    78:cb:14:07:35:e0:a9:df:8b:e9:af:15:4f:16:89:
+#                    5b:bd:f6:8d:c6:59:ae:88:85:0e:c1:89:eb:1f:67:
+#                    c5:45:8e:ff:6d:37:36:2b:78:66:83:91:51:2b:3d:
+#                    ff:51:77:76:62:a1:ec:67:3e:3e:81:83:e0:56:a9:
+#                    50:1f:1f:7a:99:ab:63:bf:84:17:77:f1:0d:3b:df:
+#                    f7:9c:61:b3:35:98:8a:3a:b2:ec:3c:1a:37:3f:7e:
+#                    8f:92:cf:d9:12:14:64:da:10:02:15:41:ff:4f:c4:
+#                    eb:1c:a3:c9:fa:99:f7:46:e9:e1:18:d9:b1:b8:32:
+#                    2d:cb:14:0c:50:d8:83:65:83:ee:b9:5c:cf:cb:05:
+#                    5a:4c:fa:19:97:6b:d6:5d:13:d3:c2:5c:54:bc:32:
+#                    73:a0:78:f5:f1:6d:1e:cb:9f:a5:a6:9f:22:dc:d1:
+#                    51:9e:82:79:64:60:29:13:3e:a3:fd:4f:72:6a:ab:
+#                    e2:d4:e5:b8:24:55:2c:44:4b:8a:88:44:9c:ca:84:
+#                    d3:2a:3b
+#                Exponent: 65537 (0x10001)
+#        X509v3 extensions:
+#            X509v3 Basic Constraints: critical
+#                CA:TRUE
+#            X509v3 Key Usage: critical
+#                Certificate Sign, CRL Sign
+#            X509v3 Subject Key Identifier: 
+#                82:21:2D:66:C6:D7:A0:E0:15:EB:CE:4C:09:77:C4:60:9E:54:6E:03
+#    Signature Algorithm: sha256WithRSAEncryption
+#         60:de:1a:b8:e7:f2:60:82:d5:03:33:81:cb:06:8a:f1:22:49:
+#         e9:e8:ea:91:7f:c6:33:5e:68:19:03:86:3b:43:01:cf:07:70:
+#         e4:08:1e:65:85:91:e6:11:22:b7:f5:02:23:8e:ae:b9:1e:7d:
+#         1f:7e:6c:e6:bd:25:d5:95:1a:f2:05:a6:af:85:02:6f:ae:f8:
+#         d6:31:ff:25:c9:4a:c8:c7:8a:a9:d9:9f:4b:49:9b:11:57:99:
+#         92:43:11:de:b6:33:a4:cc:d7:8d:64:7d:d4:cd:3c:28:2c:b4:
+#         9a:96:ea:4d:f5:c4:44:c4:25:aa:20:80:d8:29:55:f7:e0:41:
+#         fc:06:26:ff:b9:36:f5:43:14:03:66:78:e1:11:b1:da:20:5f:
+#         46:00:78:00:21:a5:1e:00:28:61:78:6f:a8:01:01:8f:9d:34:
+#         9a:ff:f4:38:90:fb:b8:d1:b3:72:06:c9:71:e6:81:c5:79:ed:
+#         0b:a6:79:f2:13:0b:9c:f7:5d:0e:7b:24:93:b4:48:db:86:5f:
+#         de:50:86:78:e7:40:e6:31:a8:90:76:70:61:af:9c:37:2c:11:
+#         b5:82:b7:aa:ae:24:34:5b:72:0c:69:0d:cd:59:9f:f6:71:af:
+#         9c:0b:d1:0a:38:f9:06:22:83:53:25:0c:fc:51:c4:e6:be:e2:
+#         39:95:0b:24:ad:af:d1:95:e4:96:d7:74:64:6b:71:4e:02:3c:
+#         aa:85:f3:20:a3:43:39:76:5b:6c:50:fe:9a:9c:14:1e:65:14:
+#         8a:15:bd:a3:82:45:5a:49:56:6a:d2:9c:b1:63:32:e5:61:e0:
+#         53:22:0e:a7:0a:49:ea:cb:7e:1f:a8:e2:62:80:f6:10:45:52:
+#         98:06:18:de:a5:cd:2f:7f:aa:d4:e9:3e:08:72:ec:23:03:02:
+#         3c:a6:aa:d8:bc:67:74:3d:14:17:fb:54:4b:17:e3:d3:79:3d:
+#         6d:6b:49:c9:28:0e:2e:74:50:bf:0c:d9:46:3a:10:86:c9:a7:
+#         3f:e9:a0:ec:7f:eb:a5:77:58:69:71:e6:83:0a:37:f2:86:49:
+#         6a:be:79:08:90:f6:02:16:64:3e:e5:da:4c:7e:0c:34:c9:f9:
+#         5f:b6:b3:28:51:a7:a7:2b:aa:49:fa:8d:65:29:4e:e3:6b:13:
+#         a7:94:a3:2d:51:6d:78:0c:44:cb:df:de:08:6f:ce:a3:64:ab:
+#         d3:95:84:d4:b9:52:54:72:7b:96:25:cc:bc:69:e3:48:6e:0d:
+#         d0:c7:9d:27:9a:aa:f8:13:92:dd:1e:df:63:9f:35:a9:16:36:
+#         ec:8c:b8:83:f4:3d:89:8f:cd:b4:17:5e:d7:b3:17:41:10:5d:
+#         27:73:60:85:57:49:22:07
+
+[p11-kit-object-v1]
 label: "Certum Root CA"
 class: x-certificate-extension
 object-id: 2.5.29.37
@@ -4994,36 +4923,6 @@ gKDWHrO8Dw9TdSmq6hN35N6MgSGtBxBHEa2HPQfRdbzP82Z+
 #         07:d1:75:bc:cf:f3:66:7e
 
 [p11-kit-object-v1]
-label: "Distrust: O=Egypt Trust, OU=VeriSign Trust Network (cert 1/3)"
-class: certificate
-certificate-type: x-509
-modifiable: false
-issuer: "0%81%CA1%0B0%09%06%03U%04%06%13%02US1%170%15%06%03U%04%0A%13%0EVeriSign%2C%20Inc.1%1F0%1D%06%03U%04%0B%13%16VeriSign%20Trust%20Network1%3A08%06%03U%04%0B%131%28c%29%201999%20VeriSign%2C%20Inc.%20-%20For%20authorized%20use%20only1E0C%06%03U%04%03%13%3CVeriSign%20Class%203%20Public%20Primary%20Certification%20Authority%20-%20G3"
-serial-number: "%02%10L%006%1B%E5%08%2B%A9%AA%CEt%0A%05%3E%FB4"
-x-distrusted: true
-
-
-[p11-kit-object-v1]
-label: "Distrust: O=Egypt Trust, OU=VeriSign Trust Network (cert 2/3)"
-class: certificate
-certificate-type: x-509
-modifiable: false
-issuer: "0%81%CA1%0B0%09%06%03U%04%06%13%02US1%170%15%06%03U%04%0A%13%0EVeriSign%2C%20Inc.1%1F0%1D%06%03U%04%0B%13%16VeriSign%20Trust%20Network1%3A08%06%03U%04%0B%131%28c%29%201999%20VeriSign%2C%20Inc.%20-%20For%20authorized%20use%20only1E0C%06%03U%04%03%13%3CVeriSign%20Class%203%20Public%20Primary%20Certification%20Authority%20-%20G3"
-serial-number: "%02%10%3E%0C%9E%87i%AA%95%5C%EA%23%D8E%9E%D4%5BQ"
-x-distrusted: true
-
-
-[p11-kit-object-v1]
-label: "Distrust: O=Egypt Trust, OU=VeriSign Trust Network (cert 3/3)"
-class: certificate
-certificate-type: x-509
-modifiable: false
-issuer: "0%81%CA1%0B0%09%06%03U%04%06%13%02US1%170%15%06%03U%04%0A%13%0EVeriSign%2C%20Inc.1%1F0%1D%06%03U%04%0B%13%16VeriSign%20Trust%20Network1%3A08%06%03U%04%0B%131%28c%29%201999%20VeriSign%2C%20Inc.%20-%20For%20authorized%20use%20only1E0C%06%03U%04%03%13%3CVeriSign%20Class%203%20Public%20Primary%20Certification%20Authority%20-%20G3"
-serial-number: "%02%10%12%BD%26%A2%AE3%C0%7F%24%7BjXi%F2%0Av"
-x-distrusted: true
-
-
-[p11-kit-object-v1]
 label: "DST Root CA X3"
 class: x-certificate-extension
 object-id: 2.5.29.37
@@ -5581,113 +5480,6 @@ nJ2lYJU6Un/10asIbvPuW/mIPX64b24D5EI=
 #         2a:4b:6a:05:45:8c:f2:21:a4:31:90:87:6c:65:9c:9d:a5:60:
 #         95:3a:52:7f:f5:d1:ab:08:6e:f3:ee:5b:f9:88:3d:7e:b8:6f:
 #         6e:03:e4:42
-
-[p11-kit-object-v1]
-label: "EE Certification Centre Root CA"
-class: x-certificate-extension
-object-id: 2.5.29.37
-value: "0%16%06%03U%1d%25%01%01%ff%04%0c0%0a%06%08%2b%06%01%05%05%07%03%01"
-modifiable: false
------BEGIN PUBLIC KEY-----
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyCDA7ODFS6sHeJXzRO77
-Cwz/dI5hu7Fi6iPYq6FlMnrrjhdPltgKe5GiY2zHjEwueb+pBfxpXJWNYvm5cO3D
-UX3Qk+Zs6zBL4bx9v1Kbzm57ZfI4scCiMu9ismjgYVPBNpX/7JS6Nq6cHKcyD+V8
-tMZvdP17GOisV+0GIEsyMFhb/c2o5qH8cLyOknPbl6d8Ia49wfVIh2wnvZ8ldIFV
-sPd19j2kZGvWT+fOQK0P3TLTvIoSU5jJifsQHU1+zX4fVg0hcIX2IIMf9rofBI/q
-d4g1xP/qTqGLTT9jG0TDRNQldsq3jdceSmZkzVzFnIPhwgiImuxOo/E+HCzZbB2h
-SwIDAQAB
------END PUBLIC KEY-----
-
-[p11-kit-object-v1]
-label: "EE Certification Centre Root CA"
-trusted: true
-nss-mozilla-ca-policy: true
-modifiable: false
-nss-server-distrust-after: "170901000000Z"
-nss-email-distrust-after: "%00"
------BEGIN CERTIFICATE-----
-MIIEAzCCAuugAwIBAgIQVID5oHPtPwBMyonY43HmSjANBgkqhkiG9w0BAQUFADB1
-MQswCQYDVQQGEwJFRTEiMCAGA1UECgwZQVMgU2VydGlmaXRzZWVyaW1pc2tlc2t1
-czEoMCYGA1UEAwwfRUUgQ2VydGlmaWNhdGlvbiBDZW50cmUgUm9vdCBDQTEYMBYG
-CSqGSIb3DQEJARYJcGtpQHNrLmVlMCIYDzIwMTAxMDMwMTAxMDMwWhgPMjAzMDEy
-MTcyMzU5NTlaMHUxCzAJBgNVBAYTAkVFMSIwIAYDVQQKDBlBUyBTZXJ0aWZpdHNl
-ZXJpbWlza2Vza3VzMSgwJgYDVQQDDB9FRSBDZXJ0aWZpY2F0aW9uIENlbnRyZSBS
-b290IENBMRgwFgYJKoZIhvcNAQkBFglwa2lAc2suZWUwggEiMA0GCSqGSIb3DQEB
-AQUAA4IBDwAwggEKAoIBAQDIIMDs4MVLqwd4lfNE7vsLDP90jmG7sWLqI9iroWUy
-euuOF0+W2Ap7kaJjbMeMTC55v6kF/GlclY1i+blw7cNRfdCT5mzrMEvhvH2/UpvO
-bntl8jixwKIy72KyaOBhU8E2lf/slLo2rpwcpzIP5Xy0xm90/XsY6KxX7QYgSzIw
-WFv9zajmofxwvI6Sc9uXp3whrj3B9UiHbCe9nyV0gVWw93X2PaRka9ZP585ArQ/d
-MtO8ihJTmMmJ+xAdTX7Nfh9WDSFwhfYggx/2uh8Ej+p3iDXE/+pOoYtNP2MbRMNE
-1CV2yreN1x5KZmTNXMWcg+HCCIia7E6j8T4cLNlsHaFLAgMBAAGjgYowgYcwDwYD
-VR0TAQH/BAUwAwEB/zAOBgNVHQ8BAf8EBAMCAQYwHQYDVR0OBBYEFBLyWj7qVhy/
-zQas8fElyalL1BSZMEUGA1UdJQQ+MDwGCCsGAQUFBwMCBggrBgEFBQcDAQYIKwYB
-BQUHAwMGCCsGAQUFBwMEBggrBgEFBQcDCAYIKwYBBQUHAwkwDQYJKoZIhvcNAQEF
-BQADggEBAHv25MANqhlHt01Xo/6tu7Fq1Q+e2+RjxY6hUFaTlrg4wCQiZrxTFGGV
-v9DHKpY5P30osxBAIWrEr7BSdxjhlthWXePdNl4dp1BUoMUq5KqMlIpPnTX/dqQG
-E5Gion0ARD9V04I8GtVbvFZMIi5GQ4okQC3zErg7cBqklrkar4dBGmoYDQZPxz5u
-uSlNDUmJEYcyW+ZLBMjkXOZ0c5RdFpgTlf7727FE5TpwrDdr5rMzcijJs1eg9gIW
-iAYLtqZLICjU3j2LrTcFU3T+bsy8QxdxXvnFzBqpYe73dgzzcvRyrc9yAjYHR8/v
-GVCJYMzpJJUPwssd8m92kMfMdcGWxZ0=
------END CERTIFICATE-----
-#Certificate:
-#    Data:
-#        Version: 3 (0x2)
-#        Serial Number:
-#            54:80:f9:a0:73:ed:3f:00:4c:ca:89:d8:e3:71:e6:4a
-#        Signature Algorithm: sha1WithRSAEncryption
-#        Issuer: C = EE, O = AS Sertifitseerimiskeskus, CN = EE Certification Centre Root CA, emailAddress = pki@sk.ee
-#        Validity
-#            Not Before: Oct 30 10:10:30 2010 GMT
-#            Not After : Dec 17 23:59:59 2030 GMT
-#        Subject: C = EE, O = AS Sertifitseerimiskeskus, CN = EE Certification Centre Root CA, emailAddress = pki@sk.ee
-#        Subject Public Key Info:
-#            Public Key Algorithm: rsaEncryption
-#                RSA Public-Key: (2048 bit)
-#                Modulus:
-#                    00:c8:20:c0:ec:e0:c5:4b:ab:07:78:95:f3:44:ee:
-#                    fb:0b:0c:ff:74:8e:61:bb:b1:62:ea:23:d8:ab:a1:
-#                    65:32:7a:eb:8e:17:4f:96:d8:0a:7b:91:a2:63:6c:
-#                    c7:8c:4c:2e:79:bf:a9:05:fc:69:5c:95:8d:62:f9:
-#                    b9:70:ed:c3:51:7d:d0:93:e6:6c:eb:30:4b:e1:bc:
-#                    7d:bf:52:9b:ce:6e:7b:65:f2:38:b1:c0:a2:32:ef:
-#                    62:b2:68:e0:61:53:c1:36:95:ff:ec:94:ba:36:ae:
-#                    9c:1c:a7:32:0f:e5:7c:b4:c6:6f:74:fd:7b:18:e8:
-#                    ac:57:ed:06:20:4b:32:30:58:5b:fd:cd:a8:e6:a1:
-#                    fc:70:bc:8e:92:73:db:97:a7:7c:21:ae:3d:c1:f5:
-#                    48:87:6c:27:bd:9f:25:74:81:55:b0:f7:75:f6:3d:
-#                    a4:64:6b:d6:4f:e7:ce:40:ad:0f:dd:32:d3:bc:8a:
-#                    12:53:98:c9:89:fb:10:1d:4d:7e:cd:7e:1f:56:0d:
-#                    21:70:85:f6:20:83:1f:f6:ba:1f:04:8f:ea:77:88:
-#                    35:c4:ff:ea:4e:a1:8b:4d:3f:63:1b:44:c3:44:d4:
-#                    25:76:ca:b7:8d:d7:1e:4a:66:64:cd:5c:c5:9c:83:
-#                    e1:c2:08:88:9a:ec:4e:a3:f1:3e:1c:2c:d9:6c:1d:
-#                    a1:4b
-#                Exponent: 65537 (0x10001)
-#        X509v3 extensions:
-#            X509v3 Basic Constraints: critical
-#                CA:TRUE
-#            X509v3 Key Usage: critical
-#                Certificate Sign, CRL Sign
-#            X509v3 Subject Key Identifier: 
-#                12:F2:5A:3E:EA:56:1C:BF:CD:06:AC:F1:F1:25:C9:A9:4B:D4:14:99
-#            X509v3 Extended Key Usage: 
-#                TLS Web Client Authentication, TLS Web Server Authentication, Code Signing, E-mail Protection, Time Stamping, OCSP Signing
-#    Signature Algorithm: sha1WithRSAEncryption
-#         7b:f6:e4:c0:0d:aa:19:47:b7:4d:57:a3:fe:ad:bb:b1:6a:d5:
-#         0f:9e:db:e4:63:c5:8e:a1:50:56:93:96:b8:38:c0:24:22:66:
-#         bc:53:14:61:95:bf:d0:c7:2a:96:39:3f:7d:28:b3:10:40:21:
-#         6a:c4:af:b0:52:77:18:e1:96:d8:56:5d:e3:dd:36:5e:1d:a7:
-#         50:54:a0:c5:2a:e4:aa:8c:94:8a:4f:9d:35:ff:76:a4:06:13:
-#         91:a2:a2:7d:00:44:3f:55:d3:82:3c:1a:d5:5b:bc:56:4c:22:
-#         2e:46:43:8a:24:40:2d:f3:12:b8:3b:70:1a:a4:96:b9:1a:af:
-#         87:41:1a:6a:18:0d:06:4f:c7:3e:6e:b9:29:4d:0d:49:89:11:
-#         87:32:5b:e6:4b:04:c8:e4:5c:e6:74:73:94:5d:16:98:13:95:
-#         fe:fb:db:b1:44:e5:3a:70:ac:37:6b:e6:b3:33:72:28:c9:b3:
-#         57:a0:f6:02:16:88:06:0b:b6:a6:4b:20:28:d4:de:3d:8b:ad:
-#         37:05:53:74:fe:6e:cc:bc:43:17:71:5e:f9:c5:cc:1a:a9:61:
-#         ee:f7:76:0c:f3:72:f4:72:ad:cf:72:02:36:07:47:cf:ef:19:
-#         50:89:60:cc:e9:24:95:0f:c2:cb:1d:f2:6f:76:90:c7:cc:75:
-#         c1:96:c5:9d
 
 [p11-kit-object-v1]
 label: "emSign ECC Root CA - C3"
@@ -6742,6 +6534,77 @@ hNQ+IIX3Sj0rnP0qCglN6oH4EZw=
 #         0a:09:4d:ea:81:f8:11:9c
 
 [p11-kit-object-v1]
+label: "e-Szigno Root CA 2017"
+class: x-certificate-extension
+object-id: 2.5.29.37
+value: "0 %06%03U%1d%25%01%01%ff%04%160%14%06%08%2b%06%01%05%05%07%03%04%06%08%2b%06%01%05%05%07%03%01"
+modifiable: false
+-----BEGIN PUBLIC KEY-----
+MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEltw9itiwe2/GJ75EkLGzVhV7jkMk
+fRqEWe5jaLLGXofQFUgeqJCtvVOi2t46kKZgX2gytYZB34dbLHvF/nx62g==
+-----END PUBLIC KEY-----
+
+[p11-kit-object-v1]
+label: "e-Szigno Root CA 2017"
+trusted: true
+nss-mozilla-ca-policy: true
+modifiable: false
+nss-server-distrust-after: "%00"
+nss-email-distrust-after: "%00"
+-----BEGIN CERTIFICATE-----
+MIICQDCCAeWgAwIBAgIMAVRI7yH9l1kN9QQKMAoGCCqGSM49BAMCMHExCzAJBgNV
+BAYTAkhVMREwDwYDVQQHDAhCdWRhcGVzdDEWMBQGA1UECgwNTWljcm9zZWMgTHRk
+LjEXMBUGA1UEYQwOVkFUSFUtMjM1ODQ0OTcxHjAcBgNVBAMMFWUtU3ppZ25vIFJv
+b3QgQ0EgMjAxNzAeFw0xNzA4MjIxMjA3MDZaFw00MjA4MjIxMjA3MDZaMHExCzAJ
+BgNVBAYTAkhVMREwDwYDVQQHDAhCdWRhcGVzdDEWMBQGA1UECgwNTWljcm9zZWMg
+THRkLjEXMBUGA1UEYQwOVkFUSFUtMjM1ODQ0OTcxHjAcBgNVBAMMFWUtU3ppZ25v
+IFJvb3QgQ0EgMjAxNzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJbcPYrYsHtv
+xie+RJCxs1YVe45DJH0ahFnuY2iyxl6H0BVIHqiQrb1TotreOpCmYF9oMrWGQd+H
+Wyx7xf58etqjYzBhMA8GA1UdEwEB/wQFMAMBAf8wDgYDVR0PAQH/BAQDAgEGMB0G
+A1UdDgQWBBSHERUI0arBeAyxr87GyZDvvzAEwDAfBgNVHSMEGDAWgBSHERUI0arB
+eAyxr87GyZDvvzAEwDAKBggqhkjOPQQDAgNJADBGAiEAtVfd14pVCzbhhkT61Nlo
+jbjcI4qKDdQvfepz7L9NbKgCIQDLpbQS+ue16M9+k/zzNY9vTlp8tLxOsvxyqltZ
++efcMQ==
+-----END CERTIFICATE-----
+#Certificate:
+#    Data:
+#        Version: 3 (0x2)
+#        Serial Number:
+#            01:54:48:ef:21:fd:97:59:0d:f5:04:0a
+#        Signature Algorithm: ecdsa-with-SHA256
+#        Issuer: C = HU, L = Budapest, O = Microsec Ltd., organizationIdentifier = VATHU-23584497, CN = e-Szigno Root CA 2017
+#        Validity
+#            Not Before: Aug 22 12:07:06 2017 GMT
+#            Not After : Aug 22 12:07:06 2042 GMT
+#        Subject: C = HU, L = Budapest, O = Microsec Ltd., organizationIdentifier = VATHU-23584497, CN = e-Szigno Root CA 2017
+#        Subject Public Key Info:
+#            Public Key Algorithm: id-ecPublicKey
+#                Public-Key: (256 bit)
+#                pub:
+#                    04:96:dc:3d:8a:d8:b0:7b:6f:c6:27:be:44:90:b1:
+#                    b3:56:15:7b:8e:43:24:7d:1a:84:59:ee:63:68:b2:
+#                    c6:5e:87:d0:15:48:1e:a8:90:ad:bd:53:a2:da:de:
+#                    3a:90:a6:60:5f:68:32:b5:86:41:df:87:5b:2c:7b:
+#                    c5:fe:7c:7a:da
+#                ASN1 OID: prime256v1
+#                NIST CURVE: P-256
+#        X509v3 extensions:
+#            X509v3 Basic Constraints: critical
+#                CA:TRUE
+#            X509v3 Key Usage: critical
+#                Certificate Sign, CRL Sign
+#            X509v3 Subject Key Identifier: 
+#                87:11:15:08:D1:AA:C1:78:0C:B1:AF:CE:C6:C9:90:EF:BF:30:04:C0
+#            X509v3 Authority Key Identifier: 
+#                keyid:87:11:15:08:D1:AA:C1:78:0C:B1:AF:CE:C6:C9:90:EF:BF:30:04:C0
+#
+#    Signature Algorithm: ecdsa-with-SHA256
+#         30:46:02:21:00:b5:57:dd:d7:8a:55:0b:36:e1:86:44:fa:d4:
+#         d9:68:8d:b8:dc:23:8a:8a:0d:d4:2f:7d:ea:73:ec:bf:4d:6c:
+#         a8:02:21:00:cb:a5:b4:12:fa:e7:b5:e8:cf:7e:93:fc:f3:35:
+#         8f:6f:4e:5a:7c:b4:bc:4e:b2:fc:72:aa:5b:59:f9:e7:dc:31
+
+[p11-kit-object-v1]
 label: "E-Tugra Certification Authority"
 class: x-certificate-extension
 object-id: 2.5.29.37
@@ -7401,7 +7264,7 @@ MTd61X8kreS8/f3MboPoDKi3QWwH3b08hpcv0g==
 label: "GeoTrust Global CA"
 class: x-certificate-extension
 object-id: 2.5.29.37
-value: "0 %06%03U%1d%25%01%01%ff%04%160%14%06%08%2b%06%01%05%05%07%03%04%06%08%2b%06%01%05%05%07%03%01"
+value: "0%16%06%03U%1d%25%01%01%ff%04%0c0%0a%06%08%2b%06%01%05%05%07%03%01"
 modifiable: false
 -----BEGIN PUBLIC KEY-----
 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2swYYzD99BcjGlZ+W988
@@ -7604,7 +7467,7 @@ AT6A8EKglQdebc3MS6RFjasS6LPeWuWgfOgPIh1a6Vk=
 label: "GeoTrust Primary Certification Authority - G2"
 class: x-certificate-extension
 object-id: 2.5.29.37
-value: "0 %06%03U%1d%25%01%01%ff%04%160%14%06%08%2b%06%01%05%05%07%03%04%06%08%2b%06%01%05%05%07%03%01"
+value: "0%16%06%03U%1d%25%01%01%ff%04%0c0%0a%06%08%2b%06%01%05%05%07%03%01"
 modifiable: false
 -----BEGIN PUBLIC KEY-----
 MHYwEAYHKoZIzj0CAQYFK4EEACIDYgAEFbHo/QMVQ+Ws64c3EWLv0oM2Un1FVwtK
@@ -7679,7 +7542,7 @@ rD6ogRLQy7rQkgu2npaqBA+K
 label: "GeoTrust Primary Certification Authority - G3"
 class: x-certificate-extension
 object-id: 2.5.29.37
-value: "0 %06%03U%1d%25%01%01%ff%04%160%14%06%08%2b%06%01%05%05%07%03%04%06%08%2b%06%01%05%05%07%03%01"
+value: "0%16%06%03U%1d%25%01%01%ff%04%0c0%0a%06%08%2b%06%01%05%05%07%03%01"
 modifiable: false
 -----BEGIN PUBLIC KEY-----
 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3OJeYlgdM1c5MjP668uH
@@ -7784,7 +7647,7 @@ spki4cErx5z481+oghLrGREt
 label: "GeoTrust Universal CA"
 class: x-certificate-extension
 object-id: 2.5.29.37
-value: "0 %06%03U%1d%25%01%01%ff%04%160%14%06%08%2b%06%01%05%05%07%03%04%06%08%2b%06%01%05%05%07%03%01"
+value: "0%16%06%03U%1d%25%01%01%ff%04%0c0%0a%06%08%2b%06%01%05%05%07%03%01"
 modifiable: false
 -----BEGIN PUBLIC KEY-----
 MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAphVVoKPG4B+MnSFQ18G+
@@ -7934,7 +7797,7 @@ bJxPgWp6ZKy7PtXny3YuxadIwVyQD8vIP/rmMuGNG2+k5o7Y+SlIis5z/iw=
 label: "GeoTrust Universal CA 2"
 class: x-certificate-extension
 object-id: 2.5.29.37
-value: "0 %06%03U%1d%25%01%01%ff%04%160%14%06%08%2b%06%01%05%05%07%03%04%06%08%2b%06%01%05%05%07%03%01"
+value: "0%16%06%03U%1d%25%01%01%ff%04%0c0%0a%06%08%2b%06%01%05%05%07%03%01"
 modifiable: false
 -----BEGIN PUBLIC KEY-----
 MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAs1RSwck+8tncsVMaWSnn
@@ -10691,163 +10554,6 @@ QyYBNWNgVYkDOnXYukrZVP/u3oDYLdE41V4tC5h9Pmzb/CaIxw==
 #         7d:3e:6c:db:fc:26:88:c7
 
 [p11-kit-object-v1]
-label: "LuxTrust Global Root 2"
-class: x-certificate-extension
-object-id: 2.5.29.37
-value: "0%16%06%03U%1d%25%01%01%ff%04%0c0%0a%06%08%2b%06%01%05%05%07%03%01"
-modifiable: false
------BEGIN PUBLIC KEY-----
-MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA14WXvxGY6fBig0w8h/lT
-ajcL8g88h85v3CYpvcWJusmDPffuylvGbUlztMlGoxs0Ez/BiUVX9Nmx+zZlS/sI
-4khxEchuO56d34llN6aF9jtEGLbGNzBiRJKXaX1CMCTkDQyJa2PexeHfTqkUbFPg
-Yc72Fy8dPL3mIkwdk/UQxKF27GrexWzflrRWQELAYpIwoS0VlKDSIAYJbmpt5eu3
-vtTw8RV8i+ZOuhPMSydemTwXXY+BfzM9T9M/G+xcP/A8THVu8qbVndotB2MCxnLp
-lLxMSZVPiFLI2+hpgvjMNFsi8Ianib1ICm1mgW3IyGT7AeH04d7Znt3bW9QqmSYV
-Gx5MkimCntWSgZJBcBn3pOWTS7x3ZzHdHP0xcA0XmQz5DDkZKhe1MHFV1Q+uWOE9
-LzSbz5/2eIXCk3pyPmaPnBYRYI+eiW9nvuBHWjsMmmeLz0bGrjij8qe85taFazMk
-cCJLywibu8j4AikdviAMRr9rh5uzKmZCNUZsqrqt+Zh76VBVFDG/sdot7YCtaCT7
-aavYcRMw5mezh0D9iX7yQ9ER3y9lL2TOXxS5sb8xvYd4WllliKr8WTJIhtZMuSlL
-ldN283clbUIcOINN/aNfm38trHkbDkIxl2Ok+4pp1SINNJAwLqi04G22lKy8i07X
-cPzFOI5kJeFNOZDOyYeEWHECAwEAAQ==
------END PUBLIC KEY-----
-
-[p11-kit-object-v1]
-label: "LuxTrust Global Root 2"
-trusted: true
-nss-mozilla-ca-policy: true
-modifiable: false
-nss-server-distrust-after: "%00"
-nss-email-distrust-after: "%00"
------BEGIN CERTIFICATE-----
-MIIFwzCCA6ugAwIBAgIUCn6m30tEntpqJIWe5rgV0xZ/u7EwDQYJKoZIhvcNAQEL
-BQAwRjELMAkGA1UEBhMCTFUxFjAUBgNVBAoMDUx1eFRydXN0IFMuQS4xHzAdBgNV
-BAMMFkx1eFRydXN0IEdsb2JhbCBSb290IDIwHhcNMTUwMzA1MTMyMTU3WhcNMzUw
-MzA1MTMyMTU3WjBGMQswCQYDVQQGEwJMVTEWMBQGA1UECgwNTHV4VHJ1c3QgUy5B
-LjEfMB0GA1UEAwwWTHV4VHJ1c3QgR2xvYmFsIFJvb3QgMjCCAiIwDQYJKoZIhvcN
-AQEBBQADggIPADCCAgoCggIBANeFl78RmOnwYoNMPIf5U2o3C/IPPIfOb9wmKb3F
-ibrJgz337spbxm1Jc7TJRqMbNBM/wYlFV/TZsfs2ZUv7COJIcRHIbjuend+JZTem
-hfY7RBi2xjcwYkSSl2l9QjAk5A0MiWtj3sXh306pFGxT4GHO9hcvHTy95iJMHZP1
-EMShduxq3sVs35a0VkBCwGKSMKEtFZSg0iAGCW5qbeXrt77U8PEVfIvmTroTzEsn
-Xpk8F12PgX8zPU/TPxvsXD/wPEx1bvKm1Z3aLQdjAsZy6ZS8TEmVT4hSyNvoaYL4
-zDRbIvCGp4m9SAptZoFtyMhk+wHh9OHe2Z7d21vUKpkmFRseTJIpgp7VkoGSQXAZ
-96Tlk0u8d2cx3Rz9MXANF5kM+Qw5GSoXtTBxVdUPrljhPS80m8+f9niFwpN6cj5m
-j5wWEWCPnolvZ77gR1o7DJpni89Gxq44o/KnvObWhWszJHAiS8sIm7vI+AIpHb4g
-DEa/a4ebsypmQjVGbKq6rfmYe+lQVRQxv7HaLe2ArWgk+2mr2HETMOZns4dA/Yl+
-8kPREd8vZS9kzl8UubG/Mb2HeFpZZYiq/FkySIbWTLkpS5XTdvN3JW1CHDiDTf2j
-X5t/Lax5Gw5CMZdjpPuKadUiDTSQMC6otOBttpSsvItO13D8xTiOZCXhTTmQzsmH
-hFhxAgMBAAGjgagwgaUwDwYDVR0TAQH/BAUwAwEB/zBCBgNVHSAEOzA5MDcGByuB
-KwEBAQowLDAqBggrBgEFBQcCARYeaHR0cHM6Ly9yZXBvc2l0b3J5Lmx1eHRydXN0
-Lmx1MA4GA1UdDwEB/wQEAwIBBjAfBgNVHSMEGDAWgBT/GCh2+UgFLKGu8SsbK7JT
-+Et8szAdBgNVHQ4EFgQU/xgodvlIBSyhrvErGyuyU/hLfLMwDQYJKoZIhvcNAQEL
-BQADggIBAGoZFO1uecEsh9QNcH7X9njJCwROxLHOk3D+sFTAMs2ZMGQXvw/l4jP9
-BzZAcg4atmpZ1gDlaCDdLnINH2pkMSCEfUmmWjfrRcmF9dTHF5kH5ptV5AzoqbTO
-jFu1EVzPig4N1qx3gf4ynCSecs5U89BvolbW7MM3LGVYvlcAGvI1+ut7MV3CwRI9
-loGIlonBWVx65n9wNOeD4rHh4bhY79SV5GCc8JaXcozrhAIuZY+kt9J/Z93I055c
-qqmkoCUUBpvsT34tC38ddfEz2O3OuHVtPlu5mB0xDVbYQw8wkbIEa91WvpWAVWe+
-2M2D2RjuLg+GLZKecBPs3lHJQ3gCpU3I+V/EkVhGFndadKpAvAefMLmx9xIX3eP/
-JEAdemrRTxgKqpAd60Ae36EeRJIQmvKN4dFLRp7oRUKX6kWZ8+xm1QL68qZKJKre
-zrnK+T+Tb/mjuuqlPpmt/f97mfVl7vBZKGfXkJWkE4SphMHozs51k2MavDzq1WQf
-LSoSOcbDWjLtR5EWDrw4wVDej8oqkDQc7kGUnF4ZLvhFSZl0kbAEb+MEWrGrKqv+
-x9CWttrhSmQGbmBNvUJO/3jaJMobtNeWOWyu8Q6qp31IiyBMz2TWuJdGsE7RKlY6
-oJO9r4Ak4Ap+58rVyuiFVdw2KuGUaJPHZnJED4AhMmwlxyOAgwrr
------END CERTIFICATE-----
-#Certificate:
-#    Data:
-#        Version: 3 (0x2)
-#        Serial Number:
-#            0a:7e:a6:df:4b:44:9e:da:6a:24:85:9e:e6:b8:15:d3:16:7f:bb:b1
-#        Signature Algorithm: sha256WithRSAEncryption
-#        Issuer: C = LU, O = LuxTrust S.A., CN = LuxTrust Global Root 2
-#        Validity
-#            Not Before: Mar  5 13:21:57 2015 GMT
-#            Not After : Mar  5 13:21:57 2035 GMT
-#        Subject: C = LU, O = LuxTrust S.A., CN = LuxTrust Global Root 2
-#        Subject Public Key Info:
-#            Public Key Algorithm: rsaEncryption
-#                RSA Public-Key: (4096 bit)
-#                Modulus:
-#                    00:d7:85:97:bf:11:98:e9:f0:62:83:4c:3c:87:f9:
-#                    53:6a:37:0b:f2:0f:3c:87:ce:6f:dc:26:29:bd:c5:
-#                    89:ba:c9:83:3d:f7:ee:ca:5b:c6:6d:49:73:b4:c9:
-#                    46:a3:1b:34:13:3f:c1:89:45:57:f4:d9:b1:fb:36:
-#                    65:4b:fb:08:e2:48:71:11:c8:6e:3b:9e:9d:df:89:
-#                    65:37:a6:85:f6:3b:44:18:b6:c6:37:30:62:44:92:
-#                    97:69:7d:42:30:24:e4:0d:0c:89:6b:63:de:c5:e1:
-#                    df:4e:a9:14:6c:53:e0:61:ce:f6:17:2f:1d:3c:bd:
-#                    e6:22:4c:1d:93:f5:10:c4:a1:76:ec:6a:de:c5:6c:
-#                    df:96:b4:56:40:42:c0:62:92:30:a1:2d:15:94:a0:
-#                    d2:20:06:09:6e:6a:6d:e5:eb:b7:be:d4:f0:f1:15:
-#                    7c:8b:e6:4e:ba:13:cc:4b:27:5e:99:3c:17:5d:8f:
-#                    81:7f:33:3d:4f:d3:3f:1b:ec:5c:3f:f0:3c:4c:75:
-#                    6e:f2:a6:d5:9d:da:2d:07:63:02:c6:72:e9:94:bc:
-#                    4c:49:95:4f:88:52:c8:db:e8:69:82:f8:cc:34:5b:
-#                    22:f0:86:a7:89:bd:48:0a:6d:66:81:6d:c8:c8:64:
-#                    fb:01:e1:f4:e1:de:d9:9e:dd:db:5b:d4:2a:99:26:
-#                    15:1b:1e:4c:92:29:82:9e:d5:92:81:92:41:70:19:
-#                    f7:a4:e5:93:4b:bc:77:67:31:dd:1c:fd:31:70:0d:
-#                    17:99:0c:f9:0c:39:19:2a:17:b5:30:71:55:d5:0f:
-#                    ae:58:e1:3d:2f:34:9b:cf:9f:f6:78:85:c2:93:7a:
-#                    72:3e:66:8f:9c:16:11:60:8f:9e:89:6f:67:be:e0:
-#                    47:5a:3b:0c:9a:67:8b:cf:46:c6:ae:38:a3:f2:a7:
-#                    bc:e6:d6:85:6b:33:24:70:22:4b:cb:08:9b:bb:c8:
-#                    f8:02:29:1d:be:20:0c:46:bf:6b:87:9b:b3:2a:66:
-#                    42:35:46:6c:aa:ba:ad:f9:98:7b:e9:50:55:14:31:
-#                    bf:b1:da:2d:ed:80:ad:68:24:fb:69:ab:d8:71:13:
-#                    30:e6:67:b3:87:40:fd:89:7e:f2:43:d1:11:df:2f:
-#                    65:2f:64:ce:5f:14:b9:b1:bf:31:bd:87:78:5a:59:
-#                    65:88:aa:fc:59:32:48:86:d6:4c:b9:29:4b:95:d3:
-#                    76:f3:77:25:6d:42:1c:38:83:4d:fd:a3:5f:9b:7f:
-#                    2d:ac:79:1b:0e:42:31:97:63:a4:fb:8a:69:d5:22:
-#                    0d:34:90:30:2e:a8:b4:e0:6d:b6:94:ac:bc:8b:4e:
-#                    d7:70:fc:c5:38:8e:64:25:e1:4d:39:90:ce:c9:87:
-#                    84:58:71
-#                Exponent: 65537 (0x10001)
-#        X509v3 extensions:
-#            X509v3 Basic Constraints: critical
-#                CA:TRUE
-#            X509v3 Certificate Policies: 
-#                Policy: 1.3.171.1.1.1.10
-#                  CPS: https://repository.luxtrust.lu
-#
-#            X509v3 Key Usage: critical
-#                Certificate Sign, CRL Sign
-#            X509v3 Authority Key Identifier: 
-#                keyid:FF:18:28:76:F9:48:05:2C:A1:AE:F1:2B:1B:2B:B2:53:F8:4B:7C:B3
-#
-#            X509v3 Subject Key Identifier: 
-#                FF:18:28:76:F9:48:05:2C:A1:AE:F1:2B:1B:2B:B2:53:F8:4B:7C:B3
-#    Signature Algorithm: sha256WithRSAEncryption
-#         6a:19:14:ed:6e:79:c1:2c:87:d4:0d:70:7e:d7:f6:78:c9:0b:
-#         04:4e:c4:b1:ce:93:70:fe:b0:54:c0:32:cd:99:30:64:17:bf:
-#         0f:e5:e2:33:fd:07:36:40:72:0e:1a:b6:6a:59:d6:00:e5:68:
-#         20:dd:2e:72:0d:1f:6a:64:31:20:84:7d:49:a6:5a:37:eb:45:
-#         c9:85:f5:d4:c7:17:99:07:e6:9b:55:e4:0c:e8:a9:b4:ce:8c:
-#         5b:b5:11:5c:cf:8a:0e:0d:d6:ac:77:81:fe:32:9c:24:9e:72:
-#         ce:54:f3:d0:6f:a2:56:d6:ec:c3:37:2c:65:58:be:57:00:1a:
-#         f2:35:fa:eb:7b:31:5d:c2:c1:12:3d:96:81:88:96:89:c1:59:
-#         5c:7a:e6:7f:70:34:e7:83:e2:b1:e1:e1:b8:58:ef:d4:95:e4:
-#         60:9c:f0:96:97:72:8c:eb:84:02:2e:65:8f:a4:b7:d2:7f:67:
-#         dd:c8:d3:9e:5c:aa:a9:a4:a0:25:14:06:9b:ec:4f:7e:2d:0b:
-#         7f:1d:75:f1:33:d8:ed:ce:b8:75:6d:3e:5b:b9:98:1d:31:0d:
-#         56:d8:43:0f:30:91:b2:04:6b:dd:56:be:95:80:55:67:be:d8:
-#         cd:83:d9:18:ee:2e:0f:86:2d:92:9e:70:13:ec:de:51:c9:43:
-#         78:02:a5:4d:c8:f9:5f:c4:91:58:46:16:77:5a:74:aa:40:bc:
-#         07:9f:30:b9:b1:f7:12:17:dd:e3:ff:24:40:1d:7a:6a:d1:4f:
-#         18:0a:aa:90:1d:eb:40:1e:df:a1:1e:44:92:10:9a:f2:8d:e1:
-#         d1:4b:46:9e:e8:45:42:97:ea:45:99:f3:ec:66:d5:02:fa:f2:
-#         a6:4a:24:aa:de:ce:b9:ca:f9:3f:93:6f:f9:a3:ba:ea:a5:3e:
-#         99:ad:fd:ff:7b:99:f5:65:ee:f0:59:28:67:d7:90:95:a4:13:
-#         84:a9:84:c1:e8:ce:ce:75:93:63:1a:bc:3c:ea:d5:64:1f:2d:
-#         2a:12:39:c6:c3:5a:32:ed:47:91:16:0e:bc:38:c1:50:de:8f:
-#         ca:2a:90:34:1c:ee:41:94:9c:5e:19:2e:f8:45:49:99:74:91:
-#         b0:04:6f:e3:04:5a:b1:ab:2a:ab:fe:c7:d0:96:b6:da:e1:4a:
-#         64:06:6e:60:4d:bd:42:4e:ff:78:da:24:ca:1b:b4:d7:96:39:
-#         6c:ae:f1:0e:aa:a7:7d:48:8b:20:4c:cf:64:d6:b8:97:46:b0:
-#         4e:d1:2a:56:3a:a0:93:bd:af:80:24:e0:0a:7e:e7:ca:d5:ca:
-#         e8:85:55:dc:36:2a:e1:94:68:93:c7:66:72:44:0f:80:21:32:
-#         6c:25:c7:23:80:83:0a:eb
-
-[p11-kit-object-v1]
 label: "Microsec e-Szigno Root CA 2009"
 class: x-certificate-extension
 object-id: 2.5.29.37
@@ -10956,6 +10662,233 @@ HMN1Rq41Bab2XD0h7lbwyYIiLXpUq3DDfSJlgnCW
 #         1a:75:ba:1c:c1:36:7c:8f:1e:6d:1c:c3:75:46:ae:35:05:a6:
 #         f6:5c:3d:21:ee:56:f0:c9:82:22:2d:7a:54:ab:70:c3:7d:22:
 #         65:82:70:96
+
+[p11-kit-object-v1]
+label: "Microsoft ECC Root Certificate Authority 2017"
+class: x-certificate-extension
+object-id: 2.5.29.37
+value: "0%16%06%03U%1d%25%01%01%ff%04%0c0%0a%06%08%2b%06%01%05%05%07%03%01"
+modifiable: false
+-----BEGIN PUBLIC KEY-----
+MHYwEAYHKoZIzj0CAQYFK4EEACIDYgAE1Lw9AkJ1QRMjzYAEhgJRL2qogWILZcz2
+yp0eb0pmUaID2Z2R+rYWsYxu3nzN23mmL867znEv5aWrKOxjBGaZ+PrykxAF4YEo
+QuPGaPTmG4RgSomv7XkPO87x9kT1AXjA
+-----END PUBLIC KEY-----
+
+[p11-kit-object-v1]
+label: "Microsoft ECC Root Certificate Authority 2017"
+trusted: true
+nss-mozilla-ca-policy: true
+modifiable: false
+nss-server-distrust-after: "%00"
+nss-email-distrust-after: "%00"
+-----BEGIN CERTIFICATE-----
+MIICWTCCAd+gAwIBAgIQZvI9r4fei7FK6gxXMQHC7DAKBggqhkjOPQQDAzBlMQsw
+CQYDVQQGEwJVUzEeMBwGA1UEChMVTWljcm9zb2Z0IENvcnBvcmF0aW9uMTYwNAYD
+VQQDEy1NaWNyb3NvZnQgRUNDIFJvb3QgQ2VydGlmaWNhdGUgQXV0aG9yaXR5IDIw
+MTcwHhcNMTkxMjE4MjMwNjQ1WhcNNDIwNzE4MjMxNjA0WjBlMQswCQYDVQQGEwJV
+UzEeMBwGA1UEChMVTWljcm9zb2Z0IENvcnBvcmF0aW9uMTYwNAYDVQQDEy1NaWNy
+b3NvZnQgRUNDIFJvb3QgQ2VydGlmaWNhdGUgQXV0aG9yaXR5IDIwMTcwdjAQBgcq
+hkjOPQIBBgUrgQQAIgNiAATUvD0CQnVBEyPNgASGAlEvaqiBYgtlzPbKnR5vSmZR
+ogPZnZH6thaxjG7efM3beaYvzrvOcS/lpaso7GMEZpn4+vKTEAXhgShC48Zo9OYb
+hGBKia/teQ87zvH2RPUBeMCjVDBSMA4GA1UdDwEB/wQEAwIBhjAPBgNVHRMBAf8E
+BTADAQH/MB0GA1UdDgQWBBTIy5lycFIM+Oa+sgRXKSrPQhDtNTAQBgkrBgEEAYI3
+FQEEAwIBADAKBggqhkjOPQQDAwNoADBlAjBY8k3qDPlfXu5gKcs68tvWMoQZP3zV
+L8KxzJOuULsJMsbG7X7JNpQS5GiFBqIb0C8CMQCZ6Ra0DvpWSNSkMBaReNtUjGUB
+iudQZsIxtzm6uBoiB078a1QWIP8rtedMDE2mT3M=
+-----END CERTIFICATE-----
+#Certificate:
+#    Data:
+#        Version: 3 (0x2)
+#        Serial Number:
+#            66:f2:3d:af:87:de:8b:b1:4a:ea:0c:57:31:01:c2:ec
+#        Signature Algorithm: ecdsa-with-SHA384
+#        Issuer: C = US, O = Microsoft Corporation, CN = Microsoft ECC Root Certificate Authority 2017
+#        Validity
+#            Not Before: Dec 18 23:06:45 2019 GMT
+#            Not After : Jul 18 23:16:04 2042 GMT
+#        Subject: C = US, O = Microsoft Corporation, CN = Microsoft ECC Root Certificate Authority 2017
+#        Subject Public Key Info:
+#            Public Key Algorithm: id-ecPublicKey
+#                Public-Key: (384 bit)
+#                pub:
+#                    04:d4:bc:3d:02:42:75:41:13:23:cd:80:04:86:02:
+#                    51:2f:6a:a8:81:62:0b:65:cc:f6:ca:9d:1e:6f:4a:
+#                    66:51:a2:03:d9:9d:91:fa:b6:16:b1:8c:6e:de:7c:
+#                    cd:db:79:a6:2f:ce:bb:ce:71:2f:e5:a5:ab:28:ec:
+#                    63:04:66:99:f8:fa:f2:93:10:05:e1:81:28:42:e3:
+#                    c6:68:f4:e6:1b:84:60:4a:89:af:ed:79:0f:3b:ce:
+#                    f1:f6:44:f5:01:78:c0
+#                ASN1 OID: secp384r1
+#                NIST CURVE: P-384
+#        X509v3 extensions:
+#            X509v3 Key Usage: critical
+#                Digital Signature, Certificate Sign, CRL Sign
+#            X509v3 Basic Constraints: critical
+#                CA:TRUE
+#            X509v3 Subject Key Identifier: 
+#                C8:CB:99:72:70:52:0C:F8:E6:BE:B2:04:57:29:2A:CF:42:10:ED:35
+#            1.3.6.1.4.1.311.21.1: 
+#                ...
+#    Signature Algorithm: ecdsa-with-SHA384
+#         30:65:02:30:58:f2:4d:ea:0c:f9:5f:5e:ee:60:29:cb:3a:f2:
+#         db:d6:32:84:19:3f:7c:d5:2f:c2:b1:cc:93:ae:50:bb:09:32:
+#         c6:c6:ed:7e:c9:36:94:12:e4:68:85:06:a2:1b:d0:2f:02:31:
+#         00:99:e9:16:b4:0e:fa:56:48:d4:a4:30:16:91:78:db:54:8c:
+#         65:01:8a:e7:50:66:c2:31:b7:39:ba:b8:1a:22:07:4e:fc:6b:
+#         54:16:20:ff:2b:b5:e7:4c:0c:4d:a6:4f:73
+
+[p11-kit-object-v1]
+label: "Microsoft RSA Root Certificate Authority 2017"
+class: x-certificate-extension
+object-id: 2.5.29.37
+value: "0%16%06%03U%1d%25%01%01%ff%04%0c0%0a%06%08%2b%06%01%05%05%07%03%01"
+modifiable: false
+-----BEGIN PUBLIC KEY-----
+MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAylu+lDOMKZWRFgqVvUdi
+wYnzmTbfRpDJpe14am9HkWj4J2dQMx2hpvvg5UOjhAJXAV2cSECCUxC8v8c7aJC2
+gi3l9GXQzG0ZzJX5e6xKlK0O3ktDHYcHkhOQgINkNTkE/OXpbLO2H1CUOGVQXBdG
+ubaFtRy1F+jWRZ3YsiawysRwSq5gpN2z2ez8O9VXcrw/yMmy3ktr+CNsA8AFvZXH
+zXM7ZoBk4xqsLvlHBfIGtptz9XgzW8eh+ycqobSakYyR0zqCPnZAtM1SYVFwKD/F
+xVryyYxJuxRbTcj/Z01MEpat9f54qJeH1/1eIIDcoUsi+9SJrbrOR5dHVXuPRchn
+KISVHGgw7+9J4DV7ZOeYsJTaTYU7PlXEKK9X854T20Ynnx6iXkSDpKXK1ROzSz/E
+48LmhmGkUjC5eiBPbw84U8szDBMrj9aavSrILbEcfUtRykfRSCdyXYfr1UXmSGWd
+r1KQuluiGGVXEp9oudQVa5TEaSKY9DPg7flRjkFQyTRPdpCs/DjB2OF7uePjlOFG
+acsOClBrE7qsDzdatxK1kIEeVq5XIobZydLR11HjqzvGVf0eDtN0CtHaquppuJco
+j0jEB/hSQzr0ylU1LLCmasCc+fKB4RJqwEXZZ7PO/yOiiQpU1BS5KqjX7PmrzSVY
+MnmPkFuYOcQIBsGsfw49AKUCAwEAAQ==
+-----END PUBLIC KEY-----
+
+[p11-kit-object-v1]
+label: "Microsoft RSA Root Certificate Authority 2017"
+trusted: true
+nss-mozilla-ca-policy: true
+modifiable: false
+nss-server-distrust-after: "%00"
+nss-email-distrust-after: "%00"
+-----BEGIN CERTIFICATE-----
+MIIFqDCCA5CgAwIBAgIQHtOXCV/YtLNHcB6qvn9FszANBgkqhkiG9w0BAQwFADBl
+MQswCQYDVQQGEwJVUzEeMBwGA1UEChMVTWljcm9zb2Z0IENvcnBvcmF0aW9uMTYw
+NAYDVQQDEy1NaWNyb3NvZnQgUlNBIFJvb3QgQ2VydGlmaWNhdGUgQXV0aG9yaXR5
+IDIwMTcwHhcNMTkxMjE4MjI1MTIyWhcNNDIwNzE4MjMwMDIzWjBlMQswCQYDVQQG
+EwJVUzEeMBwGA1UEChMVTWljcm9zb2Z0IENvcnBvcmF0aW9uMTYwNAYDVQQDEy1N
+aWNyb3NvZnQgUlNBIFJvb3QgQ2VydGlmaWNhdGUgQXV0aG9yaXR5IDIwMTcwggIi
+MA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQDKW76UM4wplZEWCpW9R2LBifOZ
+Nt9GkMml7Xhqb0eRaPgnZ1AzHaGm++DlQ6OEAlcBXZxIQIJTELy/xztokLaCLeX0
+ZdDMbRnMlfl7rEqUrQ7eS0MdhweSE5CAg2Q1OQT85elss7YfUJQ4ZVBcF0a5toW1
+HLUX6NZFndiyJrDKxHBKrmCk3bPZ7Pw71VdyvD/IybLeS2v4I2wDwAW9lcfNcztm
+gGTjGqwu+UcF8ga2m3P1eDNbx6H7JyqhtJqRjJHTOoI+dkC0zVJhUXAoP8XFWvLJ
+jEm7FFtNyP9nTUwSlq31/niol4fX/V4ggNyhSyL71Imtus5Hl0dVe49FyGcohJUc
+aDDv70ngNXtk55iwlNpNhTs+VcQor1fznhPbRiefHqJeRIOkpcrVE7NLP8TjwuaG
+YaRSMLl6IE9vDzhTyzMMEyuP1pq9KsgtsRx9S1HKR9FIJ3Jdh+vVReZIZZ2vUpC6
+W6IYZVcSn2i51BVrlMRpIpj0M+Dt+VGOQVDJNE92kKz8OMHY4Xu54+OU4UZpyw4K
+UGsTuqwPN1q3ErWQgR5WrlcihtnJ0tHXUeOrO8ZV/R4O03QK0dqq6mm4lyiPSMQH
++FJDOvTKVTUssKZqwJz58oHhEmrARdlns87/I6KJClTUFLkqqNfs+avNJVgyeY+Q
+W5g5xAgGwax/Dj0ApQIDAQABo1QwUjAOBgNVHQ8BAf8EBAMCAYYwDwYDVR0TAQH/
+BAUwAwEB/zAdBgNVHQ4EFgQUCctZf4aycI8awznjwNnpv7tNsiMwEAYJKwYBBAGC
+NxUBBAMCAQAwDQYJKoZIhvcNAQEMBQADggIBAKyvPl3CEZaJjqPnktaXFbgToqZC
+LgLNFgVZJ8og6Lq46BrsTaiXVq5lQ7GPAJtSzVXNUzltYkyLDVt8LkS/gxCP81OC
+gMNPOsduET/m4xaRhPtthH80dK2Jp86519efhGSSvpWhrQlTM93uCupKUY5vVau6
+tZRGrox/2KJQJWVggEbbMwSubLWYdFQl3JPk+ONVFT24bcMKpBLBaYVu32TxU5nh
+SnUgnZUP5NbcA/FZGOhHibJXWpS2qdgXKxdJ5XbLwVaZOjex/2kskZGT4d9Mozd2
+TaGf+G0eHdP67Pv0RR0Tbc/3WeUiJ3IrhvNXuzDtJE3cfVa7o7P4NHmJweDyAmH3
+pvwPuxwXC65B2Xy9J6P9LjrRk5Sxcx0ki69bIImtt2dmefU6xqaWM/5TkshGsRGR
+xpl/j8nWZjEgQRCHLQzWwa80mMpkg/sTV9HB8Dx6jKXB/ZUhoHHBk2dxEuqPiApp
+GWSZI1b7rCoucL5mxAyE7+WL85MB+GqQk2dLsmijtWKP6T+MejteD+eMuMZ87zf9
+dOLITzNy4ZQ5bb0Sr74MTnB8G2+NszKTc0QWbej09+CVgI+WXTik9KveCjCHk9hN
+AHFiRSdLOkKEW39lt2c0Ui2cFmuqqNh7o0JMcccMyj6D5KbvtwEwXlGjefVwaaZB
+RA+GsCyRxj3qrg+E
+-----END CERTIFICATE-----
+#Certificate:
+#    Data:
+#        Version: 3 (0x2)
+#        Serial Number:
+#            1e:d3:97:09:5f:d8:b4:b3:47:70:1e:aa:be:7f:45:b3
+#        Signature Algorithm: sha384WithRSAEncryption
+#        Issuer: C = US, O = Microsoft Corporation, CN = Microsoft RSA Root Certificate Authority 2017
+#        Validity
+#            Not Before: Dec 18 22:51:22 2019 GMT
+#            Not After : Jul 18 23:00:23 2042 GMT
+#        Subject: C = US, O = Microsoft Corporation, CN = Microsoft RSA Root Certificate Authority 2017
+#        Subject Public Key Info:
+#            Public Key Algorithm: rsaEncryption
+#                RSA Public-Key: (4096 bit)
+#                Modulus:
+#                    00:ca:5b:be:94:33:8c:29:95:91:16:0a:95:bd:47:
+#                    62:c1:89:f3:99:36:df:46:90:c9:a5:ed:78:6a:6f:
+#                    47:91:68:f8:27:67:50:33:1d:a1:a6:fb:e0:e5:43:
+#                    a3:84:02:57:01:5d:9c:48:40:82:53:10:bc:bf:c7:
+#                    3b:68:90:b6:82:2d:e5:f4:65:d0:cc:6d:19:cc:95:
+#                    f9:7b:ac:4a:94:ad:0e:de:4b:43:1d:87:07:92:13:
+#                    90:80:83:64:35:39:04:fc:e5:e9:6c:b3:b6:1f:50:
+#                    94:38:65:50:5c:17:46:b9:b6:85:b5:1c:b5:17:e8:
+#                    d6:45:9d:d8:b2:26:b0:ca:c4:70:4a:ae:60:a4:dd:
+#                    b3:d9:ec:fc:3b:d5:57:72:bc:3f:c8:c9:b2:de:4b:
+#                    6b:f8:23:6c:03:c0:05:bd:95:c7:cd:73:3b:66:80:
+#                    64:e3:1a:ac:2e:f9:47:05:f2:06:b6:9b:73:f5:78:
+#                    33:5b:c7:a1:fb:27:2a:a1:b4:9a:91:8c:91:d3:3a:
+#                    82:3e:76:40:b4:cd:52:61:51:70:28:3f:c5:c5:5a:
+#                    f2:c9:8c:49:bb:14:5b:4d:c8:ff:67:4d:4c:12:96:
+#                    ad:f5:fe:78:a8:97:87:d7:fd:5e:20:80:dc:a1:4b:
+#                    22:fb:d4:89:ad:ba:ce:47:97:47:55:7b:8f:45:c8:
+#                    67:28:84:95:1c:68:30:ef:ef:49:e0:35:7b:64:e7:
+#                    98:b0:94:da:4d:85:3b:3e:55:c4:28:af:57:f3:9e:
+#                    13:db:46:27:9f:1e:a2:5e:44:83:a4:a5:ca:d5:13:
+#                    b3:4b:3f:c4:e3:c2:e6:86:61:a4:52:30:b9:7a:20:
+#                    4f:6f:0f:38:53:cb:33:0c:13:2b:8f:d6:9a:bd:2a:
+#                    c8:2d:b1:1c:7d:4b:51:ca:47:d1:48:27:72:5d:87:
+#                    eb:d5:45:e6:48:65:9d:af:52:90:ba:5b:a2:18:65:
+#                    57:12:9f:68:b9:d4:15:6b:94:c4:69:22:98:f4:33:
+#                    e0:ed:f9:51:8e:41:50:c9:34:4f:76:90:ac:fc:38:
+#                    c1:d8:e1:7b:b9:e3:e3:94:e1:46:69:cb:0e:0a:50:
+#                    6b:13:ba:ac:0f:37:5a:b7:12:b5:90:81:1e:56:ae:
+#                    57:22:86:d9:c9:d2:d1:d7:51:e3:ab:3b:c6:55:fd:
+#                    1e:0e:d3:74:0a:d1:da:aa:ea:69:b8:97:28:8f:48:
+#                    c4:07:f8:52:43:3a:f4:ca:55:35:2c:b0:a6:6a:c0:
+#                    9c:f9:f2:81:e1:12:6a:c0:45:d9:67:b3:ce:ff:23:
+#                    a2:89:0a:54:d4:14:b9:2a:a8:d7:ec:f9:ab:cd:25:
+#                    58:32:79:8f:90:5b:98:39:c4:08:06:c1:ac:7f:0e:
+#                    3d:00:a5
+#                Exponent: 65537 (0x10001)
+#        X509v3 extensions:
+#            X509v3 Key Usage: critical
+#                Digital Signature, Certificate Sign, CRL Sign
+#            X509v3 Basic Constraints: critical
+#                CA:TRUE
+#            X509v3 Subject Key Identifier: 
+#                09:CB:59:7F:86:B2:70:8F:1A:C3:39:E3:C0:D9:E9:BF:BB:4D:B2:23
+#            1.3.6.1.4.1.311.21.1: 
+#                ...
+#    Signature Algorithm: sha384WithRSAEncryption
+#         ac:af:3e:5d:c2:11:96:89:8e:a3:e7:92:d6:97:15:b8:13:a2:
+#         a6:42:2e:02:cd:16:05:59:27:ca:20:e8:ba:b8:e8:1a:ec:4d:
+#         a8:97:56:ae:65:43:b1:8f:00:9b:52:cd:55:cd:53:39:6d:62:
+#         4c:8b:0d:5b:7c:2e:44:bf:83:10:8f:f3:53:82:80:c3:4f:3a:
+#         c7:6e:11:3f:e6:e3:16:91:84:fb:6d:84:7f:34:74:ad:89:a7:
+#         ce:b9:d7:d7:9f:84:64:92:be:95:a1:ad:09:53:33:dd:ee:0a:
+#         ea:4a:51:8e:6f:55:ab:ba:b5:94:46:ae:8c:7f:d8:a2:50:25:
+#         65:60:80:46:db:33:04:ae:6c:b5:98:74:54:25:dc:93:e4:f8:
+#         e3:55:15:3d:b8:6d:c3:0a:a4:12:c1:69:85:6e:df:64:f1:53:
+#         99:e1:4a:75:20:9d:95:0f:e4:d6:dc:03:f1:59:18:e8:47:89:
+#         b2:57:5a:94:b6:a9:d8:17:2b:17:49:e5:76:cb:c1:56:99:3a:
+#         37:b1:ff:69:2c:91:91:93:e1:df:4c:a3:37:76:4d:a1:9f:f8:
+#         6d:1e:1d:d3:fa:ec:fb:f4:45:1d:13:6d:cf:f7:59:e5:22:27:
+#         72:2b:86:f3:57:bb:30:ed:24:4d:dc:7d:56:bb:a3:b3:f8:34:
+#         79:89:c1:e0:f2:02:61:f7:a6:fc:0f:bb:1c:17:0b:ae:41:d9:
+#         7c:bd:27:a3:fd:2e:3a:d1:93:94:b1:73:1d:24:8b:af:5b:20:
+#         89:ad:b7:67:66:79:f5:3a:c6:a6:96:33:fe:53:92:c8:46:b1:
+#         11:91:c6:99:7f:8f:c9:d6:66:31:20:41:10:87:2d:0c:d6:c1:
+#         af:34:98:ca:64:83:fb:13:57:d1:c1:f0:3c:7a:8c:a5:c1:fd:
+#         95:21:a0:71:c1:93:67:71:12:ea:8f:88:0a:69:19:64:99:23:
+#         56:fb:ac:2a:2e:70:be:66:c4:0c:84:ef:e5:8b:f3:93:01:f8:
+#         6a:90:93:67:4b:b2:68:a3:b5:62:8f:e9:3f:8c:7a:3b:5e:0f:
+#         e7:8c:b8:c6:7c:ef:37:fd:74:e2:c8:4f:33:72:e1:94:39:6d:
+#         bd:12:af:be:0c:4e:70:7c:1b:6f:8d:b3:32:93:73:44:16:6d:
+#         e8:f4:f7:e0:95:80:8f:96:5d:38:a4:f4:ab:de:0a:30:87:93:
+#         d8:4d:00:71:62:45:27:4b:3a:42:84:5b:7f:65:b7:67:34:52:
+#         2d:9c:16:6b:aa:a8:d8:7b:a3:42:4c:71:c7:0c:ca:3e:83:e4:
+#         a6:ef:b7:01:30:5e:51:a3:79:f5:70:69:a6:41:44:0f:86:b0:
+#         2c:91:c6:3d:ea:ae:0f:84
 
 [p11-kit-object-v1]
 label: "MITM subCA 1 issued by Trustwave"
@@ -11194,7 +11127,7 @@ pGxlaKFJdlxDydi8NmdspZS11My5vWo1ViHe2MPr+8ukYEywVaCge1ey
 label: "OISTE WISeKey Global Root GA CA"
 class: x-certificate-extension
 object-id: 2.5.29.37
-value: "0 %06%03U%1d%25%01%01%ff%04%160%14%06%08%2b%06%01%05%05%07%03%04%06%08%2b%06%01%05%05%07%03%01"
+value: "0%16%06%03U%1d%25%01%01%ff%04%0c0%0a%06%08%2b%06%01%05%05%07%03%04"
 modifiable: false
 -----BEGIN PUBLIC KEY-----
 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAy0+zAJs9Nt350UlqaxBJ
@@ -13600,159 +13533,6 @@ FVdMpEbB4IMeDExNH08GGeL5qPQ6gqGyeUN51q1veieQA6TqJIc/2b3Z6fJfUEkc
 #         5f:50:49:1c:ee:ec:d7:2e
 
 [p11-kit-object-v1]
-label: "Staat der Nederlanden Root CA - G2"
-class: x-certificate-extension
-object-id: 2.5.29.37
-value: "0 %06%03U%1d%25%01%01%ff%04%160%14%06%08%2b%06%01%05%05%07%03%04%06%08%2b%06%01%05%05%07%03%01"
-modifiable: false
------BEGIN PUBLIC KEY-----
-MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAxVnnb3WqPkuctbisngvk
-+dnKq12PtTkQgtevUeA74QBIas/a4QZDEZmqFCUSrSLoAG1DxKm45R+JS2e9YUjv
-/dLgYIjluRhgKMN3K62wN6o33mRZKkZX5Eu5+Dd81TbngMG289Rnm5boztfGClPQ
-a0mW86MLBXdI9yXlcKwwFCAl4391WuVI+E57AwcE+oJhh27wO8Skx9D1dD6lXRoI
-8psl0vasBCY+VTpiKKV7sjCv+DfC0brWOP3070kwN5kmIUiFAanlFufckFXfD+g4
-zZk3IU9d9SJvasUSFmAXVfJlZqanMJE4wTgdhgSEuholeF6dr8xQYNYTh1LtYx9t
-ZX3CFRh0yuF+ZCmMctgWE30LSUrxKBsgdGvFPd2wqkgJPS6ClM0aZdkriJqZvBh+
-n+59Znw+vZS4gc7NmDB4wW9n0L5f4Gjt3uKxySxZeJKq3ytgY/LlXrnjyvp/UIY+
-ojQYDAloKBEc5OG5XD5HujI/GMxbhPXza3TEcnTh44ugSr2NZi/qrTXaINOIgmHw
-EiK2vNDVpOyvVIglJDynbbFyKT8+V6Z/Va9uJsb+58xAXFFEgQp43krOVb8d1dm3
-Vu/wdv8LebWvvfupaZFGl2iAFDYds3+7KZg2pSD6gmBiM6Ts1roHp27FzxSm59aS
-NNiB9fwdXapcHvajTTu49zkCAwEAAQ==
------END PUBLIC KEY-----
-
-[p11-kit-object-v1]
-label: "Staat der Nederlanden Root CA - G2"
-trusted: true
-nss-mozilla-ca-policy: true
-modifiable: false
-nss-server-distrust-after: "%00"
-nss-email-distrust-after: "%00"
------BEGIN CERTIFICATE-----
-MIIFyjCCA7KgAwIBAgIEAJiWjDANBgkqhkiG9w0BAQsFADBaMQswCQYDVQQGEwJO
-TDEeMBwGA1UECgwVU3RhYXQgZGVyIE5lZGVybGFuZGVuMSswKQYDVQQDDCJTdGFh
-dCBkZXIgTmVkZXJsYW5kZW4gUm9vdCBDQSAtIEcyMB4XDTA4MDMyNjExMTgxN1oX
-DTIwMDMyNTExMDMxMFowWjELMAkGA1UEBhMCTkwxHjAcBgNVBAoMFVN0YWF0IGRl
-ciBOZWRlcmxhbmRlbjErMCkGA1UEAwwiU3RhYXQgZGVyIE5lZGVybGFuZGVuIFJv
-b3QgQ0EgLSBHMjCCAiIwDQYJKoZIhvcNAQEBBQADggIPADCCAgoCggIBAMVZ5291
-qj5LnLW4rJ4L5PnZyqtdj7U5EILXr1HgO+EASGrP2uEGQxGZqhQlEq0i6ABtQ8Sp
-uOUfiUtnvWFI7/3S4GCI5bkYYCjDdyutsDeqN95kWSpGV+RLufg3fNU254DBtvPU
-Z5uW6M7XxgpT0GtJlvOjCwV3SPcl5XCsMBQgJeN/dVrlSPhOewMHBPqCYYdu8DvE
-pMfQ9XQ+pV0aCPKbJdL2rAQmPlU6Yiile7Iwr/g3wtG61jj99O9JMDeZJiFIhQGp
-5Rbn3JBV3w/oOM2ZNyFPXfUib2rFEhZgF1XyZWampzCROME4HYYEhLoaJXhena/M
-UGDWE4dS7WMfbWV9whUYdMrhfmQpjHLYFhN9C0lK8SgbIHRrxT3dsKpICT0ugpTN
-GmXZK4iambwYfp/ufWZ8Pr2UuIHOzZgweMFvZ9C+X+Bo7d7iscksWXiSqt8rYGPy
-5V6548r6f1CGPqI0GAwJaCgRHOThuVw+R7oyPxjMW4T182t0xHJ04eOLoEq9jWYv
-6q012iDTiIJh8BIitrzQ1aTsr1SIJSQ8p22xcik/Plemf1WvbibG/ufMQFxRRIEK
-eN5KzlW/HdXZt1bv8Hb/C3m1r737qWmRRpdogBQ2HbN/uymYNqUg+oJgYjOk7Na6
-B6duxc8UpufWkjTYgfX8HV2qXB72o007uPc5AgMBAAGjgZcwgZQwDwYDVR0TAQH/
-BAUwAwEB/zBSBgNVHSAESzBJMEcGBFUdIAAwPzA9BggrBgEFBQcCARYxaHR0cDov
-L3d3dy5wa2lvdmVyaGVpZC5ubC9wb2xpY2llcy9yb290LXBvbGljeS1HMjAOBgNV
-HQ8BAf8EBAMCAQYwHQYDVR0OBBYEFJFoMocVHYnitfGsNig0jQt8YojrMA0GCSqG
-SIb3DQEBCwUAA4ICAQCoQUpnKpKBglBu4dfYszk78wIVCVBR7y29JHuIhjv5tLyS
-CZa59sCrI2AGeYwRTlHSeYAz+51IvuxBQ4EffkdAHOV6CMqqi3WtFMTC6GY8ggen
-5ieCWxjmD27ZUD6KQhgpxrRW/FYQoAUXvQwjf/ST7ZwaUb7dRUG/kSS0H4zpX897
-IZmflZ85OkYcbPnNe5yQzSipx6lVu6xiNGI1E0sUOlWDuYaNkqbG9AclVMwWVxJK
-gnjIFNkXgiYtXSAfea7+1HAWFpWD2DU5/1JddRwWxRNVz0fMdWVSSt7wsKfkCpYL
-+63C4iWEst3kvX5ZbJvw8NjnyvLplzh+ib7M+zkXYT9y2zqR2GUBGR2tUKRXCnxL
-vJxxcypFURmFzI79R6d0lR2o0a9OF7FpJsKqeFdbxU2n5Z4FF5TKsl+gSRiNNOkm
-bEgeqmiSBeGCc1qb3AdbCG19ndeNIdn8FCCqwkXfP+cAslHkwvgFuXkajDTznlvk
-N1trSt8sV4pAWja63XVECDdCcAz+3F4hoKOKwJCcaNpQ5kUQR3i2TtJlycM33+FC
-Y7BXN0Ute4qcvwXqZVUz9zkQxSgqIXobisQk+T8VyJoVIPVVYpbtbZNQvOSqeK3Z
-ywplh6ZmwcSBo3c6WB4L7oOLnR7SUqTMHW+wmG2UMbX4cQrcufx9MmDm66+KAQ==
------END CERTIFICATE-----
-#Certificate:
-#    Data:
-#        Version: 3 (0x2)
-#        Serial Number: 10000012 (0x98968c)
-#        Signature Algorithm: sha256WithRSAEncryption
-#        Issuer: C = NL, O = Staat der Nederlanden, CN = Staat der Nederlanden Root CA - G2
-#        Validity
-#            Not Before: Mar 26 11:18:17 2008 GMT
-#            Not After : Mar 25 11:03:10 2020 GMT
-#        Subject: C = NL, O = Staat der Nederlanden, CN = Staat der Nederlanden Root CA - G2
-#        Subject Public Key Info:
-#            Public Key Algorithm: rsaEncryption
-#                RSA Public-Key: (4096 bit)
-#                Modulus:
-#                    00:c5:59:e7:6f:75:aa:3e:4b:9c:b5:b8:ac:9e:0b:
-#                    e4:f9:d9:ca:ab:5d:8f:b5:39:10:82:d7:af:51:e0:
-#                    3b:e1:00:48:6a:cf:da:e1:06:43:11:99:aa:14:25:
-#                    12:ad:22:e8:00:6d:43:c4:a9:b8:e5:1f:89:4b:67:
-#                    bd:61:48:ef:fd:d2:e0:60:88:e5:b9:18:60:28:c3:
-#                    77:2b:ad:b0:37:aa:37:de:64:59:2a:46:57:e4:4b:
-#                    b9:f8:37:7c:d5:36:e7:80:c1:b6:f3:d4:67:9b:96:
-#                    e8:ce:d7:c6:0a:53:d0:6b:49:96:f3:a3:0b:05:77:
-#                    48:f7:25:e5:70:ac:30:14:20:25:e3:7f:75:5a:e5:
-#                    48:f8:4e:7b:03:07:04:fa:82:61:87:6e:f0:3b:c4:
-#                    a4:c7:d0:f5:74:3e:a5:5d:1a:08:f2:9b:25:d2:f6:
-#                    ac:04:26:3e:55:3a:62:28:a5:7b:b2:30:af:f8:37:
-#                    c2:d1:ba:d6:38:fd:f4:ef:49:30:37:99:26:21:48:
-#                    85:01:a9:e5:16:e7:dc:90:55:df:0f:e8:38:cd:99:
-#                    37:21:4f:5d:f5:22:6f:6a:c5:12:16:60:17:55:f2:
-#                    65:66:a6:a7:30:91:38:c1:38:1d:86:04:84:ba:1a:
-#                    25:78:5e:9d:af:cc:50:60:d6:13:87:52:ed:63:1f:
-#                    6d:65:7d:c2:15:18:74:ca:e1:7e:64:29:8c:72:d8:
-#                    16:13:7d:0b:49:4a:f1:28:1b:20:74:6b:c5:3d:dd:
-#                    b0:aa:48:09:3d:2e:82:94:cd:1a:65:d9:2b:88:9a:
-#                    99:bc:18:7e:9f:ee:7d:66:7c:3e:bd:94:b8:81:ce:
-#                    cd:98:30:78:c1:6f:67:d0:be:5f:e0:68:ed:de:e2:
-#                    b1:c9:2c:59:78:92:aa:df:2b:60:63:f2:e5:5e:b9:
-#                    e3:ca:fa:7f:50:86:3e:a2:34:18:0c:09:68:28:11:
-#                    1c:e4:e1:b9:5c:3e:47:ba:32:3f:18:cc:5b:84:f5:
-#                    f3:6b:74:c4:72:74:e1:e3:8b:a0:4a:bd:8d:66:2f:
-#                    ea:ad:35:da:20:d3:88:82:61:f0:12:22:b6:bc:d0:
-#                    d5:a4:ec:af:54:88:25:24:3c:a7:6d:b1:72:29:3f:
-#                    3e:57:a6:7f:55:af:6e:26:c6:fe:e7:cc:40:5c:51:
-#                    44:81:0a:78:de:4a:ce:55:bf:1d:d5:d9:b7:56:ef:
-#                    f0:76:ff:0b:79:b5:af:bd:fb:a9:69:91:46:97:68:
-#                    80:14:36:1d:b3:7f:bb:29:98:36:a5:20:fa:82:60:
-#                    62:33:a4:ec:d6:ba:07:a7:6e:c5:cf:14:a6:e7:d6:
-#                    92:34:d8:81:f5:fc:1d:5d:aa:5c:1e:f6:a3:4d:3b:
-#                    b8:f7:39
-#                Exponent: 65537 (0x10001)
-#        X509v3 extensions:
-#            X509v3 Basic Constraints: critical
-#                CA:TRUE
-#            X509v3 Certificate Policies: 
-#                Policy: X509v3 Any Policy
-#                  CPS: http://www.pkioverheid.nl/policies/root-policy-G2
-#
-#            X509v3 Key Usage: critical
-#                Certificate Sign, CRL Sign
-#            X509v3 Subject Key Identifier: 
-#                91:68:32:87:15:1D:89:E2:B5:F1:AC:36:28:34:8D:0B:7C:62:88:EB
-#    Signature Algorithm: sha256WithRSAEncryption
-#         a8:41:4a:67:2a:92:81:82:50:6e:e1:d7:d8:b3:39:3b:f3:02:
-#         15:09:50:51:ef:2d:bd:24:7b:88:86:3b:f9:b4:bc:92:09:96:
-#         b9:f6:c0:ab:23:60:06:79:8c:11:4e:51:d2:79:80:33:fb:9d:
-#         48:be:ec:41:43:81:1f:7e:47:40:1c:e5:7a:08:ca:aa:8b:75:
-#         ad:14:c4:c2:e8:66:3c:82:07:a7:e6:27:82:5b:18:e6:0f:6e:
-#         d9:50:3e:8a:42:18:29:c6:b4:56:fc:56:10:a0:05:17:bd:0c:
-#         23:7f:f4:93:ed:9c:1a:51:be:dd:45:41:bf:91:24:b4:1f:8c:
-#         e9:5f:cf:7b:21:99:9f:95:9f:39:3a:46:1c:6c:f9:cd:7b:9c:
-#         90:cd:28:a9:c7:a9:55:bb:ac:62:34:62:35:13:4b:14:3a:55:
-#         83:b9:86:8d:92:a6:c6:f4:07:25:54:cc:16:57:12:4a:82:78:
-#         c8:14:d9:17:82:26:2d:5d:20:1f:79:ae:fe:d4:70:16:16:95:
-#         83:d8:35:39:ff:52:5d:75:1c:16:c5:13:55:cf:47:cc:75:65:
-#         52:4a:de:f0:b0:a7:e4:0a:96:0b:fb:ad:c2:e2:25:84:b2:dd:
-#         e4:bd:7e:59:6c:9b:f0:f0:d8:e7:ca:f2:e9:97:38:7e:89:be:
-#         cc:fb:39:17:61:3f:72:db:3a:91:d8:65:01:19:1d:ad:50:a4:
-#         57:0a:7c:4b:bc:9c:71:73:2a:45:51:19:85:cc:8e:fd:47:a7:
-#         74:95:1d:a8:d1:af:4e:17:b1:69:26:c2:aa:78:57:5b:c5:4d:
-#         a7:e5:9e:05:17:94:ca:b2:5f:a0:49:18:8d:34:e9:26:6c:48:
-#         1e:aa:68:92:05:e1:82:73:5a:9b:dc:07:5b:08:6d:7d:9d:d7:
-#         8d:21:d9:fc:14:20:aa:c2:45:df:3f:e7:00:b2:51:e4:c2:f8:
-#         05:b9:79:1a:8c:34:f3:9e:5b:e4:37:5b:6b:4a:df:2c:57:8a:
-#         40:5a:36:ba:dd:75:44:08:37:42:70:0c:fe:dc:5e:21:a0:a3:
-#         8a:c0:90:9c:68:da:50:e6:45:10:47:78:b6:4e:d2:65:c9:c3:
-#         37:df:e1:42:63:b0:57:37:45:2d:7b:8a:9c:bf:05:ea:65:55:
-#         33:f7:39:10:c5:28:2a:21:7a:1b:8a:c4:24:f9:3f:15:c8:9a:
-#         15:20:f5:55:62:96:ed:6d:93:50:bc:e4:aa:78:ad:d9:cb:0a:
-#         65:87:a6:66:c1:c4:81:a3:77:3a:58:1e:0b:ee:83:8b:9d:1e:
-#         d2:52:a4:cc:1d:6f:b0:98:6d:94:31:b5:f8:71:0a:dc:b9:fc:
-#         7d:32:60:e6:eb:af:8a:01
-
-[p11-kit-object-v1]
 label: "Staat der Nederlanden Root CA - G3"
 class: x-certificate-extension
 object-id: 2.5.29.37
@@ -14684,81 +14464,6 @@ tGMU0gYqZ4yD9c7qB9iaah7s5Aq7KkzrCWA5zspi2C5u
 #         60:39:ce:ca:62:d8:2e:6e
 
 [p11-kit-object-v1]
-label: "Symantec Class 1 Public Primary Certification Authority - G4"
-class: x-certificate-extension
-object-id: 2.5.29.37
-value: "0%16%06%03U%1d%25%01%01%ff%04%0c0%0a%06%08%2b%06%01%05%05%07%03%04"
-modifiable: false
------BEGIN PUBLIC KEY-----
-MHYwEAYHKoZIzj0CAQYFK4EEACIDYgAE12a1G9uus2DuRuqIY3U7KpRt818S9uMP
-nrYKFFNIUsjcOrPLSCAmEk76iYTU35HkKX0oAdnbGENpoR+104YW3Md/ZyPf3zEx
-gwM1cLFLt8gXu1HL3JQX2+oJO3YS3qq1
------END PUBLIC KEY-----
-
-[p11-kit-object-v1]
-label: "Symantec Class 1 Public Primary Certification Authority - G4"
-trusted: true
-nss-mozilla-ca-policy: true
-modifiable: false
-nss-server-distrust-after: "%00"
-nss-email-distrust-after: "%00"
------BEGIN CERTIFICATE-----
-MIICqDCCAi2gAwIBAgIQIW4zpcvTiKRvKQe0JzzE2DAKBggqhkjOPQQDAzCBlDEL
-MAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYD
-VQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMUUwQwYDVQQDEzxTeW1hbnRlYyBD
-bGFzcyAxIFB1YmxpYyBQcmltYXJ5IENlcnRpZmljYXRpb24gQXV0aG9yaXR5IC0g
-RzQwHhcNMTExMDA1MDAwMDAwWhcNMzgwMTE4MjM1OTU5WjCBlDELMAkGA1UEBhMC
-VVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1h
-bnRlYyBUcnVzdCBOZXR3b3JrMUUwQwYDVQQDEzxTeW1hbnRlYyBDbGFzcyAxIFB1
-YmxpYyBQcmltYXJ5IENlcnRpZmljYXRpb24gQXV0aG9yaXR5IC0gRzQwdjAQBgcq
-hkjOPQIBBgUrgQQAIgNiAATXZrUb266zYO5G6ohjdTsqlG3zXxL24w+etgoUU0hS
-yNw6s8tIICYSTvqJhNTfkeQpfSgB2dsYQ2mhH7XThhbcx39nI9/fMTGDAzVwsUu3
-yBe7UcvclBfb6gk7dhLeqrWjQjBAMA4GA1UdDwEB/wQEAwIBBjAPBgNVHRMBAf8E
-BTADAQH/MB0GA1UdDgQWBBRlwI0l9Qy6l3eQP54u4Fr1ztXh5DAKBggqhkjOPQQD
-AwNpADBmAjEApa7jRlP4mDbjIvouKEkN7jB+M/PsP3FezFWJeJmssv3cHFwzjim5
-axfIEWi13IMHAjEAnMhE2mnCNsNUGRCFAtqdR+9B52wmnQk9922Q0QVEL7C8g5No
-8gxFSTm/mQQc0xCg
------END CERTIFICATE-----
-#Certificate:
-#    Data:
-#        Version: 3 (0x2)
-#        Serial Number:
-#            21:6e:33:a5:cb:d3:88:a4:6f:29:07:b4:27:3c:c4:d8
-#        Signature Algorithm: ecdsa-with-SHA384
-#        Issuer: C = US, O = Symantec Corporation, OU = Symantec Trust Network, CN = Symantec Class 1 Public Primary Certification Authority - G4
-#        Validity
-#            Not Before: Oct  5 00:00:00 2011 GMT
-#            Not After : Jan 18 23:59:59 2038 GMT
-#        Subject: C = US, O = Symantec Corporation, OU = Symantec Trust Network, CN = Symantec Class 1 Public Primary Certification Authority - G4
-#        Subject Public Key Info:
-#            Public Key Algorithm: id-ecPublicKey
-#                Public-Key: (384 bit)
-#                pub:
-#                    04:d7:66:b5:1b:db:ae:b3:60:ee:46:ea:88:63:75:
-#                    3b:2a:94:6d:f3:5f:12:f6:e3:0f:9e:b6:0a:14:53:
-#                    48:52:c8:dc:3a:b3:cb:48:20:26:12:4e:fa:89:84:
-#                    d4:df:91:e4:29:7d:28:01:d9:db:18:43:69:a1:1f:
-#                    b5:d3:86:16:dc:c7:7f:67:23:df:df:31:31:83:03:
-#                    35:70:b1:4b:b7:c8:17:bb:51:cb:dc:94:17:db:ea:
-#                    09:3b:76:12:de:aa:b5
-#                ASN1 OID: secp384r1
-#                NIST CURVE: P-384
-#        X509v3 extensions:
-#            X509v3 Key Usage: critical
-#                Certificate Sign, CRL Sign
-#            X509v3 Basic Constraints: critical
-#                CA:TRUE
-#            X509v3 Subject Key Identifier: 
-#                65:C0:8D:25:F5:0C:BA:97:77:90:3F:9E:2E:E0:5A:F5:CE:D5:E1:E4
-#    Signature Algorithm: ecdsa-with-SHA384
-#         30:66:02:31:00:a5:ae:e3:46:53:f8:98:36:e3:22:fa:2e:28:
-#         49:0d:ee:30:7e:33:f3:ec:3f:71:5e:cc:55:89:78:99:ac:b2:
-#         fd:dc:1c:5c:33:8e:29:b9:6b:17:c8:11:68:b5:dc:83:07:02:
-#         31:00:9c:c8:44:da:69:c2:36:c3:54:19:10:85:02:da:9d:47:
-#         ef:41:e7:6c:26:9d:09:3d:f7:6d:90:d1:05:44:2f:b0:bc:83:
-#         93:68:f2:0c:45:49:39:bf:99:04:1c:d3:10:a0
-
-[p11-kit-object-v1]
 label: "Symantec Class 1 Public Primary Certification Authority - G6"
 class: x-certificate-extension
 object-id: 2.5.29.37
@@ -14862,81 +14567,6 @@ DJqXPDe/v+z28LSFdyjBC8hnghAXOKK3Buqbvzr46SMHv3TgmDgVVXjucgBcGaP0
 #         82:10:17:38:a2:b7:06:ea:9b:bf:3a:f8:e9:23:07:bf:74:e0:
 #         98:38:15:55:78:ee:72:00:5c:19:a3:f4:d2:33:e0:ff:bd:d1:
 #         54:39:29:0f
-
-[p11-kit-object-v1]
-label: "Symantec Class 2 Public Primary Certification Authority - G4"
-class: x-certificate-extension
-object-id: 2.5.29.37
-value: "0%16%06%03U%1d%25%01%01%ff%04%0c0%0a%06%08%2b%06%01%05%05%07%03%04"
-modifiable: false
------BEGIN PUBLIC KEY-----
-MHYwEAYHKoZIzj0CAQYFK4EEACIDYgAE0dlKjkwNhEpRunzv08z6Opq1p2MTPQHg
-ST76wUfJkrM61/5vnPeaOg/1DgoKwz/I5xIUjtXVbZgss3EyCusqvfbXaiALZ0Wc
-0rK/UyJmCV3bEfPxBTNYo+K4z3zNgpu9
------END PUBLIC KEY-----
-
-[p11-kit-object-v1]
-label: "Symantec Class 2 Public Primary Certification Authority - G4"
-trusted: true
-nss-mozilla-ca-policy: true
-modifiable: false
-nss-server-distrust-after: "%00"
-nss-email-distrust-after: "%00"
------BEGIN CERTIFICATE-----
-MIICqDCCAi2gAwIBAgIQNBdlEkA7t1aALYDLeVWmHjAKBggqhkjOPQQDAzCBlDEL
-MAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYD
-VQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMUUwQwYDVQQDEzxTeW1hbnRlYyBD
-bGFzcyAyIFB1YmxpYyBQcmltYXJ5IENlcnRpZmljYXRpb24gQXV0aG9yaXR5IC0g
-RzQwHhcNMTExMDA1MDAwMDAwWhcNMzgwMTE4MjM1OTU5WjCBlDELMAkGA1UEBhMC
-VVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1h
-bnRlYyBUcnVzdCBOZXR3b3JrMUUwQwYDVQQDEzxTeW1hbnRlYyBDbGFzcyAyIFB1
-YmxpYyBQcmltYXJ5IENlcnRpZmljYXRpb24gQXV0aG9yaXR5IC0gRzQwdjAQBgcq
-hkjOPQIBBgUrgQQAIgNiAATR2UqOTA2ESlG6fO/TzPo6mrWnYxM9AeBJPvrBR8mS
-szrX/m+c95o6D/UOCgrDP8jnEhSO1dVtmCyzcTIK6yq99tdqIAtnRZzSsr9TImYJ
-XdsR8/EFM1ij4rjPfM2Cm72jQjBAMA4GA1UdDwEB/wQEAwIBBjAPBgNVHRMBAf8E
-BTADAQH/MB0GA1UdDgQWBBQ9MvM6qQyQhPmijGkGYVQvh3L+BTAKBggqhkjOPQQD
-AwNpADBmAjEAyKapr0F/tckRQhZoaUxcuCcYtpjxwH+QbYfTjEYX8D5P/OqwCMR6
-S7wIL8fip29lAjEA1lnehs5fDspU1cbQFQ78i5Ry1I4AWFPPfrFLDeVQhuuea9//
-KabYR9mglhjb8kWz
------END CERTIFICATE-----
-#Certificate:
-#    Data:
-#        Version: 3 (0x2)
-#        Serial Number:
-#            34:17:65:12:40:3b:b7:56:80:2d:80:cb:79:55:a6:1e
-#        Signature Algorithm: ecdsa-with-SHA384
-#        Issuer: C = US, O = Symantec Corporation, OU = Symantec Trust Network, CN = Symantec Class 2 Public Primary Certification Authority - G4
-#        Validity
-#            Not Before: Oct  5 00:00:00 2011 GMT
-#            Not After : Jan 18 23:59:59 2038 GMT
-#        Subject: C = US, O = Symantec Corporation, OU = Symantec Trust Network, CN = Symantec Class 2 Public Primary Certification Authority - G4
-#        Subject Public Key Info:
-#            Public Key Algorithm: id-ecPublicKey
-#                Public-Key: (384 bit)
-#                pub:
-#                    04:d1:d9:4a:8e:4c:0d:84:4a:51:ba:7c:ef:d3:cc:
-#                    fa:3a:9a:b5:a7:63:13:3d:01:e0:49:3e:fa:c1:47:
-#                    c9:92:b3:3a:d7:fe:6f:9c:f7:9a:3a:0f:f5:0e:0a:
-#                    0a:c3:3f:c8:e7:12:14:8e:d5:d5:6d:98:2c:b3:71:
-#                    32:0a:eb:2a:bd:f6:d7:6a:20:0b:67:45:9c:d2:b2:
-#                    bf:53:22:66:09:5d:db:11:f3:f1:05:33:58:a3:e2:
-#                    b8:cf:7c:cd:82:9b:bd
-#                ASN1 OID: secp384r1
-#                NIST CURVE: P-384
-#        X509v3 extensions:
-#            X509v3 Key Usage: critical
-#                Certificate Sign, CRL Sign
-#            X509v3 Basic Constraints: critical
-#                CA:TRUE
-#            X509v3 Subject Key Identifier: 
-#                3D:32:F3:3A:A9:0C:90:84:F9:A2:8C:69:06:61:54:2F:87:72:FE:05
-#    Signature Algorithm: ecdsa-with-SHA384
-#         30:66:02:31:00:c8:a6:a9:af:41:7f:b5:c9:11:42:16:68:69:
-#         4c:5c:b8:27:18:b6:98:f1:c0:7f:90:6d:87:d3:8c:46:17:f0:
-#         3e:4f:fc:ea:b0:08:c4:7a:4b:bc:08:2f:c7:e2:a7:6f:65:02:
-#         31:00:d6:59:de:86:ce:5f:0e:ca:54:d5:c6:d0:15:0e:fc:8b:
-#         94:72:d4:8e:00:58:53:cf:7e:b1:4b:0d:e5:50:86:eb:9e:6b:
-#         df:ff:29:a6:d8:47:d9:a0:96:18:db:f2:45:b3
 
 [p11-kit-object-v1]
 label: "Symantec Class 2 Public Primary Certification Authority - G6"
@@ -15144,155 +14774,6 @@ LvWpCz/UXeHPhJ/iGcJfitYgHuNztw==
 #         ef:97:ed:c2:30:a4:c9:2a:7a:fb:f3:4d:23:1b:99:33:34:a0:
 #         2e:f5:a9:0b:3f:d4:5d:e1:cf:84:9f:e2:19:c2:5f:8a:d6:20:
 #         1e:e3:73:b7
-
-[p11-kit-object-v1]
-label: "Taiwan GRCA"
-class: x-certificate-extension
-object-id: 2.5.29.37
-value: "0 %06%03U%1d%25%01%01%ff%04%160%14%06%08%2b%06%01%05%05%07%03%04%06%08%2b%06%01%05%05%07%03%01"
-modifiable: false
------BEGIN PUBLIC KEY-----
-MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAmiW47Myidah7985bWYrJ
-0YYSCFTsnPLnRvaI83zppd9MRzakGwEcfx5Xio3DxdEh49okP0gr+58uoZTnLByT
-0b8bAYdTmc6n9Qohdnf/qbfGc5RPRvcQSTf6qFlJXWqBB1byivkG0PdwIk20t0G5
-Mrix8LHDnD9w/VPdgarYY3j22FNuoaxqhCRyVIbG0rLKHA55gda1cGIIAS5OTw7V
-Ea+pr+Wav9zMh20m5MlXovuW+czhP1OMbEx+m1MIC2wX+2fIwq2xzYC0l9x2ARYV
-6WrXpOF4R86G1fsx8/oxvjSqKPtwTB1Jx68snW1mpraNZH61IGqdO4G2j0AAZ0uJ
-hrjMZf4VU+kEwdZfHUTXCi8nmkZ9oQ11rVSGFdxJO/GWzg+boOyjel2+1Sp1QuV7
-3qW2qq8orKyQrDi31Wg1Jnrc9zvz/UWb0btDeG5v8UJUapjwDa2X6VJe6dVqct5q
-9xtgFPSl5LZxZ6of6uJNwUJA/mdGFzgvRz9xnK7lIcphLW0HqIR8Le5RJfFjkJ79
-4VeIa++KI22x5r0/rdE9lguFjc1rJ7u3BZvsu5GpCgcSApdOIJDw/w0e4kE700A6
-541d2mbkArAHUphcDo4znMKmlftVGW5Mjq5LD73BOE1ej4QdZs3FYJa0UloFiY6V
-epjBkTyVI7IO9Hm0yXzBSiECAwEAAQ==
------END PUBLIC KEY-----
-
-[p11-kit-object-v1]
-label: "Taiwan GRCA"
-trusted: true
-nss-mozilla-ca-policy: true
-modifiable: false
-nss-server-distrust-after: "190919000000Z"
-nss-email-distrust-after: "%00"
------BEGIN CERTIFICATE-----
-MIIFcjCCA1qgAwIBAgIQH51ZWtcvwgZEpYAIaeNe9jANBgkqhkiG9w0BAQUFADA/
-MQswCQYDVQQGEwJUVzEwMC4GA1UECgwnR292ZXJubWVudCBSb290IENlcnRpZmlj
-YXRpb24gQXV0aG9yaXR5MB4XDTAyMTIwNTEzMjMzM1oXDTMyMTIwNTEzMjMzM1ow
-PzELMAkGA1UEBhMCVFcxMDAuBgNVBAoMJ0dvdmVybm1lbnQgUm9vdCBDZXJ0aWZp
-Y2F0aW9uIEF1dGhvcml0eTCCAiIwDQYJKoZIhvcNAQEBBQADggIPADCCAgoCggIB
-AJoluOzMonWoe/fOW1mKydGGEghU7Jzy50b2iPN86aXfTEc2pBsBHH8eV4qNw8XR
-IePaJD9IK/ufLqGU5ywck9G/GwGHU5nOp/UKIXZ3/6m3xnOUT0b3EEk3+qhZSV1q
-gQdW8or5BtD3cCJNtLdBuTK4sfCxw5w/cP1T3YGq2GN49thTbqGsaoQkclSGxtKy
-yhwOeYHWtXBiCAEuTk8O1RGvqa/lmr/czIdtJuTJV6L7lvnM4T9TjGxMfptTCAts
-F/tnyMKtsc2AtJfcdgEWFelq16TheEfOhtX7MfP6Mb40qij7cEwdScevLJ1tZqa2
-jWR+tSBqnTuBto9AAGdLiYa4zGX+FVPpBMHWXx1E1wovJ5pGfaENda1UhhXcSTvx
-ls4Pm6Dso3pdvtUqdULle96ltqqvKKyskKw4t9VoNSZ63Pc78/1Fm9G7Q3hub/FC
-VGqY8A2tl+lSXunVanLeavcbYBT0peS2cWeqH+riTcFCQP5nRhc4L0c/cZyu5SHK
-YS1tB6iEfC3uUSXxY5Ce/eFXiGvviiNtsea9P63RPZYLhY3Naye7twWb7LuRqQoH
-EgKXTiCQ8P8NHuJBO9NAOueNXdpm5AKwB1KYXA6OM5zCppX7VRluTI6uSw+9wThN
-Xo+EHWbNxWCWtFJaBYmOlXqYwZE8lSOyDvR5tMl8wUohAgMBAAGjajBoMB0GA1Ud
-DgQWBBTMzO/MKWCkO7GStjz6MmKPrCUVOzAMBgNVHRMEBTADAQH/MDkGBGcqBwAE
-MTAvMC0CAQAwCQYFKw4DAhoFADAHBgVnKgMAAAQUA5vwIhP/lSg209yewDL7MTqK
-UWUwDQYJKoZIhvcNAQEFBQADggIBAECASvomyc5eMN1PhnR2WPWus4MzeKR6dBcZ
-TulStbngCnRiqmjKeKBMmo4sIy7VahIkv9Ro04rQ2JyftB8M3jh+Vzj8jeJPXgyf
-qzvS/3WXy6TjZwj/5cAWtUgBfen5Cv8b5Wppv3ghqMKnI6mGq3ZW6A4M9hPdKmaK
-ZEk9GhiHkASfQlK3T8v+R0F2Ne//AHY2RTKbxkaFXeIksB7jSJaYV0eUVXoPQbFE
-JPPB/hprv4j9wabak2BegUqZIJxIZhm1AHlUD7gsL0u8qV1bYH+Mh6XgUmMqvtg7
-hUAV/h62ZT/FS9p+tXo1KaMuephgIqP0fSdOLeq0dDzpD6QzDxARvBMB1uUO07+1
-EqLhRSPAzAhuYbeJq4PjJB7mXQfnHyA+z2fI56wwbSdLaG5LKlwCCDTb+HbkZ6Mm
-nD+iMsJKxYEYMRBWqoTvLQr/uB930r+lWKBi5NdLkXWNiYCYfm3LU05er/ayl4WX
-udpVBrkk7tfGOB5jGxI7leFYrPLfhNVfmS8NVVvmONsuP3LpSIXLuykTjx44Vbnz
-ssQwmSNOXfJIoRIM3BKQCZBUkQM8R+XVyWXgt0t97EfTsws+rZ7QdAAO671RrcDe
-LMDDav7v3Aun+kbfYNucpllQdSNpc5Oy+fwC00fmcc4QAu4njIT/rEUNE1yDMuAl
-pYYsfPQS
------END CERTIFICATE-----
-#Certificate:
-#    Data:
-#        Version: 3 (0x2)
-#        Serial Number:
-#            1f:9d:59:5a:d7:2f:c2:06:44:a5:80:08:69:e3:5e:f6
-#        Signature Algorithm: sha1WithRSAEncryption
-#        Issuer: C = TW, O = Government Root Certification Authority
-#        Validity
-#            Not Before: Dec  5 13:23:33 2002 GMT
-#            Not After : Dec  5 13:23:33 2032 GMT
-#        Subject: C = TW, O = Government Root Certification Authority
-#        Subject Public Key Info:
-#            Public Key Algorithm: rsaEncryption
-#                RSA Public-Key: (4096 bit)
-#                Modulus:
-#                    00:9a:25:b8:ec:cc:a2:75:a8:7b:f7:ce:5b:59:8a:
-#                    c9:d1:86:12:08:54:ec:9c:f2:e7:46:f6:88:f3:7c:
-#                    e9:a5:df:4c:47:36:a4:1b:01:1c:7f:1e:57:8a:8d:
-#                    c3:c5:d1:21:e3:da:24:3f:48:2b:fb:9f:2e:a1:94:
-#                    e7:2c:1c:93:d1:bf:1b:01:87:53:99:ce:a7:f5:0a:
-#                    21:76:77:ff:a9:b7:c6:73:94:4f:46:f7:10:49:37:
-#                    fa:a8:59:49:5d:6a:81:07:56:f2:8a:f9:06:d0:f7:
-#                    70:22:4d:b4:b7:41:b9:32:b8:b1:f0:b1:c3:9c:3f:
-#                    70:fd:53:dd:81:aa:d8:63:78:f6:d8:53:6e:a1:ac:
-#                    6a:84:24:72:54:86:c6:d2:b2:ca:1c:0e:79:81:d6:
-#                    b5:70:62:08:01:2e:4e:4f:0e:d5:11:af:a9:af:e5:
-#                    9a:bf:dc:cc:87:6d:26:e4:c9:57:a2:fb:96:f9:cc:
-#                    e1:3f:53:8c:6c:4c:7e:9b:53:08:0b:6c:17:fb:67:
-#                    c8:c2:ad:b1:cd:80:b4:97:dc:76:01:16:15:e9:6a:
-#                    d7:a4:e1:78:47:ce:86:d5:fb:31:f3:fa:31:be:34:
-#                    aa:28:fb:70:4c:1d:49:c7:af:2c:9d:6d:66:a6:b6:
-#                    8d:64:7e:b5:20:6a:9d:3b:81:b6:8f:40:00:67:4b:
-#                    89:86:b8:cc:65:fe:15:53:e9:04:c1:d6:5f:1d:44:
-#                    d7:0a:2f:27:9a:46:7d:a1:0d:75:ad:54:86:15:dc:
-#                    49:3b:f1:96:ce:0f:9b:a0:ec:a3:7a:5d:be:d5:2a:
-#                    75:42:e5:7b:de:a5:b6:aa:af:28:ac:ac:90:ac:38:
-#                    b7:d5:68:35:26:7a:dc:f7:3b:f3:fd:45:9b:d1:bb:
-#                    43:78:6e:6f:f1:42:54:6a:98:f0:0d:ad:97:e9:52:
-#                    5e:e9:d5:6a:72:de:6a:f7:1b:60:14:f4:a5:e4:b6:
-#                    71:67:aa:1f:ea:e2:4d:c1:42:40:fe:67:46:17:38:
-#                    2f:47:3f:71:9c:ae:e5:21:ca:61:2d:6d:07:a8:84:
-#                    7c:2d:ee:51:25:f1:63:90:9e:fd:e1:57:88:6b:ef:
-#                    8a:23:6d:b1:e6:bd:3f:ad:d1:3d:96:0b:85:8d:cd:
-#                    6b:27:bb:b7:05:9b:ec:bb:91:a9:0a:07:12:02:97:
-#                    4e:20:90:f0:ff:0d:1e:e2:41:3b:d3:40:3a:e7:8d:
-#                    5d:da:66:e4:02:b0:07:52:98:5c:0e:8e:33:9c:c2:
-#                    a6:95:fb:55:19:6e:4c:8e:ae:4b:0f:bd:c1:38:4d:
-#                    5e:8f:84:1d:66:cd:c5:60:96:b4:52:5a:05:89:8e:
-#                    95:7a:98:c1:91:3c:95:23:b2:0e:f4:79:b4:c9:7c:
-#                    c1:4a:21
-#                Exponent: 65537 (0x10001)
-#        X509v3 extensions:
-#            X509v3 Subject Key Identifier: 
-#                CC:CC:EF:CC:29:60:A4:3B:B1:92:B6:3C:FA:32:62:8F:AC:25:15:3B
-#            X509v3 Basic Constraints: 
-#                CA:TRUE
-#            setCext-hashedRoot: 
-#                0/0-...0...+......0...g*........"...(6....2.1:.Qe
-#    Signature Algorithm: sha1WithRSAEncryption
-#         40:80:4a:fa:26:c9:ce:5e:30:dd:4f:86:74:76:58:f5:ae:b3:
-#         83:33:78:a4:7a:74:17:19:4e:e9:52:b5:b9:e0:0a:74:62:aa:
-#         68:ca:78:a0:4c:9a:8e:2c:23:2e:d5:6a:12:24:bf:d4:68:d3:
-#         8a:d0:d8:9c:9f:b4:1f:0c:de:38:7e:57:38:fc:8d:e2:4f:5e:
-#         0c:9f:ab:3b:d2:ff:75:97:cb:a4:e3:67:08:ff:e5:c0:16:b5:
-#         48:01:7d:e9:f9:0a:ff:1b:e5:6a:69:bf:78:21:a8:c2:a7:23:
-#         a9:86:ab:76:56:e8:0e:0c:f6:13:dd:2a:66:8a:64:49:3d:1a:
-#         18:87:90:04:9f:42:52:b7:4f:cb:fe:47:41:76:35:ef:ff:00:
-#         76:36:45:32:9b:c6:46:85:5d:e2:24:b0:1e:e3:48:96:98:57:
-#         47:94:55:7a:0f:41:b1:44:24:f3:c1:fe:1a:6b:bf:88:fd:c1:
-#         a6:da:93:60:5e:81:4a:99:20:9c:48:66:19:b5:00:79:54:0f:
-#         b8:2c:2f:4b:bc:a9:5d:5b:60:7f:8c:87:a5:e0:52:63:2a:be:
-#         d8:3b:85:40:15:fe:1e:b6:65:3f:c5:4b:da:7e:b5:7a:35:29:
-#         a3:2e:7a:98:60:22:a3:f4:7d:27:4e:2d:ea:b4:74:3c:e9:0f:
-#         a4:33:0f:10:11:bc:13:01:d6:e5:0e:d3:bf:b5:12:a2:e1:45:
-#         23:c0:cc:08:6e:61:b7:89:ab:83:e3:24:1e:e6:5d:07:e7:1f:
-#         20:3e:cf:67:c8:e7:ac:30:6d:27:4b:68:6e:4b:2a:5c:02:08:
-#         34:db:f8:76:e4:67:a3:26:9c:3f:a2:32:c2:4a:c5:81:18:31:
-#         10:56:aa:84:ef:2d:0a:ff:b8:1f:77:d2:bf:a5:58:a0:62:e4:
-#         d7:4b:91:75:8d:89:80:98:7e:6d:cb:53:4e:5e:af:f6:b2:97:
-#         85:97:b9:da:55:06:b9:24:ee:d7:c6:38:1e:63:1b:12:3b:95:
-#         e1:58:ac:f2:df:84:d5:5f:99:2f:0d:55:5b:e6:38:db:2e:3f:
-#         72:e9:48:85:cb:bb:29:13:8f:1e:38:55:b9:f3:b2:c4:30:99:
-#         23:4e:5d:f2:48:a1:12:0c:dc:12:90:09:90:54:91:03:3c:47:
-#         e5:d5:c9:65:e0:b7:4b:7d:ec:47:d3:b3:0b:3e:ad:9e:d0:74:
-#         00:0e:eb:bd:51:ad:c0:de:2c:c0:c3:6a:fe:ef:dc:0b:a7:fa:
-#         46:df:60:db:9c:a6:59:50:75:23:69:73:93:b2:f9:fc:02:d3:
-#         47:e6:71:ce:10:02:ee:27:8c:84:ff:ac:45:0d:13:5c:83:32:
-#         e0:25:a5:86:2c:7c:f4:12
 
 [p11-kit-object-v1]
 label: "TeliaSonera Root CA v1"
@@ -16202,6 +15683,300 @@ ZetX2fNXlrtIzYE=
 #         0e:6c:49:53:ef:15:5b:65:46:4a:5d:af:ba:fb:3a:72:1d:cd:
 #         f6:25:88:1e:97:cc:21:9c:29:01:0d:65:eb:57:d9:f3:57:96:
 #         bb:48:cd:81
+
+[p11-kit-object-v1]
+label: "Trustwave Global Certification Authority"
+class: x-certificate-extension
+object-id: 2.5.29.37
+value: "0 %06%03U%1d%25%01%01%ff%04%160%14%06%08%2b%06%01%05%05%07%03%04%06%08%2b%06%01%05%05%07%03%01"
+modifiable: false
+-----BEGIN PUBLIC KEY-----
+MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAuV1RKEs8N5LRgs69Hb3N
+3birzwo+4V3l3KoJuVcCPuZjYd/yD4JjrqP3rHPRfOezC68IAAlZf80pKoiThxcY
+gO2IsrS2EB8t1l9VohNd0cbrBlaJiP6sMp39XMMFx27uhom6iAOdciGGkK6PA6Xc
+n4goy6OSSQ/s0A/ibURPgGqy1OegClMBuo6XkXZuvPzVazbmQIjWey9fBegsbRHz
+57K+kkRM0pek/tJygUMHnOkRPvWLGll9H2hY3QQALJbzQ7N+mBl02Zxz2Ri+Qcc0
+edn0YsJDubMnsCLL+T1SxzBHs8k+uGri5+iBcF5Ci08mpf46wiBuu/gWjs0MqbQb
+bHYQ4Vh5Rj5UzoCoVwk3KRuZE48MyNYsHPsF6AiVPWVG3O7NaeJNj4coTjQLPs8U
+2bvdtlCarXfUGdbaGojIThsnddiyCPGugzC5EQ7Nh/CEjRVyfKHvzPKIYbr0absM
+jAt1VwS4TioULj0PHB4ypmI27mbiIrgFQGMQIvMzHXRyiiz1OSmg0+cbgIQtxT3j
+TbH9Gm+6ZQc7WOxCRSb72NolcsT2ALEieb3jfFliSpwFbz3O5tZHY5nGJG9yEsis
+f5C0C5Fw6LfmFhBxF87eBk9IQX01SqOJ8slLe0ERbWe3CJhM5REZrkKA3PuQBdT4
+UMq+5K3HwpTXFp3mF4+vNvsCAwEAAQ==
+-----END PUBLIC KEY-----
+
+[p11-kit-object-v1]
+label: "Trustwave Global Certification Authority"
+trusted: true
+nss-mozilla-ca-policy: true
+modifiable: false
+nss-server-distrust-after: "%00"
+nss-email-distrust-after: "%00"
+-----BEGIN CERTIFICATE-----
+MIIF2jCCA8KgAwIBAgIMBfcOhtpJ80Y1LrqyMA0GCSqGSIb3DQEBCwUAMIGIMQsw
+CQYDVQQGEwJVUzERMA8GA1UECAwISWxsaW5vaXMxEDAOBgNVBAcMB0NoaWNhZ28x
+ITAfBgNVBAoMGFRydXN0d2F2ZSBIb2xkaW5ncywgSW5jLjExMC8GA1UEAwwoVHJ1
+c3R3YXZlIEdsb2JhbCBDZXJ0aWZpY2F0aW9uIEF1dGhvcml0eTAeFw0xNzA4MjMx
+OTM0MTJaFw00MjA4MjMxOTM0MTJaMIGIMQswCQYDVQQGEwJVUzERMA8GA1UECAwI
+SWxsaW5vaXMxEDAOBgNVBAcMB0NoaWNhZ28xITAfBgNVBAoMGFRydXN0d2F2ZSBI
+b2xkaW5ncywgSW5jLjExMC8GA1UEAwwoVHJ1c3R3YXZlIEdsb2JhbCBDZXJ0aWZp
+Y2F0aW9uIEF1dGhvcml0eTCCAiIwDQYJKoZIhvcNAQEBBQADggIPADCCAgoCggIB
+ALldUShLPDeS0YLOvR29zd24q88KPuFd5dyqCblXAj7mY2Hf8g+CY66j96xz0Xzn
+swuvCAAJWX/NKSqIk4cXGIDtiLK0thAfLdZfVaITXdHG6wZWiYj+rDKd/VzDBcdu
+7oaJuogDnXIhhpCujwOl3J+IKMujkkkP7NAP4m1ET4BqstTnoApTAbqOl5F2brz8
+1Ws25kCI1nsvXwXoLG0R8+eyvpJETNKXpP7ScoFDB5zpET71ixpZfR9oWN0EACyW
+80OzfpgZdNmcc9kYvkHHNHnZ9GLCQ7mzJ7Aiy/k9UscwR7PJPrhq4ufogXBeQotP
+JqX+OsIgbrv4Fo7NDKm0G2x2EOFYeUY+VM6AqFcJNykbmROPDMjWLBz7BegIlT1l
+RtzuzWniTY+HKE40Cz7PFNm73bZQmq131BnW2hqIyE4bJ3XYsgjxroMwuREOzYfw
+hI0Vcnyh78zyiGG69Gm7DIwLdVcEuE4qFC49DxweMqZiNu5m4iK4BUBjECLzMx10
+coos9TkpoNPnG4CELcU9402x/RpvumUHO1jsQkUm+9jaJXLE9gCxInm943xZYkqc
+BW89zubWR2OZxiRvchLIrH+QtAuRcOi35hYQcRfO3gZPSEF9NUqjifLJS3tBEW1n
+twiYTOURGa5CgNz7kAXU+FDKvuStx8KU1xad5hePrzb7AgMBAAGjQjBAMA8GA1Ud
+EwEB/wQFMAMBAf8wHQYDVR0OBBYEFJngGWcNYtt2s9o9uFvo/ULSMQ6HMA4GA1Ud
+DwEB/wQEAwIBBjANBgkqhkiG9w0BAQsFAAOCAgEAmHNw4rDT7TnsTGDZqRKGFx6W
+0OhUKDtkLSGm+J1WE2pIPU/HPinbbViDVD2HfSMF1OQc3Og4ZYbFdada2zUFvXfe
+uyk3QAUHw5RSn8pk3fEbK9xGChACMf1KaA0HZJDmHvUqoai7PF35owgLEQzxPy0Q
+lG/+4jSHg9bP5Rs1bdID4bANqKCqRieCNqcVtgimQlRXtpla4gt5kNdXElE1GYhB
+aCXUNxeEFfsBctyV3lImIJgm4nb1J2/6ADtKYdkNy1GTKv0WBpanI5ojSP5RvbbE
+sLFUzt5sQa0WZ37b/TjNuThOssFgy50X31ieemKyJo90lZvkWx3SD92YHJtZuSPT
+MaCm/zjdzyBP6VhWOmfD0faZmZ26NraAL4hHT4a/RDqA5Dccprrql5gR0IRiR2Qe
+qu5AvzSxnI9O4fKSTx+O856X3vOmeWqJcU9LJxdI/uz0UA9PSX3MReO9ekDFQdxh
+VicGaeVyQYHTtgGJoC86cnn+OjC/QezHYj6RS8fZMXZC+fc8Y+wmjHMMfRod6qh8
+h6jCJ3zhM0EPz8/8AKAigJ5Kp28AsEFFtyLKaEjFQqKu3R3y4G5OBVixwJAWKqQ9
+EEC+j2Jjg6mcgn0tAumDMHzLJ8n9HmYAsC7TIS+OMxZsmO0QqAfWzJPP29FpHOTK
+yeC2nOnOcXHebD8WpHk=
+-----END CERTIFICATE-----
+#Certificate:
+#    Data:
+#        Version: 3 (0x2)
+#        Serial Number:
+#            05:f7:0e:86:da:49:f3:46:35:2e:ba:b2
+#        Signature Algorithm: sha256WithRSAEncryption
+#        Issuer: C = US, ST = Illinois, L = Chicago, O = "Trustwave Holdings, Inc.", CN = Trustwave Global Certification Authority
+#        Validity
+#            Not Before: Aug 23 19:34:12 2017 GMT
+#            Not After : Aug 23 19:34:12 2042 GMT
+#        Subject: C = US, ST = Illinois, L = Chicago, O = "Trustwave Holdings, Inc.", CN = Trustwave Global Certification Authority
+#        Subject Public Key Info:
+#            Public Key Algorithm: rsaEncryption
+#                RSA Public-Key: (4096 bit)
+#                Modulus:
+#                    00:b9:5d:51:28:4b:3c:37:92:d1:82:ce:bd:1d:bd:
+#                    cd:dd:b8:ab:cf:0a:3e:e1:5d:e5:dc:aa:09:b9:57:
+#                    02:3e:e6:63:61:df:f2:0f:82:63:ae:a3:f7:ac:73:
+#                    d1:7c:e7:b3:0b:af:08:00:09:59:7f:cd:29:2a:88:
+#                    93:87:17:18:80:ed:88:b2:b4:b6:10:1f:2d:d6:5f:
+#                    55:a2:13:5d:d1:c6:eb:06:56:89:88:fe:ac:32:9d:
+#                    fd:5c:c3:05:c7:6e:ee:86:89:ba:88:03:9d:72:21:
+#                    86:90:ae:8f:03:a5:dc:9f:88:28:cb:a3:92:49:0f:
+#                    ec:d0:0f:e2:6d:44:4f:80:6a:b2:d4:e7:a0:0a:53:
+#                    01:ba:8e:97:91:76:6e:bc:fc:d5:6b:36:e6:40:88:
+#                    d6:7b:2f:5f:05:e8:2c:6d:11:f3:e7:b2:be:92:44:
+#                    4c:d2:97:a4:fe:d2:72:81:43:07:9c:e9:11:3e:f5:
+#                    8b:1a:59:7d:1f:68:58:dd:04:00:2c:96:f3:43:b3:
+#                    7e:98:19:74:d9:9c:73:d9:18:be:41:c7:34:79:d9:
+#                    f4:62:c2:43:b9:b3:27:b0:22:cb:f9:3d:52:c7:30:
+#                    47:b3:c9:3e:b8:6a:e2:e7:e8:81:70:5e:42:8b:4f:
+#                    26:a5:fe:3a:c2:20:6e:bb:f8:16:8e:cd:0c:a9:b4:
+#                    1b:6c:76:10:e1:58:79:46:3e:54:ce:80:a8:57:09:
+#                    37:29:1b:99:13:8f:0c:c8:d6:2c:1c:fb:05:e8:08:
+#                    95:3d:65:46:dc:ee:cd:69:e2:4d:8f:87:28:4e:34:
+#                    0b:3e:cf:14:d9:bb:dd:b6:50:9a:ad:77:d4:19:d6:
+#                    da:1a:88:c8:4e:1b:27:75:d8:b2:08:f1:ae:83:30:
+#                    b9:11:0e:cd:87:f0:84:8d:15:72:7c:a1:ef:cc:f2:
+#                    88:61:ba:f4:69:bb:0c:8c:0b:75:57:04:b8:4e:2a:
+#                    14:2e:3d:0f:1c:1e:32:a6:62:36:ee:66:e2:22:b8:
+#                    05:40:63:10:22:f3:33:1d:74:72:8a:2c:f5:39:29:
+#                    a0:d3:e7:1b:80:84:2d:c5:3d:e3:4d:b1:fd:1a:6f:
+#                    ba:65:07:3b:58:ec:42:45:26:fb:d8:da:25:72:c4:
+#                    f6:00:b1:22:79:bd:e3:7c:59:62:4a:9c:05:6f:3d:
+#                    ce:e6:d6:47:63:99:c6:24:6f:72:12:c8:ac:7f:90:
+#                    b4:0b:91:70:e8:b7:e6:16:10:71:17:ce:de:06:4f:
+#                    48:41:7d:35:4a:a3:89:f2:c9:4b:7b:41:11:6d:67:
+#                    b7:08:98:4c:e5:11:19:ae:42:80:dc:fb:90:05:d4:
+#                    f8:50:ca:be:e4:ad:c7:c2:94:d7:16:9d:e6:17:8f:
+#                    af:36:fb
+#                Exponent: 65537 (0x10001)
+#        X509v3 extensions:
+#            X509v3 Basic Constraints: critical
+#                CA:TRUE
+#            X509v3 Subject Key Identifier: 
+#                99:E0:19:67:0D:62:DB:76:B3:DA:3D:B8:5B:E8:FD:42:D2:31:0E:87
+#            X509v3 Key Usage: critical
+#                Certificate Sign, CRL Sign
+#    Signature Algorithm: sha256WithRSAEncryption
+#         98:73:70:e2:b0:d3:ed:39:ec:4c:60:d9:a9:12:86:17:1e:96:
+#         d0:e8:54:28:3b:64:2d:21:a6:f8:9d:56:13:6a:48:3d:4f:c7:
+#         3e:29:db:6d:58:83:54:3d:87:7d:23:05:d4:e4:1c:dc:e8:38:
+#         65:86:c5:75:a7:5a:db:35:05:bd:77:de:bb:29:37:40:05:07:
+#         c3:94:52:9f:ca:64:dd:f1:1b:2b:dc:46:0a:10:02:31:fd:4a:
+#         68:0d:07:64:90:e6:1e:f5:2a:a1:a8:bb:3c:5d:f9:a3:08:0b:
+#         11:0c:f1:3f:2d:10:94:6f:fe:e2:34:87:83:d6:cf:e5:1b:35:
+#         6d:d2:03:e1:b0:0d:a8:a0:aa:46:27:82:36:a7:15:b6:08:a6:
+#         42:54:57:b6:99:5a:e2:0b:79:90:d7:57:12:51:35:19:88:41:
+#         68:25:d4:37:17:84:15:fb:01:72:dc:95:de:52:26:20:98:26:
+#         e2:76:f5:27:6f:fa:00:3b:4a:61:d9:0d:cb:51:93:2a:fd:16:
+#         06:96:a7:23:9a:23:48:fe:51:bd:b6:c4:b0:b1:54:ce:de:6c:
+#         41:ad:16:67:7e:db:fd:38:cd:b9:38:4e:b2:c1:60:cb:9d:17:
+#         df:58:9e:7a:62:b2:26:8f:74:95:9b:e4:5b:1d:d2:0f:dd:98:
+#         1c:9b:59:b9:23:d3:31:a0:a6:ff:38:dd:cf:20:4f:e9:58:56:
+#         3a:67:c3:d1:f6:99:99:9d:ba:36:b6:80:2f:88:47:4f:86:bf:
+#         44:3a:80:e4:37:1c:a6:ba:ea:97:98:11:d0:84:62:47:64:1e:
+#         aa:ee:40:bf:34:b1:9c:8f:4e:e1:f2:92:4f:1f:8e:f3:9e:97:
+#         de:f3:a6:79:6a:89:71:4f:4b:27:17:48:fe:ec:f4:50:0f:4f:
+#         49:7d:cc:45:e3:bd:7a:40:c5:41:dc:61:56:27:06:69:e5:72:
+#         41:81:d3:b6:01:89:a0:2f:3a:72:79:fe:3a:30:bf:41:ec:c7:
+#         62:3e:91:4b:c7:d9:31:76:42:f9:f7:3c:63:ec:26:8c:73:0c:
+#         7d:1a:1d:ea:a8:7c:87:a8:c2:27:7c:e1:33:41:0f:cf:cf:fc:
+#         00:a0:22:80:9e:4a:a7:6f:00:b0:41:45:b7:22:ca:68:48:c5:
+#         42:a2:ae:dd:1d:f2:e0:6e:4e:05:58:b1:c0:90:16:2a:a4:3d:
+#         10:40:be:8f:62:63:83:a9:9c:82:7d:2d:02:e9:83:30:7c:cb:
+#         27:c9:fd:1e:66:00:b0:2e:d3:21:2f:8e:33:16:6c:98:ed:10:
+#         a8:07:d6:cc:93:cf:db:d1:69:1c:e4:ca:c9:e0:b6:9c:e9:ce:
+#         71:71:de:6c:3f:16:a4:79
+
+[p11-kit-object-v1]
+label: "Trustwave Global ECC P256 Certification Authority"
+class: x-certificate-extension
+object-id: 2.5.29.37
+value: "0 %06%03U%1d%25%01%01%ff%04%160%14%06%08%2b%06%01%05%05%07%03%04%06%08%2b%06%01%05%05%07%03%01"
+modifiable: false
+-----BEGIN PUBLIC KEY-----
+MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEfvts5iPjczIIymDmU5y6dI0YsHiQ
+UoDdOMBKHdGozJOklwY4yg0VYsaOASplnarfNJEugcHkM5IxxP0JOqY/rQ==
+-----END PUBLIC KEY-----
+
+[p11-kit-object-v1]
+label: "Trustwave Global ECC P256 Certification Authority"
+trusted: true
+nss-mozilla-ca-policy: true
+modifiable: false
+nss-server-distrust-after: "%00"
+nss-email-distrust-after: "%00"
+-----BEGIN CERTIFICATE-----
+MIICYDCCAgegAwIBAgIMDWpfCD8oXD5Rld9dMAoGCCqGSM49BAMCMIGRMQswCQYD
+VQQGEwJVUzERMA8GA1UECBMISWxsaW5vaXMxEDAOBgNVBAcTB0NoaWNhZ28xITAf
+BgNVBAoTGFRydXN0d2F2ZSBIb2xkaW5ncywgSW5jLjE6MDgGA1UEAxMxVHJ1c3R3
+YXZlIEdsb2JhbCBFQ0MgUDI1NiBDZXJ0aWZpY2F0aW9uIEF1dGhvcml0eTAeFw0x
+NzA4MjMxOTM1MTBaFw00MjA4MjMxOTM1MTBaMIGRMQswCQYDVQQGEwJVUzERMA8G
+A1UECBMISWxsaW5vaXMxEDAOBgNVBAcTB0NoaWNhZ28xITAfBgNVBAoTGFRydXN0
+d2F2ZSBIb2xkaW5ncywgSW5jLjE6MDgGA1UEAxMxVHJ1c3R3YXZlIEdsb2JhbCBF
+Q0MgUDI1NiBDZXJ0aWZpY2F0aW9uIEF1dGhvcml0eTBZMBMGByqGSM49AgEGCCqG
+SM49AwEHA0IABH77bOYj43MyCMpg5lOcunSNGLB4kFKA3TjASh3RqMyTpJcGOMoN
+FWLGjgEqZZ2q3zSRLoHB5DOSMcT9CTqmP62jQzBBMA8GA1UdEwEB/wQFMAMBAf8w
+DwYDVR0PAQH/BAUDAwcGADAdBgNVHQ4EFgQUo0EGrJBt0UrrdaVKEJmzsaGLSvcw
+CgYIKoZIzj0EAwIDRwAwRAIgB+ZU2g6gWrKuEZ+Hxbb/ad4lvvigtwjzRM4q3wgh
+DDcCIC0mA6AFvWvR9lz4ZcyGbbOcNEhjhAnFjXca4syc4XR7
+-----END CERTIFICATE-----
+#Certificate:
+#    Data:
+#        Version: 3 (0x2)
+#        Serial Number:
+#            0d:6a:5f:08:3f:28:5c:3e:51:95:df:5d
+#        Signature Algorithm: ecdsa-with-SHA256
+#        Issuer: C = US, ST = Illinois, L = Chicago, O = "Trustwave Holdings, Inc.", CN = Trustwave Global ECC P256 Certification Authority
+#        Validity
+#            Not Before: Aug 23 19:35:10 2017 GMT
+#            Not After : Aug 23 19:35:10 2042 GMT
+#        Subject: C = US, ST = Illinois, L = Chicago, O = "Trustwave Holdings, Inc.", CN = Trustwave Global ECC P256 Certification Authority
+#        Subject Public Key Info:
+#            Public Key Algorithm: id-ecPublicKey
+#                Public-Key: (256 bit)
+#                pub:
+#                    04:7e:fb:6c:e6:23:e3:73:32:08:ca:60:e6:53:9c:
+#                    ba:74:8d:18:b0:78:90:52:80:dd:38:c0:4a:1d:d1:
+#                    a8:cc:93:a4:97:06:38:ca:0d:15:62:c6:8e:01:2a:
+#                    65:9d:aa:df:34:91:2e:81:c1:e4:33:92:31:c4:fd:
+#                    09:3a:a6:3f:ad
+#                ASN1 OID: prime256v1
+#                NIST CURVE: P-256
+#        X509v3 extensions:
+#            X509v3 Basic Constraints: critical
+#                CA:TRUE
+#            X509v3 Key Usage: critical
+#                Certificate Sign, CRL Sign
+#            X509v3 Subject Key Identifier: 
+#                A3:41:06:AC:90:6D:D1:4A:EB:75:A5:4A:10:99:B3:B1:A1:8B:4A:F7
+#    Signature Algorithm: ecdsa-with-SHA256
+#         30:44:02:20:07:e6:54:da:0e:a0:5a:b2:ae:11:9f:87:c5:b6:
+#         ff:69:de:25:be:f8:a0:b7:08:f3:44:ce:2a:df:08:21:0c:37:
+#         02:20:2d:26:03:a0:05:bd:6b:d1:f6:5c:f8:65:cc:86:6d:b3:
+#         9c:34:48:63:84:09:c5:8d:77:1a:e2:cc:9c:e1:74:7b
+
+[p11-kit-object-v1]
+label: "Trustwave Global ECC P384 Certification Authority"
+class: x-certificate-extension
+object-id: 2.5.29.37
+value: "0 %06%03U%1d%25%01%01%ff%04%160%14%06%08%2b%06%01%05%05%07%03%04%06%08%2b%06%01%05%05%07%03%01"
+modifiable: false
+-----BEGIN PUBLIC KEY-----
+MHYwEAYHKoZIzj0CAQYFK4EEACIDYgAEa9oNdTUIMUcFrkWZVfEREy5K+BAxI6N+
+g9N/KAg6Jho6z5eCH4C3JwmP0Y4wxAqbDqxYBKv3Nn2UI6SbCoqLq+v9OSVm8V7+
+jK6NQXmdCWDOKKnTim3z1kXU8piEOGWg
+-----END PUBLIC KEY-----
+
+[p11-kit-object-v1]
+label: "Trustwave Global ECC P384 Certification Authority"
+trusted: true
+nss-mozilla-ca-policy: true
+modifiable: false
+nss-server-distrust-after: "%00"
+nss-email-distrust-after: "%00"
+-----BEGIN CERTIFICATE-----
+MIICnTCCAiSgAwIBAgIMCL2Fl2yZJ6SAaEc7MAoGCCqGSM49BAMDMIGRMQswCQYD
+VQQGEwJVUzERMA8GA1UECBMISWxsaW5vaXMxEDAOBgNVBAcTB0NoaWNhZ28xITAf
+BgNVBAoTGFRydXN0d2F2ZSBIb2xkaW5ncywgSW5jLjE6MDgGA1UEAxMxVHJ1c3R3
+YXZlIEdsb2JhbCBFQ0MgUDM4NCBDZXJ0aWZpY2F0aW9uIEF1dGhvcml0eTAeFw0x
+NzA4MjMxOTM2NDNaFw00MjA4MjMxOTM2NDNaMIGRMQswCQYDVQQGEwJVUzERMA8G
+A1UECBMISWxsaW5vaXMxEDAOBgNVBAcTB0NoaWNhZ28xITAfBgNVBAoTGFRydXN0
+d2F2ZSBIb2xkaW5ncywgSW5jLjE6MDgGA1UEAxMxVHJ1c3R3YXZlIEdsb2JhbCBF
+Q0MgUDM4NCBDZXJ0aWZpY2F0aW9uIEF1dGhvcml0eTB2MBAGByqGSM49AgEGBSuB
+BAAiA2IABGvaDXU1CDFHBa5FmVXxERMuSvgQMSOjfoPTfygIOiYaOs+Xgh+AtycJ
+j9GOMMQKmw6sWASr9zZ9lCOkmwqKi6vr/TklZvFe/oyujUF5nQlgziip04pt89ZF
+1PKYhDhloKNDMEEwDwYDVR0TAQH/BAUwAwEB/zAPBgNVHQ8BAf8EBQMDBwYAMB0G
+A1UdDgQWBBRVqYSJ0sEyvRjLbKYHTsjnnb6CkDAKBggqhkjOPQQDAwNnADBkAjA3
+AZKXRRJ+oPM+rRk6ct30UJMDEr5E0k9BpIycnR+j9sKS50gU/k6bpZFXrsY3crsC
+MGclCrEMXu6pY5Jv5ZAL/mYiykf9ijH3g/56vxC+GCsej/YpHpRZ744hN8tRmKVu
+Sw==
+-----END CERTIFICATE-----
+#Certificate:
+#    Data:
+#        Version: 3 (0x2)
+#        Serial Number:
+#            08:bd:85:97:6c:99:27:a4:80:68:47:3b
+#        Signature Algorithm: ecdsa-with-SHA384
+#        Issuer: C = US, ST = Illinois, L = Chicago, O = "Trustwave Holdings, Inc.", CN = Trustwave Global ECC P384 Certification Authority
+#        Validity
+#            Not Before: Aug 23 19:36:43 2017 GMT
+#            Not After : Aug 23 19:36:43 2042 GMT
+#        Subject: C = US, ST = Illinois, L = Chicago, O = "Trustwave Holdings, Inc.", CN = Trustwave Global ECC P384 Certification Authority
+#        Subject Public Key Info:
+#            Public Key Algorithm: id-ecPublicKey
+#                Public-Key: (384 bit)
+#                pub:
+#                    04:6b:da:0d:75:35:08:31:47:05:ae:45:99:55:f1:
+#                    11:13:2e:4a:f8:10:31:23:a3:7e:83:d3:7f:28:08:
+#                    3a:26:1a:3a:cf:97:82:1f:80:b7:27:09:8f:d1:8e:
+#                    30:c4:0a:9b:0e:ac:58:04:ab:f7:36:7d:94:23:a4:
+#                    9b:0a:8a:8b:ab:eb:fd:39:25:66:f1:5e:fe:8c:ae:
+#                    8d:41:79:9d:09:60:ce:28:a9:d3:8a:6d:f3:d6:45:
+#                    d4:f2:98:84:38:65:a0
+#                ASN1 OID: secp384r1
+#                NIST CURVE: P-384
+#        X509v3 extensions:
+#            X509v3 Basic Constraints: critical
+#                CA:TRUE
+#            X509v3 Key Usage: critical
+#                Certificate Sign, CRL Sign
+#            X509v3 Subject Key Identifier: 
+#                55:A9:84:89:D2:C1:32:BD:18:CB:6C:A6:07:4E:C8:E7:9D:BE:82:90
+#    Signature Algorithm: ecdsa-with-SHA384
+#         30:64:02:30:37:01:92:97:45:12:7e:a0:f3:3e:ad:19:3a:72:
+#         dd:f4:50:93:03:12:be:44:d2:4f:41:a4:8c:9c:9d:1f:a3:f6:
+#         c2:92:e7:48:14:fe:4e:9b:a5:91:57:ae:c6:37:72:bb:02:30:
+#         67:25:0a:b1:0c:5e:ee:a9:63:92:6f:e5:90:0b:fe:66:22:ca:
+#         47:fd:8a:31:f7:83:fe:7a:bf:10:be:18:2b:1e:8f:f6:29:1e:
+#         94:59:ef:8e:21:37:cb:51:98:a5:6e:4b
 
 [p11-kit-object-v1]
 label: "T-TeleSec GlobalRoot Class 2"
@@ -17499,108 +17274,10 @@ cjnhsUPgKM+351psE2tJs//jGHyJizNdrDPXp/naOlXJWBD5qu9ats9LS98q
 #         4b:4b:df:2a
 
 [p11-kit-object-v1]
-label: "Verisign Class 3 Public Primary Certification Authority - G3"
-class: x-certificate-extension
-object-id: 2.5.29.37
-value: "0 %06%03U%1d%25%01%01%ff%04%160%14%06%08%2b%06%01%05%05%07%03%04%06%08%2b%06%01%05%05%07%03%01"
-modifiable: false
------BEGIN PUBLIC KEY-----
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAy7qcUvx4Hxoebxs3c734
-yWuUEjBP8DZH9dCRCvUXyKVhwRZATfuKYZDldiDBEQZ9qyxupvURQY76La0qYVmk
-ZyZM0Oi8UltwIARY0XrJpGm8gxdkrQWLvNBYzo2M9evwQkkLnZcnZzJu4a6TFRxw
-vCBNLxjekojobIVXERrpfuMmEVSiRZZVg8owiejc2KPtKoA/f3llVz4VIGYIL5WT
-v6pHL6hGl/AS4v7CCitR5nbmt0a34g2mzKjDTFlVieboU1wc6p3wYhYLp8lfDPDe
-wnbOr/dq8vpBpqIzFMnlemPTnmI31YVlng7mUyR0G14dElNbxyzng0k7Fa6KaLlX
-lwIDAQAB
------END PUBLIC KEY-----
-
-[p11-kit-object-v1]
-label: "Verisign Class 3 Public Primary Certification Authority - G3"
-trusted: true
-nss-mozilla-ca-policy: true
-modifiable: false
-nss-server-distrust-after: "%00"
-nss-email-distrust-after: "%00"
------BEGIN CERTIFICATE-----
-MIIEGjCCAwICEQCbfgZJoz5iudXukEhxKe9XMA0GCSqGSIb3DQEBBQUAMIHKMQsw
-CQYDVQQGEwJVUzEXMBUGA1UEChMOVmVyaVNpZ24sIEluYy4xHzAdBgNVBAsTFlZl
-cmlTaWduIFRydXN0IE5ldHdvcmsxOjA4BgNVBAsTMShjKSAxOTk5IFZlcmlTaWdu
-LCBJbmMuIC0gRm9yIGF1dGhvcml6ZWQgdXNlIG9ubHkxRTBDBgNVBAMTPFZlcmlT
-aWduIENsYXNzIDMgUHVibGljIFByaW1hcnkgQ2VydGlmaWNhdGlvbiBBdXRob3Jp
-dHkgLSBHMzAeFw05OTEwMDEwMDAwMDBaFw0zNjA3MTYyMzU5NTlaMIHKMQswCQYD
-VQQGEwJVUzEXMBUGA1UEChMOVmVyaVNpZ24sIEluYy4xHzAdBgNVBAsTFlZlcmlT
-aWduIFRydXN0IE5ldHdvcmsxOjA4BgNVBAsTMShjKSAxOTk5IFZlcmlTaWduLCBJ
-bmMuIC0gRm9yIGF1dGhvcml6ZWQgdXNlIG9ubHkxRTBDBgNVBAMTPFZlcmlTaWdu
-IENsYXNzIDMgUHVibGljIFByaW1hcnkgQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkg
-LSBHMzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMu6nFL8eB8aHm8b
-N3O9+MlrlBIwT/A2R/XQkQr1F8ilYcEWQE37imGQ5XYgwREGfassbqb1EUGO+i2t
-KmFZpGcmTNDovFJbcCAEWNF6yaRpvIMXZK0Fi7zQWM6NjPXr8EJJC52XJ2cybuGu
-kxUccLwgTS8Y3pKI6GyFVxEa6X7jJhFUokWWVYPKMIno3Nij7SqAP395ZVc+FSBm
-CC+Vk7+qRy+oRpfwEuL+wgorUeZ25rdGt+INpsyow0xZVYnm6FNcHOqd8GIWC6fJ
-Xwzw3sJ2zq/3avL6QaaiMxTJ5Xpj055iN9WFZZ4O5lMkdBteHRJTW8cs54NJOxWu
-imi5V5cCAwEAATANBgkqhkiG9w0BAQUFAAOCAQEAERSWwauSCPc/L8my/uRan2Te
-2yFPhpk0djZX3dAVL8WtfxUfN2JzPtTnX84XA9s1+ivbrmAJXx5fj267Cz3qWhMe
-DGBvtcC1IyIuBwvLqXTLR7sdwdela8wv0kL9Sd2nic9TutoAWii/gt/4uhMdUIaC
-/Y4wjylGsB49Ndo4YhYYSq3mtlFs3q9i6wHQHiT+eo8SGhJouPtmmRQURVyu565p
-F4ErWjfJXir0xuKhXFSbplQAz/DxwceYMBo7Nhbbo27q/a2ywtrvAkcTisDxszGt
-TxzhT5yvDwyd93gN2PQ1VoDat20Xj50egWTh/sVFuq1ruQp6Tk9LhO5L8X3dEQ==
------END CERTIFICATE-----
-#Certificate:
-#    Data:
-#        Version: 1 (0x0)
-#        Serial Number:
-#            9b:7e:06:49:a3:3e:62:b9:d5:ee:90:48:71:29:ef:57
-#        Signature Algorithm: sha1WithRSAEncryption
-#        Issuer: C = US, O = "VeriSign, Inc.", OU = VeriSign Trust Network, OU = "(c) 1999 VeriSign, Inc. - For authorized use only", CN = VeriSign Class 3 Public Primary Certification Authority - G3
-#        Validity
-#            Not Before: Oct  1 00:00:00 1999 GMT
-#            Not After : Jul 16 23:59:59 2036 GMT
-#        Subject: C = US, O = "VeriSign, Inc.", OU = VeriSign Trust Network, OU = "(c) 1999 VeriSign, Inc. - For authorized use only", CN = VeriSign Class 3 Public Primary Certification Authority - G3
-#        Subject Public Key Info:
-#            Public Key Algorithm: rsaEncryption
-#                RSA Public-Key: (2048 bit)
-#                Modulus:
-#                    00:cb:ba:9c:52:fc:78:1f:1a:1e:6f:1b:37:73:bd:
-#                    f8:c9:6b:94:12:30:4f:f0:36:47:f5:d0:91:0a:f5:
-#                    17:c8:a5:61:c1:16:40:4d:fb:8a:61:90:e5:76:20:
-#                    c1:11:06:7d:ab:2c:6e:a6:f5:11:41:8e:fa:2d:ad:
-#                    2a:61:59:a4:67:26:4c:d0:e8:bc:52:5b:70:20:04:
-#                    58:d1:7a:c9:a4:69:bc:83:17:64:ad:05:8b:bc:d0:
-#                    58:ce:8d:8c:f5:eb:f0:42:49:0b:9d:97:27:67:32:
-#                    6e:e1:ae:93:15:1c:70:bc:20:4d:2f:18:de:92:88:
-#                    e8:6c:85:57:11:1a:e9:7e:e3:26:11:54:a2:45:96:
-#                    55:83:ca:30:89:e8:dc:d8:a3:ed:2a:80:3f:7f:79:
-#                    65:57:3e:15:20:66:08:2f:95:93:bf:aa:47:2f:a8:
-#                    46:97:f0:12:e2:fe:c2:0a:2b:51:e6:76:e6:b7:46:
-#                    b7:e2:0d:a6:cc:a8:c3:4c:59:55:89:e6:e8:53:5c:
-#                    1c:ea:9d:f0:62:16:0b:a7:c9:5f:0c:f0:de:c2:76:
-#                    ce:af:f7:6a:f2:fa:41:a6:a2:33:14:c9:e5:7a:63:
-#                    d3:9e:62:37:d5:85:65:9e:0e:e6:53:24:74:1b:5e:
-#                    1d:12:53:5b:c7:2c:e7:83:49:3b:15:ae:8a:68:b9:
-#                    57:97
-#                Exponent: 65537 (0x10001)
-#    Signature Algorithm: sha1WithRSAEncryption
-#         11:14:96:c1:ab:92:08:f7:3f:2f:c9:b2:fe:e4:5a:9f:64:de:
-#         db:21:4f:86:99:34:76:36:57:dd:d0:15:2f:c5:ad:7f:15:1f:
-#         37:62:73:3e:d4:e7:5f:ce:17:03:db:35:fa:2b:db:ae:60:09:
-#         5f:1e:5f:8f:6e:bb:0b:3d:ea:5a:13:1e:0c:60:6f:b5:c0:b5:
-#         23:22:2e:07:0b:cb:a9:74:cb:47:bb:1d:c1:d7:a5:6b:cc:2f:
-#         d2:42:fd:49:dd:a7:89:cf:53:ba:da:00:5a:28:bf:82:df:f8:
-#         ba:13:1d:50:86:82:fd:8e:30:8f:29:46:b0:1e:3d:35:da:38:
-#         62:16:18:4a:ad:e6:b6:51:6c:de:af:62:eb:01:d0:1e:24:fe:
-#         7a:8f:12:1a:12:68:b8:fb:66:99:14:14:45:5c:ae:e7:ae:69:
-#         17:81:2b:5a:37:c9:5e:2a:f4:c6:e2:a1:5c:54:9b:a6:54:00:
-#         cf:f0:f1:c1:c7:98:30:1a:3b:36:16:db:a3:6e:ea:fd:ad:b2:
-#         c2:da:ef:02:47:13:8a:c0:f1:b3:31:ad:4f:1c:e1:4f:9c:af:
-#         0f:0c:9d:f7:78:0d:d8:f4:35:56:80:da:b7:6d:17:8f:9d:1e:
-#         81:64:e1:fe:c5:45:ba:ad:6b:b9:0a:7a:4e:4f:4b:84:ee:4b:
-#         f1:7d:dd:11
-
-[p11-kit-object-v1]
 label: "VeriSign Class 3 Public Primary Certification Authority - G4"
 class: x-certificate-extension
 object-id: 2.5.29.37
-value: "0 %06%03U%1d%25%01%01%ff%04%160%14%06%08%2b%06%01%05%05%07%03%04%06%08%2b%06%01%05%05%07%03%01"
+value: "0%16%06%03U%1d%25%01%01%ff%04%0c0%0a%06%08%2b%06%01%05%05%07%03%01"
 modifiable: false
 -----BEGIN PUBLIC KEY-----
 MHYwEAYHKoZIzj0CAQYFK4EEACIDYgAEp1Z6fFLaZJsOLVzYXqySPf4B5hlKPRQD
@@ -17681,7 +17358,7 @@ FRJZap7v1VmyHVIsmXHNxynfGyphe3HR3vPA5Q06Sqotp9iGKt0uEA==
 label: "VeriSign Class 3 Public Primary Certification Authority - G5"
 class: x-certificate-extension
 object-id: 2.5.29.37
-value: "0 %06%03U%1d%25%01%01%ff%04%160%14%06%08%2b%06%01%05%05%07%03%04%06%08%2b%06%01%05%05%07%03%01"
+value: "0%16%06%03U%1d%25%01%01%ff%04%0c0%0a%06%08%2b%06%01%05%05%07%03%01"
 modifiable: false
 -----BEGIN PUBLIC KEY-----
 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAryQICCl6NZ5gDKrnSztO

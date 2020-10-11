@@ -8,7 +8,7 @@ mtlibs=-pthread
 
 Name: gpg-error
 Description: GPG Runtime
-Version: 1.38-unknown
+Version: 1.39-unknown
 Cflags: 
 Libs: -lgpg-error
 Libs.private: 

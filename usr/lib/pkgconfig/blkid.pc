@@ -5,6 +5,6 @@ includedir=/usr/include
 
 Name: blkid
 Description: Block device id library
-Version: 2.35.2
+Version: 2.36.0
 Cflags: -I${includedir}/blkid
 Libs: -L${libdir} -lblkid

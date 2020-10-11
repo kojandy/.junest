@@ -118,7 +118,12 @@
     </p><p><span class="emphasis"><em>mntopts</em></span>=<em class="replaceable"><code>value</code></em>
       - value of this flag is passed to the mount call when the tmpfs mount is
       done. It allows for example the specification of the maximum size of the
-      tmpfs instance that is created by the mount call. See <span class="citerefentry"><span class="refentrytitle">mount</span>(8)</span> for details.
+      tmpfs instance that is created by the mount call. In addition to
+      options specified in the <span class="citerefentry"><span class="refentrytitle">tmpfs</span>(5)</span> manual the <span class="emphasis"><em>nosuid</em></span>,
+      <span class="emphasis"><em>noexec</em></span>, and <span class="emphasis"><em>nodev</em></span> flags
+      can be used to respectively disable setuid bit effect, disable running
+      executables, and disable devices to be interpreted on the mounted
+      tmpfs filesystem.
     </p><p>
       The directory where polyinstantiated instances are to be
       created, must exist and must have, by default, the mode of 0000.  The

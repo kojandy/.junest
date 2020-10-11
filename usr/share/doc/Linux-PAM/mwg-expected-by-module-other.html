@@ -46,7 +46,7 @@
       set with
       <span class="citerefentry"><span class="refentrytitle">pam_get_item</span>(3)</span>
       and
-      <span class="citerefentry"><span class="refentrytitle">pam_set_item </span>(3)</span>  respectively. The value used to set it should be
+      <span class="citerefentry"><span class="refentrytitle">pam_set_item</span>(3)</span>  respectively. The value used to set it should be
       a function pointer of the following prototype:
       </p><pre class="programlisting">
 void (*delay_fn)(int retval, unsigned usec_delay, void *appdata_ptr);
@@ -59,8 +59,14 @@ void (*delay_fn)(int retval, unsigned usec_delay, void *appdata_ptr);
       by the application when it called
       <span class="citerefentry"><span class="refentrytitle">pam_start</span>(3)</span> or explicitly with
       <span class="citerefentry"><span class="refentrytitle">pam_set_item</span>(3)</span>.
-      Note, if PAM_FAIL_DELAY item is unset (or set to NULL), then no delay
-      will be performed.
+    </p><p>
+      Note that the PAM_FAIL_DELAY item is set to NULL by default. This
+      indicates that PAM should perform a random delay as described
+      above when authentication fails and a delay has been suggested.
+      If an application does not want the PAM library to perform any
+      delay on authentication failure, then the application must define
+      a custom delay function that executes no statements and set
+      the PAM_FAIL_DELAY item to point to this function.
     </p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="adg-pam_fail_delay-return_values"></a>2.2.2.2. RETURN VALUES</h4></div></div></div><div class="variablelist"><dl class="variablelist"><dt><span class="term">PAM_SUCCESS</span></dt><dd><p>
             Delay was successful adjusted.
           </p></dd><dt><span class="term">PAM_SYSTEM_ERR</span></dt><dd><p>
